@@ -98,16 +98,19 @@ Coach can use this endpoint to delete their location.
 
 ```javascript
 import LytesnapBackendApi from 'lytesnap_backend_api';
+let defaultClient = LytesnapBackendApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let locationId = "locationId_example"; // String | 
-apiInstance.deleteLocationLocationId(locationId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteLocationLocationId(locationId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -123,7 +126,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -146,13 +149,12 @@ import LytesnapBackendApi from 'lytesnap_backend_api';
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let availabilityId = "availabilityId_example"; // String | 
-apiInstance.deleteUserCoachAvailabilityAvailabilityId(availabilityId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.deleteUserCoachAvailabilityAvailabilityId(availabilityId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -191,13 +193,12 @@ import LytesnapBackendApi from 'lytesnap_backend_api';
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let paymentMethodId = "paymentMethodId_example"; // String | 
-apiInstance.deleteUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.deleteUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -240,13 +241,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let filterId = "filterId_example"; // String | 
-apiInstance.deleteUserFilterFilterName(filterId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.deleteUserFilterFilterName(filterId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -286,13 +286,12 @@ import LytesnapBackendApi from 'lytesnap_backend_api';
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
 let paymentMethodId = "paymentMethodId_example"; // String | 
-apiInstance.deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -335,13 +334,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getCoach((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getCoach().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -380,13 +378,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getLocation((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getLocation().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -426,13 +423,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let locationId = "locationId_example"; // String | 
-apiInstance.getLocationLocationId(locationId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getLocationLocationId(locationId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -481,13 +477,12 @@ let opts = {
   'bookingType': "bookingType_example", // String | This is your booking parameter
   'filterID': "filterID_example" // String | This is the filter id of the filter that you saved
 };
-apiInstance.getUserAdmin(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdmin(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -539,13 +534,12 @@ let opts = {
   'endTime': 2017-09-14T04:07:11.532-04:00, // String | This is the end range of the period
   'numItems': 56 // Number | This determines how many results you want to return
 };
-apiInstance.getUserAdminBookingLocationPercentage(reachedType, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminBookingLocationPercentage(reachedType, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -594,13 +588,12 @@ let opts = {
   'status': "status_example", // String | This is the filter for requests
   'numItems': "numItems_example" // String | This is the number of items to return
 };
-apiInstance.getUserAdminCertificate(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminCertificate(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -644,13 +637,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let coachId = "coachId_example"; // String | 
-apiInstance.getUserAdminCertificateCoachId(coachId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminCertificateCoachId(coachId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -693,13 +685,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let userId = "userId_example"; // String | 
-apiInstance.getUserAdminComplaintUserId(userId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminComplaintUserId(userId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -741,13 +732,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserAdminDashboardFilter((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminDashboardFilter().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -794,13 +784,12 @@ let opts = {
   'endTime': 2017-09-14T04:07:11.532-04:00, // String | This is the end range of the period
   'filterID': "filterID_example" // String | This is the filter id that represents the saved filter
 };
-apiInstance.getUserAdminDashboardLocationState(state, reachedType, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminDashboardLocationState(state, reachedType, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -847,13 +836,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserAdminProfile((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminProfile().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -896,13 +884,12 @@ let opts = {
   'status': "status_example", // String | This is the profiles to filter on 
   'numItems': "numItems_example" // String | This is the number of items that you want to return
 };
-apiInstance.getUserAdminProfileCheck(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminProfileCheck(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -948,13 +935,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'numItems': 56 // Number | This is the number of items that you want to fetch
 };
-apiInstance.getUserAdminUserComplaints(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminUserComplaints(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1001,13 +987,12 @@ let opts = {
   'startTime': 2021-12-20T07:30:00-08:00, // String | This is the start time of the range
   'endTime': 2021-12-20T07:30:00-08:00 // String | This is the end time of the range
 };
-apiInstance.getUserAdminUserFeedback(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminUserFeedback(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1052,13 +1037,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let featureId = "featureId_example"; // String | 
-apiInstance.getUserAdminUserFeedbackFeedbackId(featureId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminUserFeedbackFeedbackId(featureId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1103,13 +1087,12 @@ let opts = {
   'userType': "userType_example", // String | This is the user type to filter
   'numItems': 56 // Number | This is the number of items to return
 };
-apiInstance.getUserAdminUsersManagement(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserAdminUsersManagement(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1159,13 +1142,12 @@ let opts = {
   'startTime': 2017-09-14T04:07:11.532-04:00, // String | This is the start range of availability items you want to fetch
   'endTime': 2017-09-14T04:07:11.532-04:00 // String | This is the end range of availability items you want to fetch
 };
-apiInstance.getUserCoachAvailability(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachAvailability(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1208,13 +1190,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserCoachAvailabilityInfo((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachAvailabilityInfo().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1256,13 +1237,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let locationID = GhQRAvqicvyeHXWu6gSa; // String | This is the location from where you are going to retrieve analytics.  It can be all if you want to retrieve all notifications
 let startTime = 2021-12-20T07:30:00-08:00; // String | This  is the start range of data to perform analytics
 let endTime = 2021-12-20T07:30:00-08:00; // String | This is the end range of data to perform analytics
-apiInstance.getUserCoachInsights(locationID, startTime, endTime, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachInsights(locationID, startTime, endTime).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1309,13 +1289,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'numItems': 56 // Number | This is the number of notifications that you want to return
 };
-apiInstance.getUserCoachNotifications(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachNotifications(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1354,13 +1333,12 @@ import LytesnapBackendApi from 'lytesnap_backend_api';
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let coachId = "coachId_example"; // String | 
-apiInstance.getUserCoachProfileCoachId(coachId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachProfileCoachId(coachId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1398,13 +1376,12 @@ Retrieve coach notification settings
 import LytesnapBackendApi from 'lytesnap_backend_api';
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserCoachProfileSettingsNotifications((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachProfileSettingsNotifications().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1443,13 +1420,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserCoachProfileSettingsPayout((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachProfileSettingsPayout().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1491,13 +1467,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'numItems': 56 // Number | This is the number of reviews that you want to fetch
 };
-apiInstance.getUserCoachReview(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachReview(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1539,13 +1514,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserCoachSession((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserCoachSession().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1584,13 +1558,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUserFilter((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserFilter().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1633,13 +1606,12 @@ let filterId = "filterId_example"; // String |
 let opts = {
   'filterId2': "filterId_example" // String | 
 };
-apiInstance.getUserFilterFilterName(filterId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserFilterFilterName(filterId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1683,13 +1655,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let lessonId = "lessonId_example"; // String | 
-apiInstance.getUserLessonsLessonId(lessonId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserLessonsLessonId(lessonId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1732,13 +1703,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
-apiInstance.getUserStudentNotificationFilter(studentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserStudentNotificationFilter(studentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1781,13 +1751,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
-apiInstance.getUserStudentProfileSettingsBasicInfoStudentId(studentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserStudentProfileSettingsBasicInfoStudentId(studentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1830,13 +1799,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
-apiInstance.getUserStudentProfileSettingsNotificationSettingsStudentId(studentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserStudentProfileSettingsNotificationSettingsStudentId(studentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1879,13 +1847,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
-apiInstance.getUserStudentProfileSettingsPaymentMethodsStudentId(studentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserStudentProfileSettingsPaymentMethodsStudentId(studentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1928,13 +1895,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
-apiInstance.getUserStudentProfileSettingsStudentId(studentId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUserStudentProfileSettingsStudentId(studentId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -1976,13 +1942,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.getUsersLessons((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.getUsersLessons().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2015,19 +1980,22 @@ Coach can use this endpoint to edit their location.
 
 ```javascript
 import LytesnapBackendApi from 'lytesnap_backend_api';
+let defaultClient = LytesnapBackendApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let locationId = "locationId_example"; // String | 
 let opts = {
   'locationRequestOptional': {"address":"string","city":"string","state":"string","zipcode":0,"name":"string"} // LocationRequestOptional | Location Request Model
 };
-apiInstance.patchLocationLocationId(locationId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.patchLocationLocationId(locationId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2044,7 +2012,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -2074,13 +2042,12 @@ let coachId = "coachId_example"; // String |
 let opts = {
   'inlineObject9': new LytesnapBackendApi.InlineObject9() // InlineObject9 | 
 };
-apiInstance.patchUserAdminCertificateCoachId(coachId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.patchUserAdminCertificateCoachId(coachId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2126,13 +2093,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject12': new LytesnapBackendApi.InlineObject12() // InlineObject12 | 
 };
-apiInstance.patchUserAdminProfile(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.patchUserAdminProfile(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2174,13 +2140,12 @@ let coachId = "coachId_example"; // String |
 let opts = {
   'inlineObject11': new LytesnapBackendApi.InlineObject11() // InlineObject11 | 
 };
-apiInstance.patchUserAdminProfileCheckCoachId(coachId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.patchUserAdminProfileCheckCoachId(coachId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2223,13 +2188,12 @@ let availabilityId = "availabilityId_example"; // String |
 let opts = {
   'coachAvailabilityPut': new LytesnapBackendApi.CoachAvailabilityPut() // CoachAvailabilityPut | 
 };
-apiInstance.patchUserCoachAvailability(availabilityId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.patchUserCoachAvailability(availabilityId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2275,13 +2239,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject': [new LytesnapBackendApi.InlineObject()] // [InlineObject] | 
 };
-apiInstance.patchUserCoachNotificationsRead(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.patchUserCoachNotificationsRead(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2322,13 +2285,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject2': new LytesnapBackendApi.InlineObject2() // InlineObject2 | 
 };
-apiInstance.patchUserCoachProfileSettings(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.patchUserCoachProfileSettings(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2369,13 +2331,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject5': new LytesnapBackendApi.InlineObject5() // InlineObject5 | 
 };
-apiInstance.patchUserCoachProfileSettingsNotifications(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.patchUserCoachProfileSettingsNotifications(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2420,13 +2381,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'coachProfile': new LytesnapBackendApi.CoachProfile() // CoachProfile | 
 };
-apiInstance.postCoachProfile(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postCoachProfile(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2471,13 +2431,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'locationRequest': new LytesnapBackendApi.LocationRequest() // LocationRequest | location request object
 };
-apiInstance.postLocation(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postLocation(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2523,13 +2482,12 @@ let coachId = "coachId_example"; // String |
 let opts = {
   'inlineObject8': new LytesnapBackendApi.InlineObject8() // InlineObject8 | 
 };
-apiInstance.postUserAdminCertificateCoachId(coachId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserAdminCertificateCoachId(coachId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2571,13 +2529,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject7': new LytesnapBackendApi.InlineObject7() // InlineObject7 | 
 };
-apiInstance.postUserAdminDashboardFilter(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.postUserAdminDashboardFilter(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2623,13 +2580,12 @@ let coachId = "coachId_example"; // String |
 let opts = {
   'inlineObject10': new LytesnapBackendApi.InlineObject10() // InlineObject10 | 
 };
-apiInstance.postUserAdminProfileCheckCoachId(coachId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.postUserAdminProfileCheckCoachId(coachId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2676,13 +2632,12 @@ let userId = "userId_example"; // String | This is the userID to send warning em
 let opts = {
   'message': "message_example" // String | This is an optional email message for the user. Otherwise, it will use the default emails.
 };
-apiInstance.postUserAdminSendWarningEmail(userId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.postUserAdminSendWarningEmail(userId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2724,13 +2679,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'coachAvailability': new LytesnapBackendApi.CoachAvailability() // CoachAvailability | 
 };
-apiInstance.postUserCoachAvailability(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserCoachAvailability(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2775,13 +2729,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject1': new LytesnapBackendApi.InlineObject1() // InlineObject1 | 
 };
-apiInstance.postUserCoachAvailabilityInfo(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserCoachAvailabilityInfo(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2826,13 +2779,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject3': new LytesnapBackendApi.InlineObject3() // InlineObject3 | 
 };
-apiInstance.postUserCoachProfileSettingsPayout(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.postUserCoachProfileSettingsPayout(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2877,13 +2829,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'coachSession': new LytesnapBackendApi.CoachSession() // CoachSession | 
 };
-apiInstance.postUserCoachSession(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserCoachSession(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2928,13 +2879,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'filter': new LytesnapBackendApi.Filter() // Filter | Filter data in JSON
 };
-apiInstance.postUserFilter(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserFilter(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -2980,13 +2930,12 @@ let lessonId = "lessonId_example"; // String |
 let opts = {
   'lessonCancelRequest': new LytesnapBackendApi.LessonCancelRequest() // LessonCancelRequest | Lesson Cancel Request
 };
-apiInstance.postUserLessonLessonIdCancelRequest(lessonId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserLessonLessonIdCancelRequest(lessonId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3028,13 +2977,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'lesson': new LytesnapBackendApi.Lesson() // Lesson | User detailed booking information
 };
-apiInstance.postUserLessons(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserLessons(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3080,13 +3028,12 @@ let lessonId = "lessonId_example"; // String |
 let opts = {
   'lessonProblemReport': new LytesnapBackendApi.LessonProblemReport() // LessonProblemReport | Report a problem
 };
-apiInstance.postUserLessonsLessonIdProblemReport(lessonId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserLessonsLessonIdProblemReport(lessonId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3132,13 +3079,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'studentNotificationFilter': new LytesnapBackendApi.StudentNotificationFilter() // StudentNotificationFilter | 
 };
-apiInstance.postUserStudentNotificationFilter(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.postUserStudentNotificationFilter(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3183,13 +3129,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'studentProfilePost': new LytesnapBackendApi.StudentProfilePost() // StudentProfilePost | 
 };
-apiInstance.postUserStudentProfileSettingsProfileCreate(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.postUserStudentProfileSettingsProfileCreate(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3235,13 +3180,12 @@ let opts = {
   'userId': "userId_example", // String | This is the userID to ban
   'reason': "reason_example" // String | This is the reason why the user was banned
 };
-apiInstance.putUserAdminBanUser(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserAdminBanUser(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3285,13 +3229,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let userId = "userId_example"; // String | This is the userID to unban
-apiInstance.putUserAdminUnbanUser(userId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserAdminUnbanUser(userId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3336,13 +3279,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject': new LytesnapBackendApi.InlineObject() // InlineObject | 
 };
-apiInstance.putUserCoachAvailabilityOptions(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserCoachAvailabilityOptions(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3387,13 +3329,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'body': {key: null} // Object | 
 };
-apiInstance.putUserCoachProfile(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserCoachProfile(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3438,13 +3379,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject6': new LytesnapBackendApi.InlineObject6() // InlineObject6 | 
 };
-apiInstance.putUserCoachProfileSettingsDisable(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserCoachProfileSettingsDisable(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3486,13 +3426,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.putUserCoachProfileSettingsEnable((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserCoachProfileSettingsEnable().then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3534,13 +3473,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'inlineObject4': new LytesnapBackendApi.InlineObject4() // InlineObject4 | 
 };
-apiInstance.putUserCoachProfileSettingsNotifications(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.putUserCoachProfileSettingsNotifications(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3579,13 +3517,12 @@ import LytesnapBackendApi from 'lytesnap_backend_api';
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let paymentMethodId = "paymentMethodId_example"; // String | 
-apiInstance.putUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3630,13 +3567,12 @@ let apiInstance = new LytesnapBackendApi.DefaultApi();
 let opts = {
   'coachSessionPut': new LytesnapBackendApi.CoachSessionPut() // CoachSessionPut | 
 };
-apiInstance.putUserCoachSession(opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.putUserCoachSession(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3682,13 +3618,12 @@ let studentId = "studentId_example"; // String |
 let opts = {
   'studentNotificationFilter': new LytesnapBackendApi.StudentNotificationFilter() // StudentNotificationFilter | 
 };
-apiInstance.putUserStudentNotificationFilterStudentId(studentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserStudentNotificationFilterStudentId(studentId, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3735,13 +3670,12 @@ let studentId = "studentId_example"; // String |
 let opts = {
   'studentProfileBasicInfo': new LytesnapBackendApi.StudentProfileBasicInfo() // StudentProfileBasicInfo | 
 };
-apiInstance.putUserStudentProfileSettingsBasicInfo(studentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.putUserStudentProfileSettingsBasicInfo(studentId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3784,13 +3718,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.putUserStudentProfileSettingsDisable((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserStudentProfileSettingsDisable().then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3829,13 +3762,12 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new LytesnapBackendApi.DefaultApi();
-apiInstance.putUserStudentProfileSettingsEnable((error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
+apiInstance.putUserStudentProfileSettingsEnable().then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3878,13 +3810,12 @@ let studentId = "studentId_example"; // String |
 let opts = {
   'studentProfileNotifications': new LytesnapBackendApi.StudentProfileNotifications() // StudentProfileNotifications | 
 };
-apiInstance.putUserStudentProfileSettingsNotificationSettings(studentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.putUserStudentProfileSettingsNotificationSettings(studentId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3931,13 +3862,12 @@ let studentId = "studentId_example"; // String |
 let opts = {
   'studentPaymentMethod': new LytesnapBackendApi.StudentPaymentMethod() // StudentPaymentMethod | 
 };
-apiInstance.putUserStudentProfileSettingsPayment(studentId, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.putUserStudentProfileSettingsPayment(studentId, opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters
@@ -3982,13 +3912,12 @@ bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 let apiInstance = new LytesnapBackendApi.DefaultApi();
 let studentId = "studentId_example"; // String | 
 let paymentMethodId = "paymentMethodId_example"; // String | 
-apiInstance.putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
+apiInstance.putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
 });
+
 ```
 
 ### Parameters

@@ -1,6 +1,6 @@
 {
   "name": "lytesnap_backend_api",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "This_document_details_all_the_API_endpoints_that_are_consumed_exclusively_by_lytesnap_frontend_",
   "license": "EULA",
   "main": "dist/index.js",

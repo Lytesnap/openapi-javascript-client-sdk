@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachPaymentMethod model module.
  * @module model/CoachPaymentMethod
- * @version 1.0.0
+ * @version 1.0.4
  */
 class CoachPaymentMethod {
     /**

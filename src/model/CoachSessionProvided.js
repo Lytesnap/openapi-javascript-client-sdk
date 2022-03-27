@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachSessionProvided model module.
  * @module model/CoachSessionProvided
- * @version 1.0.0
+ * @version 1.0.4
  */
 class CoachSessionProvided {
     /**

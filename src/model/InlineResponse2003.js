@@ -17,7 +17,7 @@ import CoachNotification from './CoachNotification';
 /**
  * The InlineResponse2003 model module.
  * @module model/InlineResponse2003
- * @version 1.0.0
+ * @version 1.0.4
  */
 class InlineResponse2003 {
     /**

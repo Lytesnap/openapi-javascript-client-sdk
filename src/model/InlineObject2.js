@@ -17,7 +17,7 @@ import CoachProfileSettingsPrivacyResetPassword from './CoachProfileSettingsPriv
 /**
  * The InlineObject2 model module.
  * @module model/InlineObject2
- * @version 1.0.0
+ * @version 1.0.4
  */
 class InlineObject2 {
     /**

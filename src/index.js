@@ -140,7 +140,7 @@ import DefaultApi from './api/DefaultApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.0
+* @version 1.0.4
 */
 export {
     /**

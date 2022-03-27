@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2008CancellationReason model module.
  * @module model/InlineResponse2008CancellationReason
- * @version 1.0.0
+ * @version 1.0.4
  */
 class InlineResponse2008CancellationReason {
     /**

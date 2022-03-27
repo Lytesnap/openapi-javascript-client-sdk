@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachProfileTrainingLocations model module.
  * @module model/CoachProfileTrainingLocations
- * @version 1.0.0
+ * @version 1.0.4
  */
 class CoachProfileTrainingLocations {
     /**

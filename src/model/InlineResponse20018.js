@@ -17,7 +17,7 @@ import InlineResponse20018Data from './InlineResponse20018Data';
 /**
  * The InlineResponse20018 model module.
  * @module model/InlineResponse20018
- * @version 1.0.0
+ * @version 1.0.4
  */
 class InlineResponse20018 {
     /**

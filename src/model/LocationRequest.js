@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LocationRequest model module.
  * @module model/LocationRequest
- * @version 1.0.0
+ * @version 1.0.4
  */
 class LocationRequest {
     /**

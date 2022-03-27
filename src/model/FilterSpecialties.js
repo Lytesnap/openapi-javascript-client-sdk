@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FilterSpecialties model module.
  * @module model/FilterSpecialties
- * @version 1.0.0
+ * @version 1.0.4
  */
 class FilterSpecialties {
     /**

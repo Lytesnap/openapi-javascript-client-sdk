@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FilterFocusTags model module.
  * @module model/FilterFocusTags
- * @version 1.0.0
+ * @version 1.0.4
  */
 class FilterFocusTags {
     /**

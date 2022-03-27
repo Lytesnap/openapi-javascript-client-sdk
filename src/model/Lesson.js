@@ -17,7 +17,7 @@ import LessonStudentInfo from './LessonStudentInfo';
 /**
  * The Lesson model module.
  * @module model/Lesson
- * @version 1.0.0
+ * @version 1.0.4
  */
 class Lesson {
     /**

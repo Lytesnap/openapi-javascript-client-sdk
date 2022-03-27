@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FilterSchedule model module.
  * @module model/FilterSchedule
- * @version 1.0.0
+ * @version 1.0.4
  */
 class FilterSchedule {
     /**

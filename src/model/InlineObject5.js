@@ -17,7 +17,7 @@ import InlineResponse2001SomeoneMessagedMe from './InlineResponse2001SomeoneMess
 /**
  * The InlineObject5 model module.
  * @module model/InlineObject5
- * @version 1.0.0
+ * @version 1.0.4
  */
 class InlineObject5 {
     /**

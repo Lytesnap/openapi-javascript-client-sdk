@@ -17,7 +17,7 @@ import InlineResponse500Errors from './InlineResponse500Errors';
 /**
  * The InlineResponse500 model module.
  * @module model/InlineResponse500
- * @version 1.0.0
+ * @version 1.0.4
  */
 class InlineResponse500 {
     /**

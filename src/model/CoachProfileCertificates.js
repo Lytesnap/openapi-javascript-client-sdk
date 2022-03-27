@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachProfileCertificates model module.
  * @module model/CoachProfileCertificates
- * @version 1.0.0
+ * @version 1.0.4
  */
 class CoachProfileCertificates {
     /**

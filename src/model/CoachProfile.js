@@ -21,7 +21,7 @@ import CoachProfileTrainingLocations from './CoachProfileTrainingLocations';
 /**
  * The CoachProfile model module.
  * @module model/CoachProfile
- * @version 1.0.0
+ * @version 1.0.4
  */
 class CoachProfile {
     /**
