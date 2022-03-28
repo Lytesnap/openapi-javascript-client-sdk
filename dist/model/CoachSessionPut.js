@@ -22,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachSessionPut model module.
  * @module model/CoachSessionPut
- * @version 1.0.0
+ * @version 1.0.4
  */
 var CoachSessionPut = /*#__PURE__*/function () {
   /**

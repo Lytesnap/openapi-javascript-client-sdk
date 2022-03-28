@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StudentPaymentMethod model module.
  * @module model/StudentPaymentMethod
- * @version 1.0.0
+ * @version 1.0.4
  */
 var StudentPaymentMethod = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LocationResponse model module.
  * @module model/LocationResponse
- * @version 1.0.0
+ * @version 1.0.4
  */
 var LocationResponse = /*#__PURE__*/function () {
   /**

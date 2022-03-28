@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachProfile model module.
  * @module model/CoachProfile
- * @version 1.0.0
+ * @version 1.0.4
  */
 var CoachProfile = /*#__PURE__*/function () {
   /**

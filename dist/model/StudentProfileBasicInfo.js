@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StudentProfileBasicInfo model module.
  * @module model/StudentProfileBasicInfo
- * @version 1.0.0
+ * @version 1.0.4
  */
 var StudentProfileBasicInfo = /*#__PURE__*/function () {
   /**

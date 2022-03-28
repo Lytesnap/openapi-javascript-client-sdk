@@ -138,7 +138,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Default service.
 * @module api/DefaultApi
-* @version 1.0.0
+* @version 1.0.4
 */
 var DefaultApi = /*#__PURE__*/function () {
   /**
@@ -154,24 +154,16 @@ var DefaultApi = /*#__PURE__*/function () {
     this.apiClient = apiClient || _ApiClient["default"].instance;
   }
   /**
-   * Callback function to receive the result of the deleteLocationLocationId operation.
-   * @callback module:api/DefaultApi~deleteLocationLocationIdCallback
-   * @param {String} error Error message, if any.
-   * @param data This operation does not return a value.
-   * @param {String} response The complete HTTP response.
-   */
-
-  /**
    * Delete location information by locationId
    * Coach can use this endpoint to delete their location.
    * @param {String} locationId 
-   * @param {module:api/DefaultApi~deleteLocationLocationIdCallback} callback The callback function, accepting three arguments: error, data, response
+   * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
    */
 
 
   _createClass(DefaultApi, [{
-    key: "deleteLocationLocationId",
-    value: function deleteLocationLocationId(locationId, callback) {
+    key: "deleteLocationLocationIdWithHttpInfo",
+    value: function deleteLocationLocationIdWithHttpInfo(locationId) {
       var postBody = null; // verify the required parameter 'locationId' is set
 
       if (locationId === undefined || locationId === null) {
@@ -188,26 +180,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/location/{locationId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/location/{locationId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the deleteUserCoachAvailabilityAvailabilityId operation.
-     * @callback module:api/DefaultApi~deleteUserCoachAvailabilityAvailabilityIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Deletes a coach availability by ID
-     * @param {String} availabilityId 
-     * @param {module:api/DefaultApi~deleteUserCoachAvailabilityAvailabilityIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * Delete location information by locationId
+     * Coach can use this endpoint to delete their location.
+     * @param {String} locationId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
-    key: "deleteUserCoachAvailabilityAvailabilityId",
-    value: function deleteUserCoachAvailabilityAvailabilityId(availabilityId, callback) {
+    key: "deleteLocationLocationId",
+    value: function deleteLocationLocationId(locationId) {
+      return this.deleteLocationLocationIdWithHttpInfo(locationId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Deletes a coach availability by ID
+     * @param {String} availabilityId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+
+  }, {
+    key: "deleteUserCoachAvailabilityAvailabilityIdWithHttpInfo",
+    value: function deleteUserCoachAvailabilityAvailabilityIdWithHttpInfo(availabilityId) {
       var postBody = null; // verify the required parameter 'availabilityId' is set
 
       if (availabilityId === undefined || availabilityId === null) {
@@ -224,26 +221,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/coach/availability/{availabilityId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability/{availabilityId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the deleteUserCoachProfileSettingsPayoutPaymentMethodId operation.
-     * @callback module:api/DefaultApi~deleteUserCoachProfileSettingsPayoutPaymentMethodIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Deletes a coach availability by ID
+     * @param {String} availabilityId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "deleteUserCoachAvailabilityAvailabilityId",
+    value: function deleteUserCoachAvailabilityAvailabilityId(availabilityId) {
+      return this.deleteUserCoachAvailabilityAvailabilityIdWithHttpInfo(availabilityId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Coach delete payment method Id
      * Coach deletes their listed payment method
      * @param {String} paymentMethodId 
-     * @param {module:api/DefaultApi~deleteUserCoachProfileSettingsPayoutPaymentMethodIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "deleteUserCoachProfileSettingsPayoutPaymentMethodId",
-    value: function deleteUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId, callback) {
+    key: "deleteUserCoachProfileSettingsPayoutPaymentMethodIdWithHttpInfo",
+    value: function deleteUserCoachProfileSettingsPayoutPaymentMethodIdWithHttpInfo(paymentMethodId) {
       var postBody = null; // verify the required parameter 'paymentMethodId' is set
 
       if (paymentMethodId === undefined || paymentMethodId === null) {
@@ -260,27 +262,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/payout/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/payout/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the deleteUserFilterFilterName operation.
-     * @callback module:api/DefaultApi~deleteUserFilterFilterNameCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Coach delete payment method Id
+     * Coach deletes their listed payment method
+     * @param {String} paymentMethodId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "deleteUserCoachProfileSettingsPayoutPaymentMethodId",
+    value: function deleteUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId) {
+      return this.deleteUserCoachProfileSettingsPayoutPaymentMethodIdWithHttpInfo(paymentMethodId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Delete user filter by ID
      * Delete user filter by name
      * @param {String} filterId 
-     * @param {module:api/DefaultApi~deleteUserFilterFilterNameCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "deleteUserFilterFilterName",
-    value: function deleteUserFilterFilterName(filterId, callback) {
+    key: "deleteUserFilterFilterNameWithHttpInfo",
+    value: function deleteUserFilterFilterNameWithHttpInfo(filterId) {
       var postBody = null; // verify the required parameter 'filterId' is set
 
       if (filterId === undefined || filterId === null) {
@@ -297,28 +304,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json', 'application/xml'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/filter/{filterId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/filter/{filterId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId operation.
-     * @callback module:api/DefaultApi~deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Delete user filter by ID
+     * Delete user filter by name
+     * @param {String} filterId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "deleteUserFilterFilterName",
+    value: function deleteUserFilterFilterName(filterId) {
+      return this.deleteUserFilterFilterNameWithHttpInfo(filterId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Delete payment method by payment ID
      * Delete payment method by ID
      * @param {String} studentId 
      * @param {String} paymentMethodId 
-     * @param {module:api/DefaultApi~deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId",
-    value: function deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId, callback) {
+    key: "deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdWithHttpInfo",
+    value: function deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdWithHttpInfo(studentId, paymentMethodId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -341,26 +353,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getCoach operation.
-     * @callback module:api/DefaultApi~getCoachCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CoachProfile} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get coach's own profile
-     * This fetches the information of the coach profile
-     * @param {module:api/DefaultApi~getCoachCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CoachProfile}
+     * Delete payment method by payment ID
+     * Delete payment method by ID
+     * @param {String} studentId 
+     * @param {String} paymentMethodId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
   }, {
-    key: "getCoach",
-    value: function getCoach(callback) {
+    key: "deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId",
+    value: function deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId) {
+      return this.deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdWithHttpInfo(studentId, paymentMethodId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get coach's own profile
+     * This fetches the information of the coach profile
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CoachProfile} and HTTP response
+     */
+
+  }, {
+    key: "getCoachWithHttpInfo",
+    value: function getCoachWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -370,26 +388,30 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _CoachProfile["default"];
-      return this.apiClient.callApi('/coach/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getLocation operation.
-     * @callback module:api/DefaultApi~getLocationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20017} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get all saved locations by coach
-     * Coach can invoke this endpoint to get all the training locations he/she saved in the pass
-     * @param {module:api/DefaultApi~getLocationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20017}
+     * Get coach's own profile
+     * This fetches the information of the coach profile
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CoachProfile}
      */
 
   }, {
-    key: "getLocation",
-    value: function getLocation(callback) {
+    key: "getCoach",
+    value: function getCoach() {
+      return this.getCoachWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get all saved locations by coach
+     * Coach can invoke this endpoint to get all the training locations he/she saved in the pass
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20017} and HTTP response
+     */
+
+  }, {
+    key: "getLocationWithHttpInfo",
+    value: function getLocationWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -399,27 +421,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse10["default"];
-      return this.apiClient.callApi('/location', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/location', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getLocationLocationId operation.
-     * @callback module:api/DefaultApi~getLocationLocationIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/LocationResponse} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get all saved locations by coach
+     * Coach can invoke this endpoint to get all the training locations he/she saved in the pass
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20017}
      */
 
+  }, {
+    key: "getLocation",
+    value: function getLocation() {
+      return this.getLocationWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get location information by locationId
      * Both student and coach can use this endpoint to fetch location information.
      * @param {String} locationId 
-     * @param {module:api/DefaultApi~getLocationLocationIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/LocationResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LocationResponse} and HTTP response
      */
 
   }, {
-    key: "getLocationLocationId",
-    value: function getLocationLocationId(locationId, callback) {
+    key: "getLocationLocationIdWithHttpInfo",
+    value: function getLocationLocationIdWithHttpInfo(locationId) {
       var postBody = null; // verify the required parameter 'locationId' is set
 
       if (locationId === undefined || locationId === null) {
@@ -436,16 +462,22 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _LocationResponse["default"];
-      return this.apiClient.callApi('/location/{locationId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/location/{locationId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdmin operation.
-     * @callback module:api/DefaultApi~getUserAdminCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<Number>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get location information by locationId
+     * Both student and coach can use this endpoint to fetch location information.
+     * @param {String} locationId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LocationResponse}
      */
 
+  }, {
+    key: "getLocationLocationId",
+    value: function getLocationLocationId(locationId) {
+      return this.getLocationLocationIdWithHttpInfo(locationId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get Bookings
      * Get list of bookings
@@ -455,13 +487,12 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.endTime This is the endTime of the booking
      * @param {module:model/String} opts.bookingType This is your booking parameter
      * @param {String} opts.filterID This is the filter id of the filter that you saved
-     * @param {module:api/DefaultApi~getUserAdminCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Number>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<Number>} and HTTP response
      */
 
   }, {
-    key: "getUserAdmin",
-    value: function getUserAdmin(opts, callback) {
+    key: "getUserAdminWithHttpInfo",
+    value: function getUserAdminWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -478,16 +509,27 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = ['Number'];
-      return this.apiClient.callApi('/admin/bookings', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/bookings', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminBookingLocationPercentage operation.
-     * @callback module:api/DefaultApi~getUserAdminBookingLocationPercentageCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2006} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Bookings
+     * Get list of bookings
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.location This is the city locations of the bookings
+     * @param {String} opts.startTime This is the startTime of the booking range
+     * @param {String} opts.endTime This is the endTime of the booking
+     * @param {module:model/String} opts.bookingType This is your booking parameter
+     * @param {String} opts.filterID This is the filter id of the filter that you saved
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<Number>}
      */
 
+  }, {
+    key: "getUserAdmin",
+    value: function getUserAdmin(opts) {
+      return this.getUserAdminWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Your GET endpoint
      * Get dashboard location percentage
@@ -496,13 +538,12 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.startTime This is the start range of the period
      * @param {String} opts.endTime This is the end range of the period
      * @param {Number} opts.numItems This determines how many results you want to return
-     * @param {module:api/DefaultApi~getUserAdminBookingLocationPercentageCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
      */
 
   }, {
-    key: "getUserAdminBookingLocationPercentage",
-    value: function getUserAdminBookingLocationPercentage(reachedType, opts, callback) {
+    key: "getUserAdminBookingLocationPercentageWithHttpInfo",
+    value: function getUserAdminBookingLocationPercentageWithHttpInfo(reachedType, opts) {
       opts = opts || {};
       var postBody = null; // verify the required parameter 'reachedType' is set
 
@@ -523,29 +564,38 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse16["default"];
-      return this.apiClient.callApi('/admin/dashboard-location-percentage', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/dashboard-location-percentage', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminCertificate operation.
-     * @callback module:api/DefaultApi~getUserAdminCertificateCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse20011>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Your GET endpoint
+     * Get dashboard location percentage
+     * @param {module:model/String} reachedType This is the type of information that you want to fetch
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.startTime This is the start range of the period
+     * @param {String} opts.endTime This is the end range of the period
+     * @param {Number} opts.numItems This determines how many results you want to return
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
      */
 
+  }, {
+    key: "getUserAdminBookingLocationPercentage",
+    value: function getUserAdminBookingLocationPercentage(reachedType, opts) {
+      return this.getUserAdminBookingLocationPercentageWithHttpInfo(reachedType, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin get certificates
      * Get coach's certificates
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status This is the filter for requests
      * @param {String} opts.numItems This is the number of items to return
-     * @param {module:api/DefaultApi~getUserAdminCertificateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse20011>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20011>} and HTTP response
      */
 
   }, {
-    key: "getUserAdminCertificate",
-    value: function getUserAdminCertificate(opts, callback) {
+    key: "getUserAdminCertificateWithHttpInfo",
+    value: function getUserAdminCertificateWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -559,27 +609,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse4["default"]];
-      return this.apiClient.callApi('/admin/certificate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/certificate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminCertificateCoachId operation.
-     * @callback module:api/DefaultApi~getUserAdminCertificateCoachIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse20012>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin get certificates
+     * Get coach's certificates
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.status This is the filter for requests
+     * @param {String} opts.numItems This is the number of items to return
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20011>}
      */
 
+  }, {
+    key: "getUserAdminCertificate",
+    value: function getUserAdminCertificate(opts) {
+      return this.getUserAdminCertificateWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin get certificate from coachId
      * Retrieve coach certificate
      * @param {String} coachId 
-     * @param {module:api/DefaultApi~getUserAdminCertificateCoachIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse20012>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20012>} and HTTP response
      */
 
   }, {
-    key: "getUserAdminCertificateCoachId",
-    value: function getUserAdminCertificateCoachId(coachId, callback) {
+    key: "getUserAdminCertificateCoachIdWithHttpInfo",
+    value: function getUserAdminCertificateCoachIdWithHttpInfo(coachId) {
       var postBody = null; // verify the required parameter 'coachId' is set
 
       if (coachId === undefined || coachId === null) {
@@ -596,27 +653,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse5["default"]];
-      return this.apiClient.callApi('/admin/certificate/{coachId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/certificate/{coachId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminComplaintUserId operation.
-     * @callback module:api/DefaultApi~getUserAdminComplaintUserIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20010} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin get certificate from coachId
+     * Retrieve coach certificate
+     * @param {String} coachId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20012>}
      */
 
+  }, {
+    key: "getUserAdminCertificateCoachId",
+    value: function getUserAdminCertificateCoachId(coachId) {
+      return this.getUserAdminCertificateCoachIdWithHttpInfo(coachId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get complaint from user
      * Get user complains
      * @param {String} userId 
-     * @param {module:api/DefaultApi~getUserAdminComplaintUserIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20010}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20010} and HTTP response
      */
 
   }, {
-    key: "getUserAdminComplaintUserId",
-    value: function getUserAdminComplaintUserId(userId, callback) {
+    key: "getUserAdminComplaintUserIdWithHttpInfo",
+    value: function getUserAdminComplaintUserIdWithHttpInfo(userId) {
       var postBody = null; // verify the required parameter 'userId' is set
 
       if (userId === undefined || userId === null) {
@@ -633,26 +695,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse3["default"];
-      return this.apiClient.callApi('/admin/complaint/{userId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/complaint/{userId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminDashboardFilter operation.
-     * @callback module:api/DefaultApi~getUserAdminDashboardFilterCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse2007>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * This get the dashboard filter names
-     * Get admin dashbord filter names
-     * @param {module:api/DefaultApi~getUserAdminDashboardFilterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse2007>}
+     * Get complaint from user
+     * Get user complains
+     * @param {String} userId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20010}
      */
 
   }, {
-    key: "getUserAdminDashboardFilter",
-    value: function getUserAdminDashboardFilter(callback) {
+    key: "getUserAdminComplaintUserId",
+    value: function getUserAdminComplaintUserId(userId) {
+      return this.getUserAdminComplaintUserIdWithHttpInfo(userId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * This get the dashboard filter names
+     * Get admin dashbord filter names
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2007>} and HTTP response
+     */
+
+  }, {
+    key: "getUserAdminDashboardFilterWithHttpInfo",
+    value: function getUserAdminDashboardFilterWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -662,16 +729,21 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse17["default"]];
-      return this.apiClient.callApi('/admin/dashboard-filter', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/dashboard-filter', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminDashboardLocationState operation.
-     * @callback module:api/DefaultApi~getUserAdminDashboardLocationStateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2005} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * This get the dashboard filter names
+     * Get admin dashbord filter names
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2007>}
      */
 
+  }, {
+    key: "getUserAdminDashboardFilter",
+    value: function getUserAdminDashboardFilter() {
+      return this.getUserAdminDashboardFilterWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Your GET endpoint
      * Retrieve dashboard location
@@ -682,13 +754,12 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.startTime This is the start range of the period
      * @param {String} opts.endTime This is the end range of the period
      * @param {String} opts.filterID This is the filter id that represents the saved filter
-     * @param {module:api/DefaultApi~getUserAdminDashboardLocationStateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
      */
 
   }, {
-    key: "getUserAdminDashboardLocationState",
-    value: function getUserAdminDashboardLocationState(state, reachedType, opts, callback) {
+    key: "getUserAdminDashboardLocationStateWithHttpInfo",
+    value: function getUserAdminDashboardLocationStateWithHttpInfo(state, reachedType, opts) {
       opts = opts || {};
       var postBody = null; // verify the required parameter 'state' is set
 
@@ -716,26 +787,37 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse15["default"];
-      return this.apiClient.callApi('/admin/dashboard-location', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/dashboard-location', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminProfile operation.
-     * @callback module:api/DefaultApi~getUserAdminProfileCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20016} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Admin get profile
-     * Get profile of admin
-     * @param {module:api/DefaultApi~getUserAdminProfileCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20016}
+     * Your GET endpoint
+     * Retrieve dashboard location
+     * @param {String} state This is the state from where to fetch data
+     * @param {module:model/String} reachedType This is the type of information that you want to fetch
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.city This is an optional field to pick the city
+     * @param {String} opts.startTime This is the start range of the period
+     * @param {String} opts.endTime This is the end range of the period
+     * @param {String} opts.filterID This is the filter id that represents the saved filter
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
      */
 
   }, {
-    key: "getUserAdminProfile",
-    value: function getUserAdminProfile(callback) {
+    key: "getUserAdminDashboardLocationState",
+    value: function getUserAdminDashboardLocationState(state, reachedType, opts) {
+      return this.getUserAdminDashboardLocationStateWithHttpInfo(state, reachedType, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Admin get profile
+     * Get profile of admin
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20016} and HTTP response
+     */
+
+  }, {
+    key: "getUserAdminProfileWithHttpInfo",
+    value: function getUserAdminProfileWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -745,29 +827,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse9["default"];
-      return this.apiClient.callApi('/admin/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminProfileCheck operation.
-     * @callback module:api/DefaultApi~getUserAdminProfileCheckCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse20013>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin get profile
+     * Get profile of admin
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20016}
      */
 
+  }, {
+    key: "getUserAdminProfile",
+    value: function getUserAdminProfile() {
+      return this.getUserAdminProfileWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin get Profile-Check
      * Get the status of the coach's profile check
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status This is the profiles to filter on 
      * @param {String} opts.numItems This is the number of items that you want to return
-     * @param {module:api/DefaultApi~getUserAdminProfileCheckCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse20013>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20013>} and HTTP response
      */
 
   }, {
-    key: "getUserAdminProfileCheck",
-    value: function getUserAdminProfileCheck(opts, callback) {
+    key: "getUserAdminProfileCheckWithHttpInfo",
+    value: function getUserAdminProfileCheckWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -781,28 +867,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse6["default"]];
-      return this.apiClient.callApi('/admin/profile-check', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/profile-check', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminUserComplaints operation.
-     * @callback module:api/DefaultApi~getUserAdminUserComplaintsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse2009>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin get Profile-Check
+     * Get the status of the coach's profile check
+     * @param {Object} opts Optional parameters
+     * @param {module:model/String} opts.status This is the profiles to filter on 
+     * @param {String} opts.numItems This is the number of items that you want to return
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20013>}
      */
 
+  }, {
+    key: "getUserAdminProfileCheck",
+    value: function getUserAdminProfileCheck(opts) {
+      return this.getUserAdminProfileCheckWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin gets user complaints
      * Get users complaints
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of items that you want to fetch
-     * @param {module:api/DefaultApi~getUserAdminUserComplaintsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse2009>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2009>} and HTTP response
      */
 
   }, {
-    key: "getUserAdminUserComplaints",
-    value: function getUserAdminUserComplaints(opts, callback) {
+    key: "getUserAdminUserComplaintsWithHttpInfo",
+    value: function getUserAdminUserComplaintsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -815,16 +908,23 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse19["default"]];
-      return this.apiClient.callApi('/admin/complaint', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/complaint', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminUserFeedback operation.
-     * @callback module:api/DefaultApi~getUserAdminUserFeedbackCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse20014>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin gets user complaints
+     * Get users complaints
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.numItems This is the number of items that you want to fetch
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2009>}
      */
 
+  }, {
+    key: "getUserAdminUserComplaints",
+    value: function getUserAdminUserComplaints(opts) {
+      return this.getUserAdminUserComplaintsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin get user feedback
      * Get list of user feedback
@@ -832,13 +932,12 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Number} opts.rating This is used to filter feature by rating
      * @param {String} opts.startTime This is the start time of the range
      * @param {String} opts.endTime This is the end time of the range
-     * @param {module:api/DefaultApi~getUserAdminUserFeedbackCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse20014>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20014>} and HTTP response
      */
 
   }, {
-    key: "getUserAdminUserFeedback",
-    value: function getUserAdminUserFeedback(opts, callback) {
+    key: "getUserAdminUserFeedbackWithHttpInfo",
+    value: function getUserAdminUserFeedbackWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -853,27 +952,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse7["default"]];
-      return this.apiClient.callApi('/admin/user-feedback', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/user-feedback', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminUserFeedbackFeedbackId operation.
-     * @callback module:api/DefaultApi~getUserAdminUserFeedbackFeedbackIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse20015>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin get user feedback
+     * Get list of user feedback
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.rating This is used to filter feature by rating
+     * @param {String} opts.startTime This is the start time of the range
+     * @param {String} opts.endTime This is the end time of the range
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20014>}
      */
 
+  }, {
+    key: "getUserAdminUserFeedback",
+    value: function getUserAdminUserFeedback(opts) {
+      return this.getUserAdminUserFeedbackWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin get feedback for specific feature
      * Get feedback for a specific feature
      * @param {String} featureId 
-     * @param {module:api/DefaultApi~getUserAdminUserFeedbackFeedbackIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse20015>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20015>} and HTTP response
      */
 
   }, {
-    key: "getUserAdminUserFeedbackFeedbackId",
-    value: function getUserAdminUserFeedbackFeedbackId(featureId, callback) {
+    key: "getUserAdminUserFeedbackFeedbackIdWithHttpInfo",
+    value: function getUserAdminUserFeedbackFeedbackIdWithHttpInfo(featureId) {
       var postBody = null; // verify the required parameter 'featureId' is set
 
       if (featureId === undefined || featureId === null) {
@@ -890,16 +997,22 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse8["default"]];
-      return this.apiClient.callApi('/admin/user-feedback/{featureId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/user-feedback/{featureId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserAdminUsersManagement operation.
-     * @callback module:api/DefaultApi~getUserAdminUsersManagementCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2008} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin get feedback for specific feature
+     * Get feedback for a specific feature
+     * @param {String} featureId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20015>}
      */
 
+  }, {
+    key: "getUserAdminUserFeedbackFeedbackId",
+    value: function getUserAdminUserFeedbackFeedbackId(featureId) {
+      return this.getUserAdminUserFeedbackFeedbackIdWithHttpInfo(featureId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Your GET endpoint
      * Get user management
@@ -909,13 +1022,12 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Number} opts.rating This is the rating to filter
      * @param {module:model/String} opts.userType This is the user type to filter
      * @param {Number} opts.numItems This is the number of items to return
-     * @param {module:api/DefaultApi~getUserAdminUsersManagementCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2008}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
      */
 
   }, {
-    key: "getUserAdminUsersManagement",
-    value: function getUserAdminUsersManagement(opts, callback) {
+    key: "getUserAdminUsersManagementWithHttpInfo",
+    value: function getUserAdminUsersManagementWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -932,29 +1044,39 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse18["default"];
-      return this.apiClient.callApi('/admin/users-management', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/users-management', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachAvailability operation.
-     * @callback module:api/DefaultApi~getUserCoachAvailabilityCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<Object>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Your GET endpoint
+     * Get user management
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.cancellations This is the cancellation parameter to filter the user
+     * @param {module:model/String} opts.status This is the status to filter
+     * @param {Number} opts.rating This is the rating to filter
+     * @param {module:model/String} opts.userType This is the user type to filter
+     * @param {Number} opts.numItems This is the number of items to return
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
      */
 
+  }, {
+    key: "getUserAdminUsersManagement",
+    value: function getUserAdminUsersManagement(opts) {
+      return this.getUserAdminUsersManagementWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Coach gets own availability
      * Retrieve the coach's availability
      * @param {Object} opts Optional parameters
      * @param {String} opts.startTime This is the start range of availability items you want to fetch
      * @param {String} opts.endTime This is the end range of availability items you want to fetch
-     * @param {module:api/DefaultApi~getUserCoachAvailabilityCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<Object>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<Object>} and HTTP response
      */
 
   }, {
-    key: "getUserCoachAvailability",
-    value: function getUserCoachAvailability(opts, callback) {
+    key: "getUserCoachAvailabilityWithHttpInfo",
+    value: function getUserCoachAvailabilityWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -968,26 +1090,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [Object];
-      return this.apiClient.callApi('/coach/availability/list', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability/list', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachAvailabilityInfo operation.
-     * @callback module:api/DefaultApi~getUserCoachAvailabilityInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse200} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get Availability Info
-     * This gets the coach's availability options
-     * @param {module:api/DefaultApi~getUserCoachAvailabilityInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse200}
+     * Coach gets own availability
+     * Retrieve the coach's availability
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.startTime This is the start range of availability items you want to fetch
+     * @param {String} opts.endTime This is the end range of availability items you want to fetch
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<Object>}
      */
 
   }, {
-    key: "getUserCoachAvailabilityInfo",
-    value: function getUserCoachAvailabilityInfo(callback) {
+    key: "getUserCoachAvailability",
+    value: function getUserCoachAvailability(opts) {
+      return this.getUserCoachAvailabilityWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get Availability Info
+     * This gets the coach's availability options
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     */
+
+  }, {
+    key: "getUserCoachAvailabilityInfoWithHttpInfo",
+    value: function getUserCoachAvailabilityInfoWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -997,29 +1126,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse["default"];
-      return this.apiClient.callApi('/coach/availability-options', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability-options', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachInsights operation.
-     * @callback module:api/DefaultApi~getUserCoachInsightsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2002} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Availability Info
+     * This gets the coach's availability options
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
 
+  }, {
+    key: "getUserCoachAvailabilityInfo",
+    value: function getUserCoachAvailabilityInfo() {
+      return this.getUserCoachAvailabilityInfoWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get coach analytics insight
      * Get coach insights
      * @param {String} locationID This is the location from where you are going to retrieve analytics.  It can be all if you want to retrieve all notifications
      * @param {String} startTime This  is the start range of data to perform analytics
      * @param {String} endTime This is the end range of data to perform analytics
-     * @param {module:api/DefaultApi~getUserCoachInsightsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
 
   }, {
-    key: "getUserCoachInsights",
-    value: function getUserCoachInsights(locationID, startTime, endTime, callback) {
+    key: "getUserCoachInsightsWithHttpInfo",
+    value: function getUserCoachInsightsWithHttpInfo(locationID, startTime, endTime) {
       var postBody = null; // verify the required parameter 'locationID' is set
 
       if (locationID === undefined || locationID === null) {
@@ -1048,28 +1181,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse12["default"];
-      return this.apiClient.callApi('/coach/insights/analytics', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/insights/analytics', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachNotifications operation.
-     * @callback module:api/DefaultApi~getUserCoachNotificationsCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse2003>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get coach analytics insight
+     * Get coach insights
+     * @param {String} locationID This is the location from where you are going to retrieve analytics.  It can be all if you want to retrieve all notifications
+     * @param {String} startTime This  is the start range of data to perform analytics
+     * @param {String} endTime This is the end range of data to perform analytics
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
 
+  }, {
+    key: "getUserCoachInsights",
+    value: function getUserCoachInsights(locationID, startTime, endTime) {
+      return this.getUserCoachInsightsWithHttpInfo(locationID, startTime, endTime).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get Coach Notifications
      * Retrieve coach notification
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of notifications that you want to return
-     * @param {module:api/DefaultApi~getUserCoachNotificationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse2003>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2003>} and HTTP response
      */
 
   }, {
-    key: "getUserCoachNotifications",
-    value: function getUserCoachNotifications(opts, callback) {
+    key: "getUserCoachNotificationsWithHttpInfo",
+    value: function getUserCoachNotificationsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -1082,27 +1222,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse13["default"]];
-      return this.apiClient.callApi('/coach/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachProfileCoachId operation.
-     * @callback module:api/DefaultApi~getUserCoachProfileCoachIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/CoachProfile} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Coach Notifications
+     * Retrieve coach notification
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.numItems This is the number of notifications that you want to return
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2003>}
      */
 
+  }, {
+    key: "getUserCoachNotifications",
+    value: function getUserCoachNotifications(opts) {
+      return this.getUserCoachNotificationsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Your GET endpoint
      * Get coach profile data
      * @param {String} coachId 
-     * @param {module:api/DefaultApi~getUserCoachProfileCoachIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/CoachProfile}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CoachProfile} and HTTP response
      */
 
   }, {
-    key: "getUserCoachProfileCoachId",
-    value: function getUserCoachProfileCoachId(coachId, callback) {
+    key: "getUserCoachProfileCoachIdWithHttpInfo",
+    value: function getUserCoachProfileCoachIdWithHttpInfo(coachId) {
       var postBody = null; // verify the required parameter 'coachId' is set
 
       if (coachId === undefined || coachId === null) {
@@ -1119,26 +1265,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _CoachProfile["default"];
-      return this.apiClient.callApi('/coach/profile/{coachId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile/{coachId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachProfileSettingsNotifications operation.
-     * @callback module:api/DefaultApi~getUserCoachProfileSettingsNotificationsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2001} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get coach notifications settings
-     * Retrieve coach notification settings
-     * @param {module:api/DefaultApi~getUserCoachProfileSettingsNotificationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2001}
+     * Your GET endpoint
+     * Get coach profile data
+     * @param {String} coachId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CoachProfile}
      */
 
   }, {
-    key: "getUserCoachProfileSettingsNotifications",
-    value: function getUserCoachProfileSettingsNotifications(callback) {
+    key: "getUserCoachProfileCoachId",
+    value: function getUserCoachProfileCoachId(coachId) {
+      return this.getUserCoachProfileCoachIdWithHttpInfo(coachId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get coach notifications settings
+     * Retrieve coach notification settings
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     */
+
+  }, {
+    key: "getUserCoachProfileSettingsNotificationsWithHttpInfo",
+    value: function getUserCoachProfileSettingsNotificationsWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -1148,26 +1299,30 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _InlineResponse2["default"];
-      return this.apiClient.callApi('/coach/profile-settings/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachProfileSettingsPayout operation.
-     * @callback module:api/DefaultApi~getUserCoachProfileSettingsPayoutCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CoachPaymentMethod>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get Coach Payout Methods
-     * Get payout settings
-     * @param {module:api/DefaultApi~getUserCoachProfileSettingsPayoutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CoachPaymentMethod>}
+     * Get coach notifications settings
+     * Retrieve coach notification settings
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
 
   }, {
-    key: "getUserCoachProfileSettingsPayout",
-    value: function getUserCoachProfileSettingsPayout(callback) {
+    key: "getUserCoachProfileSettingsNotifications",
+    value: function getUserCoachProfileSettingsNotifications() {
+      return this.getUserCoachProfileSettingsNotificationsWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get Coach Payout Methods
+     * Get payout settings
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CoachPaymentMethod>} and HTTP response
+     */
+
+  }, {
+    key: "getUserCoachProfileSettingsPayoutWithHttpInfo",
+    value: function getUserCoachProfileSettingsPayoutWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -1177,28 +1332,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_CoachPaymentMethod["default"]];
-      return this.apiClient.callApi('/coach/profile-settings/payout', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/payout', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachReview operation.
-     * @callback module:api/DefaultApi~getUserCoachReviewCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CoachReview>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get Coach Payout Methods
+     * Get payout settings
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CoachPaymentMethod>}
      */
 
+  }, {
+    key: "getUserCoachProfileSettingsPayout",
+    value: function getUserCoachProfileSettingsPayout() {
+      return this.getUserCoachProfileSettingsPayoutWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Coach Get Reviews
      * Get list of coach reviews
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of reviews that you want to fetch
-     * @param {module:api/DefaultApi~getUserCoachReviewCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CoachReview>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CoachReview>} and HTTP response
      */
 
   }, {
-    key: "getUserCoachReview",
-    value: function getUserCoachReview(opts, callback) {
+    key: "getUserCoachReviewWithHttpInfo",
+    value: function getUserCoachReviewWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -1211,26 +1370,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_CoachReview["default"]];
-      return this.apiClient.callApi('/coach/review', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/review', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserCoachSession operation.
-     * @callback module:api/DefaultApi~getUserCoachSessionCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CoachSession>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get coach session info
-     * Get coach session plans
-     * @param {module:api/DefaultApi~getUserCoachSessionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CoachSession>}
+     * Coach Get Reviews
+     * Get list of coach reviews
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.numItems This is the number of reviews that you want to fetch
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CoachReview>}
      */
 
   }, {
-    key: "getUserCoachSession",
-    value: function getUserCoachSession(callback) {
+    key: "getUserCoachReview",
+    value: function getUserCoachReview(opts) {
+      return this.getUserCoachReviewWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get coach session info
+     * Get coach session plans
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/CoachSession>} and HTTP response
+     */
+
+  }, {
+    key: "getUserCoachSessionWithHttpInfo",
+    value: function getUserCoachSessionWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -1240,26 +1405,30 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_CoachSession["default"]];
-      return this.apiClient.callApi('/coach/session-plans', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/session-plans', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserFilter operation.
-     * @callback module:api/DefaultApi~getUserFilterCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get user saved filters
-     * Get user's saved filter
-     * @param {module:api/DefaultApi~getUserFilterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * Get coach session info
+     * Get coach session plans
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/CoachSession>}
      */
 
   }, {
-    key: "getUserFilter",
-    value: function getUserFilter(callback) {
+    key: "getUserCoachSession",
+    value: function getUserCoachSession() {
+      return this.getUserCoachSessionWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get user saved filters
+     * Get user's saved filter
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     */
+
+  }, {
+    key: "getUserFilterWithHttpInfo",
+    value: function getUserFilterWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -1269,29 +1438,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/filter', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/filter', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserFilterFilterName operation.
-     * @callback module:api/DefaultApi~getUserFilterFilterNameCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Filter} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get user saved filters
+     * Get user's saved filter
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "getUserFilter",
+    value: function getUserFilter() {
+      return this.getUserFilterWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get user filter by ID
      * Get user saved filter by filter name
      * @param {String} filterId 
      * @param {Object} opts Optional parameters
      * @param {String} opts.filterId2 
-     * @param {module:api/DefaultApi~getUserFilterFilterNameCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Filter}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Filter} and HTTP response
      */
 
   }, {
-    key: "getUserFilterFilterName",
-    value: function getUserFilterFilterName(filterId, opts, callback) {
+    key: "getUserFilterFilterNameWithHttpInfo",
+    value: function getUserFilterFilterNameWithHttpInfo(filterId, opts) {
       opts = opts || {};
       var postBody = null; // verify the required parameter 'filterId' is set
 
@@ -1311,27 +1484,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _Filter["default"];
-      return this.apiClient.callApi('/student/filter/{filterId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/filter/{filterId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserLessonsLessonId operation.
-     * @callback module:api/DefaultApi~getUserLessonsLessonIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Lesson} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get user filter by ID
+     * Get user saved filter by filter name
+     * @param {String} filterId 
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.filterId2 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Filter}
      */
 
+  }, {
+    key: "getUserFilterFilterName",
+    value: function getUserFilterFilterName(filterId, opts) {
+      return this.getUserFilterFilterNameWithHttpInfo(filterId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get a lesson
      * Get a lesson based on lessonId
      * @param {String} lessonId 
-     * @param {module:api/DefaultApi~getUserLessonsLessonIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Lesson}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lesson} and HTTP response
      */
 
   }, {
-    key: "getUserLessonsLessonId",
-    value: function getUserLessonsLessonId(lessonId, callback) {
+    key: "getUserLessonsLessonIdWithHttpInfo",
+    value: function getUserLessonsLessonIdWithHttpInfo(lessonId) {
       var postBody = null; // verify the required parameter 'lessonId' is set
 
       if (lessonId === undefined || lessonId === null) {
@@ -1348,27 +1528,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _Lesson["default"];
-      return this.apiClient.callApi('/lessons/{lessonId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/lessons/{lessonId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserStudentNotificationFilter operation.
-     * @callback module:api/DefaultApi~getUserStudentNotificationFilterCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/StudentNotificationFilter} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get a lesson
+     * Get a lesson based on lessonId
+     * @param {String} lessonId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lesson}
      */
 
+  }, {
+    key: "getUserLessonsLessonId",
+    value: function getUserLessonsLessonId(lessonId) {
+      return this.getUserLessonsLessonIdWithHttpInfo(lessonId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get student notification filter by studentId
      * get notification filter by studentId
      * @param {String} studentId 
-     * @param {module:api/DefaultApi~getUserStudentNotificationFilterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/StudentNotificationFilter}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StudentNotificationFilter} and HTTP response
      */
 
   }, {
-    key: "getUserStudentNotificationFilter",
-    value: function getUserStudentNotificationFilter(studentId, callback) {
+    key: "getUserStudentNotificationFilterWithHttpInfo",
+    value: function getUserStudentNotificationFilterWithHttpInfo(studentId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -1385,27 +1570,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentNotificationFilter["default"];
-      return this.apiClient.callApi('/student/notification-filter/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/notification-filter/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserStudentProfileSettingsBasicInfoStudentId operation.
-     * @callback module:api/DefaultApi~getUserStudentProfileSettingsBasicInfoStudentIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/StudentProfileBasicInfo} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get student notification filter by studentId
+     * get notification filter by studentId
+     * @param {String} studentId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StudentNotificationFilter}
      */
 
+  }, {
+    key: "getUserStudentNotificationFilter",
+    value: function getUserStudentNotificationFilter(studentId) {
+      return this.getUserStudentNotificationFilterWithHttpInfo(studentId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get student basic information
      * Get student basic information
      * @param {String} studentId 
-     * @param {module:api/DefaultApi~getUserStudentProfileSettingsBasicInfoStudentIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/StudentProfileBasicInfo}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StudentProfileBasicInfo} and HTTP response
      */
 
   }, {
-    key: "getUserStudentProfileSettingsBasicInfoStudentId",
-    value: function getUserStudentProfileSettingsBasicInfoStudentId(studentId, callback) {
+    key: "getUserStudentProfileSettingsBasicInfoStudentIdWithHttpInfo",
+    value: function getUserStudentProfileSettingsBasicInfoStudentIdWithHttpInfo(studentId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -1422,27 +1612,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentProfileBasicInfo["default"];
-      return this.apiClient.callApi('/student/profile-settings/basic-info/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/basic-info/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserStudentProfileSettingsNotificationSettingsStudentId operation.
-     * @callback module:api/DefaultApi~getUserStudentProfileSettingsNotificationSettingsStudentIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/StudentProfileNotifications} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get student basic information
+     * Get student basic information
+     * @param {String} studentId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StudentProfileBasicInfo}
      */
 
+  }, {
+    key: "getUserStudentProfileSettingsBasicInfoStudentId",
+    value: function getUserStudentProfileSettingsBasicInfoStudentId(studentId) {
+      return this.getUserStudentProfileSettingsBasicInfoStudentIdWithHttpInfo(studentId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * get student profile notification settings by ID
      * Retrieve student profile notification settings
      * @param {String} studentId 
-     * @param {module:api/DefaultApi~getUserStudentProfileSettingsNotificationSettingsStudentIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/StudentProfileNotifications}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StudentProfileNotifications} and HTTP response
      */
 
   }, {
-    key: "getUserStudentProfileSettingsNotificationSettingsStudentId",
-    value: function getUserStudentProfileSettingsNotificationSettingsStudentId(studentId, callback) {
+    key: "getUserStudentProfileSettingsNotificationSettingsStudentIdWithHttpInfo",
+    value: function getUserStudentProfileSettingsNotificationSettingsStudentIdWithHttpInfo(studentId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -1459,27 +1654,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentProfileNotifications["default"];
-      return this.apiClient.callApi('/student/profile-settings/notification-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/notification-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserStudentProfileSettingsPaymentMethodsStudentId operation.
-     * @callback module:api/DefaultApi~getUserStudentProfileSettingsPaymentMethodsStudentIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/InlineResponse2004>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * get student profile notification settings by ID
+     * Retrieve student profile notification settings
+     * @param {String} studentId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StudentProfileNotifications}
      */
 
+  }, {
+    key: "getUserStudentProfileSettingsNotificationSettingsStudentId",
+    value: function getUserStudentProfileSettingsNotificationSettingsStudentId(studentId) {
+      return this.getUserStudentProfileSettingsNotificationSettingsStudentIdWithHttpInfo(studentId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get student payment methods
      * Get the registered payment methods
      * @param {String} studentId 
-     * @param {module:api/DefaultApi~getUserStudentProfileSettingsPaymentMethodsStudentIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/InlineResponse2004>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2004>} and HTTP response
      */
 
   }, {
-    key: "getUserStudentProfileSettingsPaymentMethodsStudentId",
-    value: function getUserStudentProfileSettingsPaymentMethodsStudentId(studentId, callback) {
+    key: "getUserStudentProfileSettingsPaymentMethodsStudentIdWithHttpInfo",
+    value: function getUserStudentProfileSettingsPaymentMethodsStudentIdWithHttpInfo(studentId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -1496,27 +1696,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_InlineResponse14["default"]];
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUserStudentProfileSettingsStudentId operation.
-     * @callback module:api/DefaultApi~getUserStudentProfileSettingsStudentIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/StudentProfile} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Get student payment methods
+     * Get the registered payment methods
+     * @param {String} studentId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2004>}
      */
 
+  }, {
+    key: "getUserStudentProfileSettingsPaymentMethodsStudentId",
+    value: function getUserStudentProfileSettingsPaymentMethodsStudentId(studentId) {
+      return this.getUserStudentProfileSettingsPaymentMethodsStudentIdWithHttpInfo(studentId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Get student profile by student ID
      * Retrieve student's profile
      * @param {String} studentId 
-     * @param {module:api/DefaultApi~getUserStudentProfileSettingsStudentIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/StudentProfile}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/StudentProfile} and HTTP response
      */
 
   }, {
-    key: "getUserStudentProfileSettingsStudentId",
-    value: function getUserStudentProfileSettingsStudentId(studentId, callback) {
+    key: "getUserStudentProfileSettingsStudentIdWithHttpInfo",
+    value: function getUserStudentProfileSettingsStudentIdWithHttpInfo(studentId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -1533,26 +1738,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentProfile["default"];
-      return this.apiClient.callApi('/student/profile-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the getUsersLessons operation.
-     * @callback module:api/DefaultApi~getUsersLessonsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/Lesson} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Get user lessons
-     * Get current user lesssons information
-     * @param {module:api/DefaultApi~getUsersLessonsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/Lesson}
+     * Get student profile by student ID
+     * Retrieve student's profile
+     * @param {String} studentId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/StudentProfile}
      */
 
   }, {
-    key: "getUsersLessons",
-    value: function getUsersLessons(callback) {
+    key: "getUserStudentProfileSettingsStudentId",
+    value: function getUserStudentProfileSettingsStudentId(studentId) {
+      return this.getUserStudentProfileSettingsStudentIdWithHttpInfo(studentId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Get user lessons
+     * Get current user lesssons information
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/Lesson} and HTTP response
+     */
+
+  }, {
+    key: "getUsersLessonsWithHttpInfo",
+    value: function getUsersLessonsWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -1562,28 +1772,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _Lesson["default"];
-      return this.apiClient.callApi('/lessons', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/lessons', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchLocationLocationId operation.
-     * @callback module:api/DefaultApi~patchLocationLocationIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Get user lessons
+     * Get current user lesssons information
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/Lesson}
      */
 
+  }, {
+    key: "getUsersLessons",
+    value: function getUsersLessons() {
+      return this.getUsersLessonsWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Edit location information by locationId
      * Coach can use this endpoint to edit their location.
      * @param {String} locationId 
      * @param {Object} opts Optional parameters
      * @param {module:model/LocationRequestOptional} opts.locationRequestOptional Location Request Model
-     * @param {module:api/DefaultApi~patchLocationLocationIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "patchLocationLocationId",
-    value: function patchLocationLocationId(locationId, opts, callback) {
+    key: "patchLocationLocationIdWithHttpInfo",
+    value: function patchLocationLocationIdWithHttpInfo(locationId, opts) {
       opts = opts || {};
       var postBody = opts['locationRequestOptional']; // verify the required parameter 'locationId' is set
 
@@ -1601,29 +1816,36 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/location/{locationId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/location/{locationId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserAdminCertificateCoachId operation.
-     * @callback module:api/DefaultApi~patchUserAdminCertificateCoachIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Edit location information by locationId
+     * Coach can use this endpoint to edit their location.
+     * @param {String} locationId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LocationRequestOptional} opts.locationRequestOptional Location Request Model
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "patchLocationLocationId",
+    value: function patchLocationLocationId(locationId, opts) {
+      return this.patchLocationLocationIdWithHttpInfo(locationId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin update certificate status
      * Update the coach's certificate status
      * @param {String} coachId 
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject9} opts.inlineObject9 
-     * @param {module:api/DefaultApi~patchUserAdminCertificateCoachIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "patchUserAdminCertificateCoachId",
-    value: function patchUserAdminCertificateCoachId(coachId, opts, callback) {
+    key: "patchUserAdminCertificateCoachIdWithHttpInfo",
+    value: function patchUserAdminCertificateCoachIdWithHttpInfo(coachId, opts) {
       opts = opts || {};
       var postBody = opts['inlineObject9']; // verify the required parameter 'coachId' is set
 
@@ -1641,28 +1863,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/admin/certificate/{coachId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/certificate/{coachId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserAdminProfile operation.
-     * @callback module:api/DefaultApi~patchUserAdminProfileCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin update certificate status
+     * Update the coach's certificate status
+     * @param {String} coachId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject9} opts.inlineObject9 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "patchUserAdminCertificateCoachId",
+    value: function patchUserAdminCertificateCoachId(coachId, opts) {
+      return this.patchUserAdminCertificateCoachIdWithHttpInfo(coachId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin update profile
      * Update admin profile
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject12} opts.inlineObject12 
-     * @param {module:api/DefaultApi~patchUserAdminProfileCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "patchUserAdminProfile",
-    value: function patchUserAdminProfile(opts, callback) {
+    key: "patchUserAdminProfileWithHttpInfo",
+    value: function patchUserAdminProfileWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject12'];
       var pathParams = {};
@@ -1673,27 +1902,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/admin/profile', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/profile', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserAdminProfileCheckCoachId operation.
-     * @callback module:api/DefaultApi~patchUserAdminProfileCheckCoachIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Admin update profile
+     * Update admin profile
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject12} opts.inlineObject12 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "patchUserAdminProfile",
+    value: function patchUserAdminProfile(opts) {
+      return this.patchUserAdminProfileWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Update the status of the coach's profile check
      * @param {String} coachId 
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject11} opts.inlineObject11 
-     * @param {module:api/DefaultApi~patchUserAdminProfileCheckCoachIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "patchUserAdminProfileCheckCoachId",
-    value: function patchUserAdminProfileCheckCoachId(coachId, opts, callback) {
+    key: "patchUserAdminProfileCheckCoachIdWithHttpInfo",
+    value: function patchUserAdminProfileCheckCoachIdWithHttpInfo(coachId, opts) {
       opts = opts || {};
       var postBody = opts['inlineObject11']; // verify the required parameter 'coachId' is set
 
@@ -1711,27 +1947,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/admin/profile-onboarding/{coachId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/profile-onboarding/{coachId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserCoachAvailability operation.
-     * @callback module:api/DefaultApi~patchUserCoachAvailabilityCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update the status of the coach's profile check
+     * @param {String} coachId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject11} opts.inlineObject11 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "patchUserAdminProfileCheckCoachId",
+    value: function patchUserAdminProfileCheckCoachId(coachId, opts) {
+      return this.patchUserAdminProfileCheckCoachIdWithHttpInfo(coachId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Updates a coach availability by ID
      * @param {String} availabilityId 
      * @param {Object} opts Optional parameters
      * @param {module:model/CoachAvailabilityPut} opts.coachAvailabilityPut 
-     * @param {module:api/DefaultApi~patchUserCoachAvailabilityCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "patchUserCoachAvailability",
-    value: function patchUserCoachAvailability(availabilityId, opts, callback) {
+    key: "patchUserCoachAvailabilityWithHttpInfo",
+    value: function patchUserCoachAvailabilityWithHttpInfo(availabilityId, opts) {
       opts = opts || {};
       var postBody = opts['coachAvailabilityPut']; // verify the required parameter 'availabilityId' is set
 
@@ -1749,27 +1992,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/availability/{availabilityId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability/{availabilityId}', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserCoachNotificationsRead operation.
-     * @callback module:api/DefaultApi~patchUserCoachNotificationsReadCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Updates a coach availability by ID
+     * @param {String} availabilityId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CoachAvailabilityPut} opts.coachAvailabilityPut 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "patchUserCoachAvailability",
+    value: function patchUserCoachAvailability(availabilityId, opts) {
+      return this.patchUserCoachAvailabilityWithHttpInfo(availabilityId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Set list of notifications as read
      * Mark the list of notifications as read
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/InlineObject>} opts.inlineObject 
-     * @param {module:api/DefaultApi~patchUserCoachNotificationsReadCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "patchUserCoachNotificationsRead",
-    value: function patchUserCoachNotificationsRead(opts, callback) {
+    key: "patchUserCoachNotificationsReadWithHttpInfo",
+    value: function patchUserCoachNotificationsReadWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject'];
       var pathParams = {};
@@ -1780,27 +2030,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/notifications/read', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/notifications/read', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserCoachProfileSettings operation.
-     * @callback module:api/DefaultApi~patchUserCoachProfileSettingsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Set list of notifications as read
+     * Mark the list of notifications as read
+     * @param {Object} opts Optional parameters
+     * @param {Array.<module:model/InlineObject>} opts.inlineObject 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "patchUserCoachNotificationsRead",
+    value: function patchUserCoachNotificationsRead(opts) {
+      return this.patchUserCoachNotificationsReadWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Update coach privacy settings
      * Update coach privacy settings
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject2} opts.inlineObject2 
-     * @param {module:api/DefaultApi~patchUserCoachProfileSettingsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "patchUserCoachProfileSettings",
-    value: function patchUserCoachProfileSettings(opts, callback) {
+    key: "patchUserCoachProfileSettingsWithHttpInfo",
+    value: function patchUserCoachProfileSettingsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject2'];
       var pathParams = {};
@@ -1811,28 +2068,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/privacy', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/privacy', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the patchUserCoachProfileSettingsNotifications operation.
-     * @callback module:api/DefaultApi~patchUserCoachProfileSettingsNotificationsCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update coach privacy settings
+     * Update coach privacy settings
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "patchUserCoachProfileSettings",
+    value: function patchUserCoachProfileSettings(opts) {
+      return this.patchUserCoachProfileSettingsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Update coach profile notification settings
      * Update coach profile notification settings
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject5} opts.inlineObject5 
-     * @param {module:api/DefaultApi~patchUserCoachProfileSettingsNotificationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "patchUserCoachProfileSettingsNotifications",
-    value: function patchUserCoachProfileSettingsNotifications(opts, callback) {
+    key: "patchUserCoachProfileSettingsNotificationsWithHttpInfo",
+    value: function patchUserCoachProfileSettingsNotificationsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject5'];
       var pathParams = {};
@@ -1843,27 +2106,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/coach/profile-settings/notifications', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/notifications', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postCoachProfile operation.
-     * @callback module:api/DefaultApi~postCoachProfileCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update coach profile notification settings
+     * Update coach profile notification settings
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject5} opts.inlineObject5 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "patchUserCoachProfileSettingsNotifications",
+    value: function patchUserCoachProfileSettingsNotifications(opts) {
+      return this.patchUserCoachProfileSettingsNotificationsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * This endpoint is used to create the coach profile if it doesn't exist
      * @param {Object} opts Optional parameters
      * @param {module:model/CoachProfile} opts.coachProfile 
-     * @param {module:api/DefaultApi~postCoachProfileCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postCoachProfile",
-    value: function postCoachProfile(opts, callback) {
+    key: "postCoachProfileWithHttpInfo",
+    value: function postCoachProfileWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['coachProfile'];
       var pathParams = {};
@@ -1874,28 +2143,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/coach/profile', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postLocation operation.
-     * @callback module:api/DefaultApi~postLocationCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse20018} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * This endpoint is used to create the coach profile if it doesn't exist
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CoachProfile} opts.coachProfile 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postCoachProfile",
+    value: function postCoachProfile(opts) {
+      return this.postCoachProfileWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Add a location
      * This endpoint allow coach to add/saved a training location
      * @param {Object} opts Optional parameters
      * @param {module:model/LocationRequest} opts.locationRequest location request object
-     * @param {module:api/DefaultApi~postLocationCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse20018}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
      */
 
   }, {
-    key: "postLocation",
-    value: function postLocation(opts, callback) {
+    key: "postLocationWithHttpInfo",
+    value: function postLocationWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['locationRequest'];
       var pathParams = {};
@@ -1906,29 +2180,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse11["default"];
-      return this.apiClient.callApi('/location', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/location', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserAdminCertificateCoachId operation.
-     * @callback module:api/DefaultApi~postUserAdminCertificateCoachIdCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add a location
+     * This endpoint allow coach to add/saved a training location
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LocationRequest} opts.locationRequest location request object
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
      */
 
+  }, {
+    key: "postLocation",
+    value: function postLocation(opts) {
+      return this.postLocationWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin set certificate status
      * Sets the coach's ceritifcate status
      * @param {String} coachId 
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject8} opts.inlineObject8 
-     * @param {module:api/DefaultApi~postUserAdminCertificateCoachIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postUserAdminCertificateCoachId",
-    value: function postUserAdminCertificateCoachId(coachId, opts, callback) {
+    key: "postUserAdminCertificateCoachIdWithHttpInfo",
+    value: function postUserAdminCertificateCoachIdWithHttpInfo(coachId, opts) {
       opts = opts || {};
       var postBody = opts['inlineObject8']; // verify the required parameter 'coachId' is set
 
@@ -1946,27 +2226,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/admin/certificate/{coachId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/certificate/{coachId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserAdminDashboardFilter operation.
-     * @callback module:api/DefaultApi~postUserAdminDashboardFilterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Admin set certificate status
+     * Sets the coach's ceritifcate status
+     * @param {String} coachId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject8} opts.inlineObject8 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postUserAdminCertificateCoachId",
+    value: function postUserAdminCertificateCoachId(coachId, opts) {
+      return this.postUserAdminCertificateCoachIdWithHttpInfo(coachId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Save admin dashboard filter
      * Save admin dashbord filter
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject7} opts.inlineObject7 
-     * @param {module:api/DefaultApi~postUserAdminDashboardFilterCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "postUserAdminDashboardFilter",
-    value: function postUserAdminDashboardFilter(opts, callback) {
+    key: "postUserAdminDashboardFilterWithHttpInfo",
+    value: function postUserAdminDashboardFilterWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject7'];
       var pathParams = {};
@@ -1977,28 +2265,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/admin/dashboard-filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/dashboard-filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserAdminProfileCheckCoachId operation.
-     * @callback module:api/DefaultApi~postUserAdminProfileCheckCoachIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Save admin dashboard filter
+     * Save admin dashbord filter
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject7} opts.inlineObject7 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "postUserAdminDashboardFilter",
+    value: function postUserAdminDashboardFilter(opts) {
+      return this.postUserAdminDashboardFilterWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin set coach status
      * Sets the coach's status
      * @param {String} coachId 
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject10} opts.inlineObject10 
-     * @param {module:api/DefaultApi~postUserAdminProfileCheckCoachIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "postUserAdminProfileCheckCoachId",
-    value: function postUserAdminProfileCheckCoachId(coachId, opts, callback) {
+    key: "postUserAdminProfileCheckCoachIdWithHttpInfo",
+    value: function postUserAdminProfileCheckCoachIdWithHttpInfo(coachId, opts) {
       opts = opts || {};
       var postBody = opts['inlineObject10']; // verify the required parameter 'coachId' is set
 
@@ -2016,28 +2311,36 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/admin/profile-onboarding/{coachId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/profile-onboarding/{coachId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserAdminSendWarningEmail operation.
-     * @callback module:api/DefaultApi~postUserAdminSendWarningEmailCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Admin set coach status
+     * Sets the coach's status
+     * @param {String} coachId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject10} opts.inlineObject10 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "postUserAdminProfileCheckCoachId",
+    value: function postUserAdminProfileCheckCoachId(coachId, opts) {
+      return this.postUserAdminProfileCheckCoachIdWithHttpInfo(coachId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin send warning email
      * Send a warning email
      * @param {String} userId This is the userID to send warning email to.
      * @param {Object} opts Optional parameters
      * @param {String} opts.message This is an optional email message for the user. Otherwise, it will use the default emails.
-     * @param {module:api/DefaultApi~postUserAdminSendWarningEmailCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "postUserAdminSendWarningEmail",
-    value: function postUserAdminSendWarningEmail(userId, opts, callback) {
+    key: "postUserAdminSendWarningEmailWithHttpInfo",
+    value: function postUserAdminSendWarningEmailWithHttpInfo(userId, opts) {
       opts = opts || {};
       var postBody = null; // verify the required parameter 'userId' is set
 
@@ -2056,27 +2359,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/admin/send-warning-email', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/send-warning-email', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserCoachAvailability operation.
-     * @callback module:api/DefaultApi~postUserCoachAvailabilityCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Admin send warning email
+     * Send a warning email
+     * @param {String} userId This is the userID to send warning email to.
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.message This is an optional email message for the user. Otherwise, it will use the default emails.
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "postUserAdminSendWarningEmail",
+    value: function postUserAdminSendWarningEmail(userId, opts) {
+      return this.postUserAdminSendWarningEmailWithHttpInfo(userId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Create coach availability
      * @param {Object} opts Optional parameters
      * @param {module:model/CoachAvailability} opts.coachAvailability 
-     * @param {module:api/DefaultApi~postUserCoachAvailabilityCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postUserCoachAvailability",
-    value: function postUserCoachAvailability(opts, callback) {
+    key: "postUserCoachAvailabilityWithHttpInfo",
+    value: function postUserCoachAvailabilityWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['coachAvailability'];
       var pathParams = {};
@@ -2087,28 +2397,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/coach/availability/list', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability/list', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserCoachAvailabilityInfo operation.
-     * @callback module:api/DefaultApi~postUserCoachAvailabilityInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create coach availability
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CoachAvailability} opts.coachAvailability 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postUserCoachAvailability",
+    value: function postUserCoachAvailability(opts) {
+      return this.postUserCoachAvailabilityWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Set Coach Availability Options
      * This sets the coach's availability options
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject1} opts.inlineObject1 
-     * @param {module:api/DefaultApi~postUserCoachAvailabilityInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postUserCoachAvailabilityInfo",
-    value: function postUserCoachAvailabilityInfo(opts, callback) {
+    key: "postUserCoachAvailabilityInfoWithHttpInfo",
+    value: function postUserCoachAvailabilityInfoWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject1'];
       var pathParams = {};
@@ -2119,27 +2434,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json', 'application/xml'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/coach/availability-options', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability-options', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserCoachProfileSettingsPayout operation.
-     * @callback module:api/DefaultApi~postUserCoachProfileSettingsPayoutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Set Coach Availability Options
+     * This sets the coach's availability options
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject1} opts.inlineObject1 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postUserCoachAvailabilityInfo",
+    value: function postUserCoachAvailabilityInfo(opts) {
+      return this.postUserCoachAvailabilityInfoWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Add Payment Method
      * Add a payment method to user
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject3} opts.inlineObject3 
-     * @param {module:api/DefaultApi~postUserCoachProfileSettingsPayoutCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "postUserCoachProfileSettingsPayout",
-    value: function postUserCoachProfileSettingsPayout(opts, callback) {
+    key: "postUserCoachProfileSettingsPayoutWithHttpInfo",
+    value: function postUserCoachProfileSettingsPayoutWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject3'];
       var pathParams = {};
@@ -2150,27 +2472,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/payout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/payout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserCoachSession operation.
-     * @callback module:api/DefaultApi~postUserCoachSessionCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Add Payment Method
+     * Add a payment method to user
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject3} opts.inlineObject3 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "postUserCoachProfileSettingsPayout",
+    value: function postUserCoachProfileSettingsPayout(opts) {
+      return this.postUserCoachProfileSettingsPayoutWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Create a new session between user and coach
      * @param {Object} opts Optional parameters
      * @param {module:model/CoachSession} opts.coachSession 
-     * @param {module:api/DefaultApi~postUserCoachSessionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postUserCoachSession",
-    value: function postUserCoachSession(opts, callback) {
+    key: "postUserCoachSessionWithHttpInfo",
+    value: function postUserCoachSessionWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['coachSession'];
       var pathParams = {};
@@ -2181,28 +2509,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/coach/session-plans', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/session-plans', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserFilter operation.
-     * @callback module:api/DefaultApi~postUserFilterCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create a new session between user and coach
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CoachSession} opts.coachSession 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postUserCoachSession",
+    value: function postUserCoachSession(opts) {
+      return this.postUserCoachSessionWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Save a user filter
      * Save a new filter for user
      * @param {Object} opts Optional parameters
      * @param {module:model/Filter} opts.filter Filter data in JSON
-     * @param {module:api/DefaultApi~postUserFilterCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postUserFilter",
-    value: function postUserFilter(opts, callback) {
+    key: "postUserFilterWithHttpInfo",
+    value: function postUserFilterWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['filter'];
       var pathParams = {};
@@ -2213,29 +2546,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/student/filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserLessonLessonIdCancelRequest operation.
-     * @callback module:api/DefaultApi~postUserLessonLessonIdCancelRequestCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2012} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Save a user filter
+     * Save a new filter for user
+     * @param {Object} opts Optional parameters
+     * @param {module:model/Filter} opts.filter Filter data in JSON
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postUserFilter",
+    value: function postUserFilter(opts) {
+      return this.postUserFilterWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Submit a lesson cancel request
      * This endpoint process lesson cancel request.
      * @param {String} lessonId 
      * @param {Object} opts Optional parameters
      * @param {module:model/LessonCancelRequest} opts.lessonCancelRequest Lesson Cancel Request
-     * @param {module:api/DefaultApi~postUserLessonLessonIdCancelRequestCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2012}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2012} and HTTP response
      */
 
   }, {
-    key: "postUserLessonLessonIdCancelRequest",
-    value: function postUserLessonLessonIdCancelRequest(lessonId, opts, callback) {
+    key: "postUserLessonLessonIdCancelRequestWithHttpInfo",
+    value: function postUserLessonLessonIdCancelRequestWithHttpInfo(lessonId, opts) {
       opts = opts || {};
       var postBody = opts['lessonCancelRequest']; // verify the required parameter 'lessonId' is set
 
@@ -2253,28 +2592,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse22["default"];
-      return this.apiClient.callApi('/lesson/{lessonId}/cancel-request', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/lesson/{lessonId}/cancel-request', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserLessons operation.
-     * @callback module:api/DefaultApi~postUserLessonsCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2011} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Submit a lesson cancel request
+     * This endpoint process lesson cancel request.
+     * @param {String} lessonId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LessonCancelRequest} opts.lessonCancelRequest Lesson Cancel Request
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2012}
      */
 
+  }, {
+    key: "postUserLessonLessonIdCancelRequest",
+    value: function postUserLessonLessonIdCancelRequest(lessonId, opts) {
+      return this.postUserLessonLessonIdCancelRequestWithHttpInfo(lessonId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Book a new lesson
      * User use this endpoint to book a new lesson
      * @param {Object} opts Optional parameters
      * @param {module:model/Lesson} opts.lesson User detailed booking information
-     * @param {module:api/DefaultApi~postUserLessonsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2011}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2011} and HTTP response
      */
 
   }, {
-    key: "postUserLessons",
-    value: function postUserLessons(opts, callback) {
+    key: "postUserLessonsWithHttpInfo",
+    value: function postUserLessonsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['lesson'];
       var pathParams = {};
@@ -2285,29 +2631,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse21["default"];
-      return this.apiClient.callApi('/lessons', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/lessons', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserLessonsLessonIdProblemReport operation.
-     * @callback module:api/DefaultApi~postUserLessonsLessonIdProblemReportCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse2013} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Book a new lesson
+     * User use this endpoint to book a new lesson
+     * @param {Object} opts Optional parameters
+     * @param {module:model/Lesson} opts.lesson User detailed booking information
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2011}
      */
 
+  }, {
+    key: "postUserLessons",
+    value: function postUserLessons(opts) {
+      return this.postUserLessonsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Report a problem with a lesson
      * Report a problem with a lesson
      * @param {String} lessonId 
      * @param {Object} opts Optional parameters
      * @param {module:model/LessonProblemReport} opts.lessonProblemReport Report a problem
-     * @param {module:api/DefaultApi~postUserLessonsLessonIdProblemReportCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse2013}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2013} and HTTP response
      */
 
   }, {
-    key: "postUserLessonsLessonIdProblemReport",
-    value: function postUserLessonsLessonIdProblemReport(lessonId, opts, callback) {
+    key: "postUserLessonsLessonIdProblemReportWithHttpInfo",
+    value: function postUserLessonsLessonIdProblemReportWithHttpInfo(lessonId, opts) {
       opts = opts || {};
       var postBody = opts['lessonProblemReport']; // verify the required parameter 'lessonId' is set
 
@@ -2325,27 +2677,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse23["default"];
-      return this.apiClient.callApi('/lessons/{lessonId}/problem-report', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/lessons/{lessonId}/problem-report', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserStudentNotificationFilter operation.
-     * @callback module:api/DefaultApi~postUserStudentNotificationFilterCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Report a problem with a lesson
+     * Report a problem with a lesson
+     * @param {String} lessonId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/LessonProblemReport} opts.lessonProblemReport Report a problem
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2013}
      */
 
+  }, {
+    key: "postUserLessonsLessonIdProblemReport",
+    value: function postUserLessonsLessonIdProblemReport(lessonId, opts) {
+      return this.postUserLessonsLessonIdProblemReportWithHttpInfo(lessonId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * create student notification filter with studentId
      * Create a student notification filter
      * @param {Object} opts Optional parameters
      * @param {module:model/StudentNotificationFilter} opts.studentNotificationFilter 
-     * @param {module:api/DefaultApi~postUserStudentNotificationFilterCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "postUserStudentNotificationFilter",
-    value: function postUserStudentNotificationFilter(opts, callback) {
+    key: "postUserStudentNotificationFilterWithHttpInfo",
+    value: function postUserStudentNotificationFilterWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['studentNotificationFilter'];
       var pathParams = {};
@@ -2356,28 +2716,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/student/notification-filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/notification-filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the postUserStudentProfileSettingsProfileCreate operation.
-     * @callback module:api/DefaultApi~postUserStudentProfileSettingsProfileCreateCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * create student notification filter with studentId
+     * Create a student notification filter
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StudentNotificationFilter} opts.studentNotificationFilter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "postUserStudentNotificationFilter",
+    value: function postUserStudentNotificationFilter(opts) {
+      return this.postUserStudentNotificationFilterWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * create student profile
      * Create a student profile
      * @param {Object} opts Optional parameters
      * @param {module:model/StudentProfilePost} opts.studentProfilePost 
-     * @param {module:api/DefaultApi~postUserStudentProfileSettingsProfileCreateCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "postUserStudentProfileSettingsProfileCreate",
-    value: function postUserStudentProfileSettingsProfileCreate(opts, callback) {
+    key: "postUserStudentProfileSettingsProfileCreateWithHttpInfo",
+    value: function postUserStudentProfileSettingsProfileCreateWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['studentProfilePost'];
       var pathParams = {};
@@ -2388,28 +2754,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/student/profile-settings', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserAdminBanUser operation.
-     * @callback module:api/DefaultApi~putUserAdminBanUserCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * create student profile
+     * Create a student profile
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StudentProfilePost} opts.studentProfilePost 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "postUserStudentProfileSettingsProfileCreate",
+    value: function postUserStudentProfileSettingsProfileCreate(opts) {
+      return this.postUserStudentProfileSettingsProfileCreateWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Admin ban user
      * Updates list of banned users
      * @param {Object} opts Optional parameters
      * @param {String} opts.userId This is the userID to ban
      * @param {String} opts.reason This is the reason why the user was banned
-     * @param {module:api/DefaultApi~putUserAdminBanUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserAdminBanUser",
-    value: function putUserAdminBanUser(opts, callback) {
+    key: "putUserAdminBanUserWithHttpInfo",
+    value: function putUserAdminBanUserWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = null;
       var pathParams = {};
@@ -2423,26 +2796,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/admin/ban-user', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/ban-user', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserAdminUnbanUser operation.
-     * @callback module:api/DefaultApi~putUserAdminUnbanUserCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Admin ban user
+     * Updates list of banned users
+     * @param {Object} opts Optional parameters
+     * @param {String} opts.userId This is the userID to ban
+     * @param {String} opts.reason This is the reason why the user was banned
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserAdminBanUser",
+    value: function putUserAdminBanUser(opts) {
+      return this.putUserAdminBanUserWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Unban user
      * Unban a user
      * @param {String} userId This is the userID to unban
-     * @param {module:api/DefaultApi~putUserAdminUnbanUserCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserAdminUnbanUser",
-    value: function putUserAdminUnbanUser(userId, callback) {
+    key: "putUserAdminUnbanUserWithHttpInfo",
+    value: function putUserAdminUnbanUserWithHttpInfo(userId) {
       var postBody = null; // verify the required parameter 'userId' is set
 
       if (userId === undefined || userId === null) {
@@ -2459,27 +2840,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/admin/unban-user', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/admin/unban-user', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachAvailabilityOptions operation.
-     * @callback module:api/DefaultApi~putUserCoachAvailabilityOptionsCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Unban user
+     * Unban a user
+     * @param {String} userId This is the userID to unban
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserAdminUnbanUser",
+    value: function putUserAdminUnbanUser(userId) {
+      return this.putUserAdminUnbanUserWithHttpInfo(userId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Update Availability Options
      * Update coach's availability options
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject} opts.inlineObject 
-     * @param {module:api/DefaultApi~putUserCoachAvailabilityOptionsCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserCoachAvailabilityOptions",
-    value: function putUserCoachAvailabilityOptions(opts, callback) {
+    key: "putUserCoachAvailabilityOptionsWithHttpInfo",
+    value: function putUserCoachAvailabilityOptionsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject'];
       var pathParams = {};
@@ -2490,27 +2877,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/availability-options', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/availability-options', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachProfile operation.
-     * @callback module:api/DefaultApi~putUserCoachProfileCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update Availability Options
+     * Update coach's availability options
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject} opts.inlineObject 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserCoachAvailabilityOptions",
+    value: function putUserCoachAvailabilityOptions(opts) {
+      return this.putUserCoachAvailabilityOptionsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Update coach profile attributes
      * This endpoint is to overwrite the properties of the coach 
      * @param {Object} opts Optional parameters
      * @param {Object.<String, Object>} opts.body 
-     * @param {module:api/DefaultApi~putUserCoachProfileCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserCoachProfile",
-    value: function putUserCoachProfile(opts, callback) {
+    key: "putUserCoachProfileWithHttpInfo",
+    value: function putUserCoachProfileWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['body'];
       var pathParams = {};
@@ -2521,27 +2915,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachProfileSettingsDisable operation.
-     * @callback module:api/DefaultApi~putUserCoachProfileSettingsDisableCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update coach profile attributes
+     * This endpoint is to overwrite the properties of the coach 
+     * @param {Object} opts Optional parameters
+     * @param {Object.<String, Object>} opts.body 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserCoachProfile",
+    value: function putUserCoachProfile(opts) {
+      return this.putUserCoachProfileWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Disable Coach Account
      * Disable the coach account
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject6} opts.inlineObject6 
-     * @param {module:api/DefaultApi~putUserCoachProfileSettingsDisableCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserCoachProfileSettingsDisable",
-    value: function putUserCoachProfileSettingsDisable(opts, callback) {
+    key: "putUserCoachProfileSettingsDisableWithHttpInfo",
+    value: function putUserCoachProfileSettingsDisableWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject6'];
       var pathParams = {};
@@ -2552,25 +2953,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachProfileSettingsEnable operation.
-     * @callback module:api/DefaultApi~putUserCoachProfileSettingsEnableCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Enable Coach Account
-     * Activate coach account
-     * @param {module:api/DefaultApi~putUserCoachProfileSettingsEnableCallback} callback The callback function, accepting three arguments: error, data, response
+     * Disable Coach Account
+     * Disable the coach account
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject6} opts.inlineObject6 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
-    key: "putUserCoachProfileSettingsEnable",
-    value: function putUserCoachProfileSettingsEnable(callback) {
+    key: "putUserCoachProfileSettingsDisable",
+    value: function putUserCoachProfileSettingsDisable(opts) {
+      return this.putUserCoachProfileSettingsDisableWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Enable Coach Account
+     * Activate coach account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "putUserCoachProfileSettingsEnableWithHttpInfo",
+    value: function putUserCoachProfileSettingsEnableWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -2580,28 +2988,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachProfileSettingsNotifications operation.
-     * @callback module:api/DefaultApi~putUserCoachProfileSettingsNotificationsCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Enable Coach Account
+     * Activate coach account
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserCoachProfileSettingsEnable",
+    value: function putUserCoachProfileSettingsEnable() {
+      return this.putUserCoachProfileSettingsEnableWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Overwrite coach notification settings
      * User updates their notification settings
      * @param {Object} opts Optional parameters
      * @param {module:model/InlineObject4} opts.inlineObject4 
-     * @param {module:api/DefaultApi~putUserCoachProfileSettingsNotificationsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "putUserCoachProfileSettingsNotifications",
-    value: function putUserCoachProfileSettingsNotifications(opts, callback) {
+    key: "putUserCoachProfileSettingsNotificationsWithHttpInfo",
+    value: function putUserCoachProfileSettingsNotificationsWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['inlineObject4'];
       var pathParams = {};
@@ -2612,26 +3024,33 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/coach/profile-settings/notifications', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/notifications', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachProfileSettingsPayoutPaymentMethodId operation.
-     * @callback module:api/DefaultApi~putUserCoachProfileSettingsPayoutPaymentMethodIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Overwrite coach notification settings
+     * User updates their notification settings
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject4} opts.inlineObject4 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "putUserCoachProfileSettingsNotifications",
+    value: function putUserCoachProfileSettingsNotifications(opts) {
+      return this.putUserCoachProfileSettingsNotificationsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Coach set default payment method
      * User sets their payment method
      * @param {String} paymentMethodId 
-     * @param {module:api/DefaultApi~putUserCoachProfileSettingsPayoutPaymentMethodIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserCoachProfileSettingsPayoutPaymentMethodId",
-    value: function putUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId, callback) {
+    key: "putUserCoachProfileSettingsPayoutPaymentMethodIdWithHttpInfo",
+    value: function putUserCoachProfileSettingsPayoutPaymentMethodIdWithHttpInfo(paymentMethodId) {
       var postBody = null; // verify the required parameter 'paymentMethodId' is set
 
       if (paymentMethodId === undefined || paymentMethodId === null) {
@@ -2648,27 +3067,32 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/payout/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/profile-settings/payout/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserCoachSession operation.
-     * @callback module:api/DefaultApi~putUserCoachSessionCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/InlineResponse201} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Coach set default payment method
+     * User sets their payment method
+     * @param {String} paymentMethodId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserCoachProfileSettingsPayoutPaymentMethodId",
+    value: function putUserCoachProfileSettingsPayoutPaymentMethodId(paymentMethodId) {
+      return this.putUserCoachProfileSettingsPayoutPaymentMethodIdWithHttpInfo(paymentMethodId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Update user-coach session''
      * @param {Object} opts Optional parameters
      * @param {module:model/CoachSessionPut} opts.coachSessionPut 
-     * @param {module:api/DefaultApi~putUserCoachSessionCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/InlineResponse201}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse201} and HTTP response
      */
 
   }, {
-    key: "putUserCoachSession",
-    value: function putUserCoachSession(opts, callback) {
+    key: "putUserCoachSessionWithHttpInfo",
+    value: function putUserCoachSessionWithHttpInfo(opts) {
       opts = opts || {};
       var postBody = opts['coachSessionPut'];
       var pathParams = {};
@@ -2679,28 +3103,34 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/coach/session-plans', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/coach/session-plans', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserStudentNotificationFilterStudentId operation.
-     * @callback module:api/DefaultApi~putUserStudentNotificationFilterStudentIdCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Update user-coach session''
+     * @param {Object} opts Optional parameters
+     * @param {module:model/CoachSessionPut} opts.coachSessionPut 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse201}
      */
 
+  }, {
+    key: "putUserCoachSession",
+    value: function putUserCoachSession(opts) {
+      return this.putUserCoachSessionWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * update student notification filter by studentId
      * Update student notifications with studentId
      * @param {String} studentId 
      * @param {Object} opts Optional parameters
      * @param {module:model/StudentNotificationFilter} opts.studentNotificationFilter 
-     * @param {module:api/DefaultApi~putUserStudentNotificationFilterStudentIdCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
      */
 
   }, {
-    key: "putUserStudentNotificationFilterStudentId",
-    value: function putUserStudentNotificationFilterStudentId(studentId, opts, callback) {
+    key: "putUserStudentNotificationFilterStudentIdWithHttpInfo",
+    value: function putUserStudentNotificationFilterStudentIdWithHttpInfo(studentId, opts) {
       opts = opts || {};
       var postBody = opts['studentNotificationFilter']; // verify the required parameter 'studentId' is set
 
@@ -2718,29 +3148,36 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/student/notification-filter/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/notification-filter/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserStudentProfileSettingsBasicInfo operation.
-     * @callback module:api/DefaultApi~putUserStudentProfileSettingsBasicInfoCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * update student notification filter by studentId
+     * Update student notifications with studentId
+     * @param {String} studentId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StudentNotificationFilter} opts.studentNotificationFilter 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
+  }, {
+    key: "putUserStudentNotificationFilterStudentId",
+    value: function putUserStudentNotificationFilterStudentId(studentId, opts) {
+      return this.putUserStudentNotificationFilterStudentIdWithHttpInfo(studentId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Edit student basic information
      * Edit student's information
      * @param {String} studentId 
      * @param {Object} opts Optional parameters
      * @param {module:model/StudentProfileBasicInfo} opts.studentProfileBasicInfo 
-     * @param {module:api/DefaultApi~putUserStudentProfileSettingsBasicInfoCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "putUserStudentProfileSettingsBasicInfo",
-    value: function putUserStudentProfileSettingsBasicInfo(studentId, opts, callback) {
+    key: "putUserStudentProfileSettingsBasicInfoWithHttpInfo",
+    value: function putUserStudentProfileSettingsBasicInfoWithHttpInfo(studentId, opts) {
       opts = opts || {};
       var postBody = opts['studentProfileBasicInfo']; // verify the required parameter 'studentId' is set
 
@@ -2758,24 +3195,63 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/basic-info/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/basic-info/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserStudentProfileSettingsDisable operation.
-     * @callback module:api/DefaultApi~putUserStudentProfileSettingsDisableCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
+     * Edit student basic information
+     * Edit student's information
+     * @param {String} studentId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StudentProfileBasicInfo} opts.studentProfileBasicInfo 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "putUserStudentProfileSettingsBasicInfo",
+    value: function putUserStudentProfileSettingsBasicInfo(studentId, opts) {
+      return this.putUserStudentProfileSettingsBasicInfoWithHttpInfo(studentId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Disable student profile settings
-     * @param {module:api/DefaultApi~putUserStudentProfileSettingsDisableCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "putUserStudentProfileSettingsDisableWithHttpInfo",
+    value: function putUserStudentProfileSettingsDisableWithHttpInfo() {
+      var postBody = null;
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = [];
+      var accepts = [];
+      var returnType = null;
+      return this.apiClient.callApi('/student/profile-settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Disable student profile settings
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "putUserStudentProfileSettingsDisable",
-    value: function putUserStudentProfileSettingsDisable(callback) {
+    value: function putUserStudentProfileSettingsDisable() {
+      return this.putUserStudentProfileSettingsDisableWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Enable student profile settings
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "putUserStudentProfileSettingsEnableWithHttpInfo",
+    value: function putUserStudentProfileSettingsEnableWithHttpInfo() {
       var postBody = null;
       var pathParams = {};
       var queryParams = {};
@@ -2785,55 +3261,31 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/student/profile-settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserStudentProfileSettingsEnable operation.
-     * @callback module:api/DefaultApi~putUserStudentProfileSettingsEnableCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
      * Enable student profile settings
-     * @param {module:api/DefaultApi~putUserStudentProfileSettingsEnableCallback} callback The callback function, accepting three arguments: error, data, response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
      */
 
   }, {
     key: "putUserStudentProfileSettingsEnable",
-    value: function putUserStudentProfileSettingsEnable(callback) {
-      var postBody = null;
-      var pathParams = {};
-      var queryParams = {};
-      var headerParams = {};
-      var formParams = {};
-      var authNames = ['bearerAuth'];
-      var contentTypes = [];
-      var accepts = [];
-      var returnType = null;
-      return this.apiClient.callApi('/student/profile-settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+    value: function putUserStudentProfileSettingsEnable() {
+      return this.putUserStudentProfileSettingsEnableWithHttpInfo().then(function (response_and_data) {
+        return response_and_data.data;
+      });
     }
-    /**
-     * Callback function to receive the result of the putUserStudentProfileSettingsNotificationSettings operation.
-     * @callback module:api/DefaultApi~putUserStudentProfileSettingsNotificationSettingsCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
     /**
      * Update the user notification settings
      * @param {String} studentId 
      * @param {Object} opts Optional parameters
      * @param {module:model/StudentProfileNotifications} opts.studentProfileNotifications 
-     * @param {module:api/DefaultApi~putUserStudentProfileSettingsNotificationSettingsCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "putUserStudentProfileSettingsNotificationSettings",
-    value: function putUserStudentProfileSettingsNotificationSettings(studentId, opts, callback) {
+    key: "putUserStudentProfileSettingsNotificationSettingsWithHttpInfo",
+    value: function putUserStudentProfileSettingsNotificationSettingsWithHttpInfo(studentId, opts) {
       opts = opts || {};
       var postBody = opts['studentProfileNotifications']; // verify the required parameter 'studentId' is set
 
@@ -2851,29 +3303,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/notification-settings/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/notification-settings/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserStudentProfileSettingsPayment operation.
-     * @callback module:api/DefaultApi~putUserStudentProfileSettingsPaymentCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Update the user notification settings
+     * @param {String} studentId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StudentProfileNotifications} opts.studentProfileNotifications 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "putUserStudentProfileSettingsNotificationSettings",
+    value: function putUserStudentProfileSettingsNotificationSettings(studentId, opts) {
+      return this.putUserStudentProfileSettingsNotificationSettingsWithHttpInfo(studentId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Create new payment method
      * Create a new payment method
      * @param {String} studentId 
      * @param {Object} opts Optional parameters
      * @param {module:model/StudentPaymentMethod} opts.studentPaymentMethod 
-     * @param {module:api/DefaultApi~putUserStudentProfileSettingsPaymentCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "putUserStudentProfileSettingsPayment",
-    value: function putUserStudentProfileSettingsPayment(studentId, opts, callback) {
+    key: "putUserStudentProfileSettingsPaymentWithHttpInfo",
+    value: function putUserStudentProfileSettingsPaymentWithHttpInfo(studentId, opts) {
       opts = opts || {};
       var postBody = opts['studentPaymentMethod']; // verify the required parameter 'studentId' is set
 
@@ -2891,28 +3349,35 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Callback function to receive the result of the putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId operation.
-     * @callback module:api/DefaultApi~putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdCallback
-     * @param {String} error Error message, if any.
-     * @param {Object} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
+     * Create new payment method
+     * Create a new payment method
+     * @param {String} studentId 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/StudentPaymentMethod} opts.studentPaymentMethod 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
 
+  }, {
+    key: "putUserStudentProfileSettingsPayment",
+    value: function putUserStudentProfileSettingsPayment(studentId, opts) {
+      return this.putUserStudentProfileSettingsPaymentWithHttpInfo(studentId, opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
     /**
      * Set student payment method to default by payment ID
      * Update student's payment method
      * @param {String} studentId 
      * @param {String} paymentMethodId 
-     * @param {module:api/DefaultApi~putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
 
   }, {
-    key: "putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId",
-    value: function putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId, callback) {
+    key: "putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdWithHttpInfo",
+    value: function putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdWithHttpInfo(studentId, paymentMethodId) {
       var postBody = null; // verify the required parameter 'studentId' is set
 
       if (studentId === undefined || studentId === null) {
@@ -2935,7 +3400,22 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null, callback);
+      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Set student payment method to default by payment ID
+     * Update student's payment method
+     * @param {String} studentId 
+     * @param {String} paymentMethodId 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     */
+
+  }, {
+    key: "putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId",
+    value: function putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId(studentId, paymentMethodId) {
+      return this.putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodIdWithHttpInfo(studentId, paymentMethodId).then(function (response_and_data) {
+        return response_and_data.data;
+      });
     }
   }]);
 

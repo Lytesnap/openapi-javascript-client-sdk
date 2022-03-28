@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2006TopCities model module.
  * @module model/InlineResponse2006TopCities
- * @version 1.0.0
+ * @version 1.0.4
  */
 var InlineResponse2006TopCities = /*#__PURE__*/function () {
   /**

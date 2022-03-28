@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse400Errors model module.
  * @module model/InlineResponse400Errors
- * @version 1.0.0
+ * @version 1.0.4
  */
 var InlineResponse400Errors = /*#__PURE__*/function () {
   /**

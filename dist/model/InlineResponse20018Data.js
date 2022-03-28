@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse20018Data model module.
  * @module model/InlineResponse20018Data
- * @version 1.0.0
+ * @version 1.0.4
  */
 var InlineResponse20018Data = /*#__PURE__*/function () {
   /**

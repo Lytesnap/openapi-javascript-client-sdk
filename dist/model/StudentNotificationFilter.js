@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StudentNotificationFilter model module.
  * @module model/StudentNotificationFilter
- * @version 1.0.0
+ * @version 1.0.4
  */
 var StudentNotificationFilter = /*#__PURE__*/function () {
   /**

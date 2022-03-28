@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineObject4 model module.
  * @module model/InlineObject4
- * @version 1.0.0
+ * @version 1.0.4
  */
 var InlineObject4 = /*#__PURE__*/function () {
   /**

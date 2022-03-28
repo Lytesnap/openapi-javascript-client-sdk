@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StudentProfilePostExperience model module.
  * @module model/StudentProfilePostExperience
- * @version 1.0.0
+ * @version 1.0.4
  */
 var StudentProfilePostExperience = /*#__PURE__*/function () {
   /**

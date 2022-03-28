@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachSessionPutWhatToBring model module.
  * @module model/CoachSessionPutWhatToBring
- * @version 1.0.0
+ * @version 1.0.4
  */
 var CoachSessionPutWhatToBring = /*#__PURE__*/function () {
   /**

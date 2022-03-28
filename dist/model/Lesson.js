@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The Lesson model module.
  * @module model/Lesson
- * @version 1.0.0
+ * @version 1.0.4
  */
 var Lesson = /*#__PURE__*/function () {
   /**

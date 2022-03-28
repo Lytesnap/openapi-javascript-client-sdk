@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2008CancellationReason model module.
  * @module model/InlineResponse2008CancellationReason
- * @version 1.0.0
+ * @version 1.0.4
  */
 var InlineResponse2008CancellationReason = /*#__PURE__*/function () {
   /**

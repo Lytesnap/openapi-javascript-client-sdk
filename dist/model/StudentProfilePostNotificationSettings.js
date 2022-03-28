@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StudentProfilePostNotificationSettings model module.
  * @module model/StudentProfilePostNotificationSettings
- * @version 1.0.0
+ * @version 1.0.4
  */
 var StudentProfilePostNotificationSettings = /*#__PURE__*/function () {
   /**

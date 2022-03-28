@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachProfileCredentialsAndExperience model module.
  * @module model/CoachProfileCredentialsAndExperience
- * @version 1.0.0
+ * @version 1.0.4
  */
 var CoachProfileCredentialsAndExperience = /*#__PURE__*/function () {
   /**

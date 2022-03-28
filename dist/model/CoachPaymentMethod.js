@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachPaymentMethod model module.
  * @module model/CoachPaymentMethod
- * @version 1.0.0
+ * @version 1.0.4
  */
 var CoachPaymentMethod = /*#__PURE__*/function () {
   /**
