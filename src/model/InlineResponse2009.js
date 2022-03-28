@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2009 model module.
  * @module model/InlineResponse2009
- * @version 1.0.4
+ * @version 1.0.7
  */
 class InlineResponse2009 {
     /**

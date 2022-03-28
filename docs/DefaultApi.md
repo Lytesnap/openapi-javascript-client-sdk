@@ -406,7 +406,7 @@ This endpoint does not need any parameter.
 
 ## getLocationLocationId
 
-> LocationResponse getLocationLocationId(locationId)
+> InlineResponse20019 getLocationLocationId(locationId)
 
 Get location information by locationId
 
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LocationResponse**](LocationResponse.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

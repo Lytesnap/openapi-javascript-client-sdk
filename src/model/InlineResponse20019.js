@@ -12,23 +12,23 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20018Data from './InlineResponse20018Data';
+import LocationResponse from './LocationResponse';
 
 /**
- * The InlineResponse20018 model module.
- * @module model/InlineResponse20018
+ * The InlineResponse20019 model module.
+ * @module model/InlineResponse20019
  * @version 1.0.7
  */
-class InlineResponse20018 {
+class InlineResponse20019 {
     /**
-     * Constructs a new <code>InlineResponse20018</code>.
-     * @alias module:model/InlineResponse20018
+     * Constructs a new <code>InlineResponse20019</code>.
+     * @alias module:model/InlineResponse20019
      * @param message {String} 
-     * @param data {module:model/InlineResponse20018Data} 
+     * @param data {module:model/LocationResponse} 
      */
     constructor(message, data) { 
         
-        InlineResponse20018.initialize(this, message, data);
+        InlineResponse20019.initialize(this, message, data);
     }
 
     /**
@@ -42,21 +42,21 @@ class InlineResponse20018 {
     }
 
     /**
-     * Constructs a <code>InlineResponse20018</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>InlineResponse20019</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/InlineResponse20018} obj Optional instance to populate.
-     * @return {module:model/InlineResponse20018} The populated <code>InlineResponse20018</code> instance.
+     * @param {module:model/InlineResponse20019} obj Optional instance to populate.
+     * @return {module:model/InlineResponse20019} The populated <code>InlineResponse20019</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new InlineResponse20018();
+            obj = obj || new InlineResponse20019();
 
             if (data.hasOwnProperty('message')) {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
             if (data.hasOwnProperty('data')) {
-                obj['data'] = InlineResponse20018Data.constructFromObject(data['data']);
+                obj['data'] = LocationResponse.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -68,17 +68,17 @@ class InlineResponse20018 {
 /**
  * @member {String} message
  */
-InlineResponse20018.prototype['message'] = undefined;
+InlineResponse20019.prototype['message'] = undefined;
 
 /**
- * @member {module:model/InlineResponse20018Data} data
+ * @member {module:model/LocationResponse} data
  */
-InlineResponse20018.prototype['data'] = undefined;
+InlineResponse20019.prototype['data'] = undefined;
 
 
 
 
 
 
-export default InlineResponse20018;
+export default InlineResponse20019;
 

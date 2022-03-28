@@ -17,7 +17,7 @@ import LocationResponse from './LocationResponse';
 /**
  * The InlineResponse20017 model module.
  * @module model/InlineResponse20017
- * @version 1.0.4
+ * @version 1.0.7
  */
 class InlineResponse20017 {
     /**

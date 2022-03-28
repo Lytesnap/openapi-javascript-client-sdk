@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2006TopCities model module.
  * @module model/InlineResponse2006TopCities
- * @version 1.0.4
+ * @version 1.0.7
  */
 class InlineResponse2006TopCities {
     /**

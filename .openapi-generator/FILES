@@ -54,6 +54,7 @@ docs/InlineResponse20016.md
 docs/InlineResponse20017.md
 docs/InlineResponse20018.md
 docs/InlineResponse20018Data.md
+docs/InlineResponse20019.md
 docs/InlineResponse2001SomeoneMessagedMe.md
 docs/InlineResponse2002.md
 docs/InlineResponse2003.md
@@ -155,6 +156,7 @@ src/model/InlineResponse20016.js
 src/model/InlineResponse20017.js
 src/model/InlineResponse20018.js
 src/model/InlineResponse20018Data.js
+src/model/InlineResponse20019.js
 src/model/InlineResponse2001SomeoneMessagedMe.js
 src/model/InlineResponse2002.js
 src/model/InlineResponse2003.js
@@ -199,3 +201,4 @@ src/model/StudentProfilePostExperience.js
 src/model/StudentProfilePostNotificationSettings.js
 src/model/StudentProfilePostPaymentMethods.js
 src/model/User.js
+test/model/InlineResponse20019.spec.js

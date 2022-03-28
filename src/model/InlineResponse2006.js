@@ -18,7 +18,7 @@ import InlineResponse2006TopStates from './InlineResponse2006TopStates';
 /**
  * The InlineResponse2006 model module.
  * @module model/InlineResponse2006
- * @version 1.0.4
+ * @version 1.0.7
  */
 class InlineResponse2006 {
     /**

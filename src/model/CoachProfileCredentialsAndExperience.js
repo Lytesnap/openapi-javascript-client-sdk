@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachProfileCredentialsAndExperience model module.
  * @module model/CoachProfileCredentialsAndExperience
- * @version 1.0.4
+ * @version 1.0.7
  */
 class CoachProfileCredentialsAndExperience {
     /**

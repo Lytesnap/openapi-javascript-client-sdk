@@ -17,7 +17,7 @@ import InlineResponse2008CancellationReason from './InlineResponse2008Cancellati
 /**
  * The InlineResponse2008 model module.
  * @module model/InlineResponse2008
- * @version 1.0.4
+ * @version 1.0.7
  */
 class InlineResponse2008 {
     /**

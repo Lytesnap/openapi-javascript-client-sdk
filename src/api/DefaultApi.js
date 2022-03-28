@@ -45,6 +45,7 @@ import InlineResponse20015 from '../model/InlineResponse20015';
 import InlineResponse20016 from '../model/InlineResponse20016';
 import InlineResponse20017 from '../model/InlineResponse20017';
 import InlineResponse20018 from '../model/InlineResponse20018';
+import InlineResponse20019 from '../model/InlineResponse20019';
 import InlineResponse2002 from '../model/InlineResponse2002';
 import InlineResponse2003 from '../model/InlineResponse2003';
 import InlineResponse2004 from '../model/InlineResponse2004';
@@ -66,7 +67,6 @@ import LessonCancelRequest from '../model/LessonCancelRequest';
 import LessonProblemReport from '../model/LessonProblemReport';
 import LocationRequest from '../model/LocationRequest';
 import LocationRequestOptional from '../model/LocationRequestOptional';
-import LocationResponse from '../model/LocationResponse';
 import StudentNotificationFilter from '../model/StudentNotificationFilter';
 import StudentPaymentMethod from '../model/StudentPaymentMethod';
 import StudentProfile from '../model/StudentProfile';
@@ -77,7 +77,7 @@ import StudentProfilePost from '../model/StudentProfilePost';
 /**
 * Default service.
 * @module api/DefaultApi
-* @version 1.0.4
+* @version 1.0.7
 */
 export default class DefaultApi {
 
@@ -425,7 +425,7 @@ export default class DefaultApi {
      * Get location information by locationId
      * Both student and coach can use this endpoint to fetch location information.
      * @param {String} locationId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LocationResponse} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20019} and HTTP response
      */
     getLocationLocationIdWithHttpInfo(locationId) {
       let postBody = null;
@@ -447,7 +447,7 @@ export default class DefaultApi {
       let authNames = ['bearerAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = LocationResponse;
+      let returnType = InlineResponse20019;
       return this.apiClient.callApi(
         '/location/{locationId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -459,7 +459,7 @@ export default class DefaultApi {
      * Get location information by locationId
      * Both student and coach can use this endpoint to fetch location information.
      * @param {String} locationId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LocationResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20019}
      */
     getLocationLocationId(locationId) {
       return this.getLocationLocationIdWithHttpInfo(locationId)

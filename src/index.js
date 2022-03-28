@@ -64,6 +64,7 @@ import InlineResponse20016 from './model/InlineResponse20016';
 import InlineResponse20017 from './model/InlineResponse20017';
 import InlineResponse20018 from './model/InlineResponse20018';
 import InlineResponse20018Data from './model/InlineResponse20018Data';
+import InlineResponse20019 from './model/InlineResponse20019';
 import InlineResponse2001SomeoneMessagedMe from './model/InlineResponse2001SomeoneMessagedMe';
 import InlineResponse2002 from './model/InlineResponse2002';
 import InlineResponse2003 from './model/InlineResponse2003';
@@ -140,7 +141,7 @@ import DefaultApi from './api/DefaultApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.4
+* @version 1.0.7
 */
 export {
     /**
@@ -454,6 +455,12 @@ export {
      * @property {module:model/InlineResponse20018Data}
      */
     InlineResponse20018Data,
+
+    /**
+     * The InlineResponse20019 model constructor.
+     * @property {module:model/InlineResponse20019}
+     */
+    InlineResponse20019,
 
     /**
      * The InlineResponse2001SomeoneMessagedMe model constructor.

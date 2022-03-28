@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachProfileFaq model module.
  * @module model/CoachProfileFaq
- * @version 1.0.4
+ * @version 1.0.7
  */
 class CoachProfileFaq {
     /**

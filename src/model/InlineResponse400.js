@@ -17,7 +17,7 @@ import InlineResponse400Errors from './InlineResponse400Errors';
 /**
  * The InlineResponse400 model module.
  * @module model/InlineResponse400
- * @version 1.0.4
+ * @version 1.0.7
  */
 class InlineResponse400 {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StudentProfilePostNotificationSettings model module.
  * @module model/StudentProfilePostNotificationSettings
- * @version 1.0.4
+ * @version 1.0.7
  */
 class StudentProfilePostNotificationSettings {
     /**

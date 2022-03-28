@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The FilterPriceRange model module.
  * @module model/FilterPriceRange
- * @version 1.0.4
+ * @version 1.0.7
  */
 class FilterPriceRange {
     /**
