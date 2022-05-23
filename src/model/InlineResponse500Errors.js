@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse500Errors model module.
  * @module model/InlineResponse500Errors
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse500Errors {
     /**

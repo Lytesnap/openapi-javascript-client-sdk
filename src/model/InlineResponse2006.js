@@ -12,13 +12,11 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2006TopCities from './InlineResponse2006TopCities';
-import InlineResponse2006TopStates from './InlineResponse2006TopStates';
 
 /**
  * The InlineResponse2006 model module.
  * @module model/InlineResponse2006
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2006 {
     /**
@@ -49,11 +47,11 @@ class InlineResponse2006 {
         if (data) {
             obj = obj || new InlineResponse2006();
 
-            if (data.hasOwnProperty('topStates')) {
-                obj['topStates'] = ApiClient.convertToType(data['topStates'], [InlineResponse2006TopStates]);
+            if (data.hasOwnProperty('default')) {
+                obj['default'] = ApiClient.convertToType(data['default'], 'Boolean');
             }
-            if (data.hasOwnProperty('topCities')) {
-                obj['topCities'] = ApiClient.convertToType(data['topCities'], [InlineResponse2006TopCities]);
+            if (data.hasOwnProperty('paymentMethodId')) {
+                obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'String');
             }
         }
         return obj;
@@ -63,14 +61,14 @@ class InlineResponse2006 {
 }
 
 /**
- * @member {Array.<module:model/InlineResponse2006TopStates>} topStates
+ * @member {Boolean} default
  */
-InlineResponse2006.prototype['topStates'] = undefined;
+InlineResponse2006.prototype['default'] = undefined;
 
 /**
- * @member {Array.<module:model/InlineResponse2006TopCities>} topCities
+ * @member {String} paymentMethodId
  */
-InlineResponse2006.prototype['topCities'] = undefined;
+InlineResponse2006.prototype['paymentMethodId'] = undefined;
 
 
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**students** | **Number** |  | [optional] 
-**coaches** | **Number** |  | [optional] 
+**** | [**CoachNotification**](CoachNotification.md) |  | [optional] 
+**id** | **String** |  | 
 
 

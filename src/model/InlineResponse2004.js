@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2004 model module.
  * @module model/InlineResponse2004
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2004 {
     /**
@@ -47,11 +47,20 @@ class InlineResponse2004 {
         if (data) {
             obj = obj || new InlineResponse2004();
 
-            if (data.hasOwnProperty('default')) {
-                obj['default'] = ApiClient.convertToType(data['default'], 'Boolean');
+            if (data.hasOwnProperty('incomeThisWeek')) {
+                obj['incomeThisWeek'] = ApiClient.convertToType(data['incomeThisWeek'], 'Number');
             }
-            if (data.hasOwnProperty('paymentMethodId')) {
-                obj['paymentMethodId'] = ApiClient.convertToType(data['paymentMethodId'], 'String');
+            if (data.hasOwnProperty('hoursWorked')) {
+                obj['hoursWorked'] = ApiClient.convertToType(data['hoursWorked'], 'Number');
+            }
+            if (data.hasOwnProperty('numSessions')) {
+                obj['numSessions'] = ApiClient.convertToType(data['numSessions'], 'Number');
+            }
+            if (data.hasOwnProperty('numStudents')) {
+                obj['numStudents'] = ApiClient.convertToType(data['numStudents'], 'Number');
+            }
+            if (data.hasOwnProperty('data')) {
+                obj['data'] = ApiClient.convertToType(data['data'], [Object]);
             }
         }
         return obj;
@@ -61,14 +70,29 @@ class InlineResponse2004 {
 }
 
 /**
- * @member {Boolean} default
+ * @member {Number} incomeThisWeek
  */
-InlineResponse2004.prototype['default'] = undefined;
+InlineResponse2004.prototype['incomeThisWeek'] = undefined;
 
 /**
- * @member {String} paymentMethodId
+ * @member {Number} hoursWorked
  */
-InlineResponse2004.prototype['paymentMethodId'] = undefined;
+InlineResponse2004.prototype['hoursWorked'] = undefined;
+
+/**
+ * @member {Number} numSessions
+ */
+InlineResponse2004.prototype['numSessions'] = undefined;
+
+/**
+ * @member {Number} numStudents
+ */
+InlineResponse2004.prototype['numStudents'] = undefined;
+
+/**
+ * @member {Array.<Object>} data
+ */
+InlineResponse2004.prototype['data'] = undefined;
 
 
 

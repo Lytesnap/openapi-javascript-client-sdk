@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachProfileSettingsPrivacyResetPassword model module.
  * @module model/CoachProfileSettingsPrivacyResetPassword
- * @version 1.0.4
+ * @version 1.0.12
  */
 var CoachProfileSettingsPrivacyResetPassword = /*#__PURE__*/function () {
   /**

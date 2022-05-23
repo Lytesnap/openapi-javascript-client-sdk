@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse20011 model module.
  * @module model/InlineResponse20011
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20011 {
     /**
@@ -50,11 +50,23 @@ class InlineResponse20011 {
             if (data.hasOwnProperty('userId')) {
                 obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
             }
+            if (data.hasOwnProperty('userType')) {
+                obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
+            }
             if (data.hasOwnProperty('userName')) {
                 obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
-            if (data.hasOwnProperty('numCertificates')) {
-                obj['numCertificates'] = ApiClient.convertToType(data['numCertificates'], 'Number');
+            if (data.hasOwnProperty('userPhoto')) {
+                obj['userPhoto'] = ApiClient.convertToType(data['userPhoto'], 'String');
+            }
+            if (data.hasOwnProperty('date')) {
+                obj['date'] = ApiClient.convertToType(data['date'], 'String');
+            }
+            if (data.hasOwnProperty('reason')) {
+                obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
+            }
+            if (data.hasOwnProperty('rating')) {
+                obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
             }
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
@@ -72,14 +84,34 @@ class InlineResponse20011 {
 InlineResponse20011.prototype['userId'] = undefined;
 
 /**
+ * @member {module:model/InlineResponse20011.UserTypeEnum} userType
+ */
+InlineResponse20011.prototype['userType'] = undefined;
+
+/**
  * @member {String} userName
  */
 InlineResponse20011.prototype['userName'] = undefined;
 
 /**
- * @member {Number} numCertificates
+ * @member {String} userPhoto
  */
-InlineResponse20011.prototype['numCertificates'] = undefined;
+InlineResponse20011.prototype['userPhoto'] = undefined;
+
+/**
+ * @member {String} date
+ */
+InlineResponse20011.prototype['date'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20011.ReasonEnum} reason
+ */
+InlineResponse20011.prototype['reason'] = undefined;
+
+/**
+ * @member {Number} rating
+ */
+InlineResponse20011.prototype['rating'] = undefined;
 
 /**
  * @member {module:model/InlineResponse20011.StatusEnum} status
@@ -88,6 +120,60 @@ InlineResponse20011.prototype['status'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>userType</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineResponse20011['UserTypeEnum'] = {
+
+    /**
+     * value: "Student"
+     * @const
+     */
+    "Student": "Student",
+
+    /**
+     * value: "Coach"
+     * @const
+     */
+    "Coach": "Coach"
+};
+
+
+/**
+ * Allowed values for the <code>reason</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineResponse20011['ReasonEnum'] = {
+
+    /**
+     * value: "Medical emergency"
+     * @const
+     */
+    "Medical emergency": "Medical emergency",
+
+    /**
+     * value: "Weather"
+     * @const
+     */
+    "Weather": "Weather",
+
+    /**
+     * value: "Unspecified"
+     * @const
+     */
+    "Unspecified": "Unspecified",
+
+    /**
+     * value: "Other"
+     * @const
+     */
+    "Other": "Other"
+};
 
 
 /**
@@ -104,16 +190,10 @@ InlineResponse20011['StatusEnum'] = {
     "pending": "pending",
 
     /**
-     * value: "declined"
+     * value: "solved"
      * @const
      */
-    "declined": "declined",
-
-    /**
-     * value: "approved"
-     * @const
-     */
-    "approved": "approved"
+    "solved": "solved"
 };
 
 

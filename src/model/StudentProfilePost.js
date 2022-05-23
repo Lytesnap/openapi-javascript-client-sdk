@@ -19,7 +19,7 @@ import StudentProfilePostPaymentMethods from './StudentProfilePostPaymentMethods
 /**
  * The StudentProfilePost model module.
  * @module model/StudentProfilePost
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentProfilePost {
     /**

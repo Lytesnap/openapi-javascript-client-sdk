@@ -12,20 +12,23 @@
  */
 
 import ApiClient from '../ApiClient';
+import CoachProfile from './CoachProfile';
 
 /**
  * The InlineResponse200 model module.
  * @module model/InlineResponse200
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse200 {
     /**
      * Constructs a new <code>InlineResponse200</code>.
      * @alias module:model/InlineResponse200
+     * @param message {String} 
+     * @param data {module:model/CoachProfile} 
      */
-    constructor() { 
+    constructor(message, data) { 
         
-        InlineResponse200.initialize(this);
+        InlineResponse200.initialize(this, message, data);
     }
 
     /**
@@ -33,7 +36,9 @@ class InlineResponse200 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, message, data) { 
+        obj['message'] = message || 'Get Coach Own Profile Success';
+        obj['data'] = data;
     }
 
     /**
@@ -47,11 +52,11 @@ class InlineResponse200 {
         if (data) {
             obj = obj || new InlineResponse200();
 
-            if (data.hasOwnProperty('timeIntervalBetweenLocations')) {
-                obj['timeIntervalBetweenLocations'] = ApiClient.convertToType(data['timeIntervalBetweenLocations'], 'Number');
+            if (data.hasOwnProperty('message')) {
+                obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
-            if (data.hasOwnProperty('breaksBetweenLessons')) {
-                obj['breaksBetweenLessons'] = ApiClient.convertToType(data['breaksBetweenLessons'], 'Number');
+            if (data.hasOwnProperty('data')) {
+                obj['data'] = CoachProfile.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -61,14 +66,15 @@ class InlineResponse200 {
 }
 
 /**
- * @member {Number} timeIntervalBetweenLocations
+ * @member {String} message
+ * @default 'Get Coach Own Profile Success'
  */
-InlineResponse200.prototype['timeIntervalBetweenLocations'] = undefined;
+InlineResponse200.prototype['message'] = 'Get Coach Own Profile Success';
 
 /**
- * @member {Number} breaksBetweenLessons
+ * @member {module:model/CoachProfile} data
  */
-InlineResponse200.prototype['breaksBetweenLessons'] = undefined;
+InlineResponse200.prototype['data'] = undefined;
 
 
 

@@ -17,7 +17,7 @@ import CoachAvailabilityLocation from './CoachAvailabilityLocation';
 /**
  * The CoachAvailability model module.
  * @module model/CoachAvailability
- * @version 1.0.7
+ * @version 1.0.12
  */
 class CoachAvailability {
     /**

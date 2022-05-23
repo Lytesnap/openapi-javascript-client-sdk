@@ -12,23 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse20018Data from './InlineResponse20018Data';
 
 /**
  * The InlineResponse20018 model module.
  * @module model/InlineResponse20018
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20018 {
     /**
      * Constructs a new <code>InlineResponse20018</code>.
      * @alias module:model/InlineResponse20018
-     * @param message {String} 
-     * @param data {module:model/InlineResponse20018Data} 
      */
-    constructor(message, data) { 
+    constructor() { 
         
-        InlineResponse20018.initialize(this, message, data);
+        InlineResponse20018.initialize(this);
     }
 
     /**
@@ -36,9 +33,7 @@ class InlineResponse20018 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, message, data) { 
-        obj['message'] = message;
-        obj['data'] = data;
+    static initialize(obj) { 
     }
 
     /**
@@ -52,11 +47,17 @@ class InlineResponse20018 {
         if (data) {
             obj = obj || new InlineResponse20018();
 
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
+            if (data.hasOwnProperty('fullName')) {
+                obj['fullName'] = ApiClient.convertToType(data['fullName'], 'String');
             }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = InlineResponse20018Data.constructFromObject(data['data']);
+            if (data.hasOwnProperty('phoneNumber')) {
+                obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'String');
+            }
+            if (data.hasOwnProperty('gender')) {
+                obj['gender'] = ApiClient.convertToType(data['gender'], 'String');
+            }
+            if (data.hasOwnProperty('emailAddress')) {
+                obj['emailAddress'] = ApiClient.convertToType(data['emailAddress'], 'String');
             }
         }
         return obj;
@@ -66,17 +67,54 @@ class InlineResponse20018 {
 }
 
 /**
- * @member {String} message
+ * @member {String} fullName
  */
-InlineResponse20018.prototype['message'] = undefined;
+InlineResponse20018.prototype['fullName'] = undefined;
 
 /**
- * @member {module:model/InlineResponse20018Data} data
+ * @member {String} phoneNumber
  */
-InlineResponse20018.prototype['data'] = undefined;
+InlineResponse20018.prototype['phoneNumber'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20018.GenderEnum} gender
+ */
+InlineResponse20018.prototype['gender'] = undefined;
+
+/**
+ * @member {String} emailAddress
+ */
+InlineResponse20018.prototype['emailAddress'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>gender</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineResponse20018['GenderEnum'] = {
+
+    /**
+     * value: "male"
+     * @const
+     */
+    "male": "male",
+
+    /**
+     * value: "female"
+     * @const
+     */
+    "female": "female",
+
+    /**
+     * value: "other"
+     * @const
+     */
+    "other": "other"
+};
 
 
 

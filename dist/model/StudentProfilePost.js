@@ -24,7 +24,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The StudentProfilePost model module.
  * @module model/StudentProfilePost
- * @version 1.0.4
+ * @version 1.0.12
  */
 var StudentProfilePost = /*#__PURE__*/function () {
   /**

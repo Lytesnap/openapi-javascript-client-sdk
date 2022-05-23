@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse20012 model module.
  * @module model/InlineResponse20012
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse20012 = /*#__PURE__*/function () {
   /**
@@ -54,24 +54,16 @@ var InlineResponse20012 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse20012();
 
-        if (data.hasOwnProperty('certificateName')) {
-          obj['certificateName'] = _ApiClient["default"].convertToType(data['certificateName'], 'String');
+        if (data.hasOwnProperty('name')) {
+          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
-        if (data.hasOwnProperty('expirationDate')) {
-          obj['expirationDate'] = _ApiClient["default"].convertToType(data['expirationDate'], 'String');
+        if (data.hasOwnProperty('userType')) {
+          obj['userType'] = _ApiClient["default"].convertToType(data['userType'], 'String');
         }
 
-        if (data.hasOwnProperty('certificatePhoto')) {
-          obj['certificatePhoto'] = _ApiClient["default"].convertToType(data['certificatePhoto'], 'String');
-        }
-
-        if (data.hasOwnProperty('status')) {
-          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
-        }
-
-        if (data.hasOwnProperty('certificateId')) {
-          obj['certificateId'] = _ApiClient["default"].convertToType(data['certificateId'], 'String');
+        if (data.hasOwnProperty('rating')) {
+          obj['rating'] = _ApiClient["default"].convertToType(data['rating'], 'Number');
         }
       }
 
@@ -82,30 +74,39 @@ var InlineResponse20012 = /*#__PURE__*/function () {
   return InlineResponse20012;
 }();
 /**
- * @member {String} certificateName
+ * @member {String} name
  */
 
 
-InlineResponse20012.prototype['certificateName'] = undefined;
+InlineResponse20012.prototype['name'] = undefined;
 /**
- * @member {String} expirationDate
+ * @member {module:model/InlineResponse20012.UserTypeEnum} userType
  */
 
-InlineResponse20012.prototype['expirationDate'] = undefined;
+InlineResponse20012.prototype['userType'] = undefined;
 /**
- * @member {String} certificatePhoto
+ * @member {Number} rating
  */
 
-InlineResponse20012.prototype['certificatePhoto'] = undefined;
+InlineResponse20012.prototype['rating'] = undefined;
 /**
- * @member {String} status
+ * Allowed values for the <code>userType</code> property.
+ * @enum {String}
+ * @readonly
  */
 
-InlineResponse20012.prototype['status'] = undefined;
-/**
- * @member {String} certificateId
- */
+InlineResponse20012['UserTypeEnum'] = {
+  /**
+   * value: "coach"
+   * @const
+   */
+  "coach": "coach",
 
-InlineResponse20012.prototype['certificateId'] = undefined;
+  /**
+   * value: "student"
+   * @const
+   */
+  "student": "student"
+};
 var _default = InlineResponse20012;
 exports["default"] = _default;

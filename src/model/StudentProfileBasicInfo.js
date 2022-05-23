@@ -17,7 +17,7 @@ import StudentProfilePostExperience from './StudentProfilePostExperience';
 /**
  * The StudentProfileBasicInfo model module.
  * @module model/StudentProfileBasicInfo
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentProfileBasicInfo {
     /**

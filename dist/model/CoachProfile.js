@@ -28,7 +28,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachProfile model module.
  * @module model/CoachProfile
- * @version 1.0.4
+ * @version 1.0.12
  */
 var CoachProfile = /*#__PURE__*/function () {
   /**
@@ -124,6 +124,10 @@ var CoachProfile = /*#__PURE__*/function () {
         if (data.hasOwnProperty('video')) {
           obj['video'] = _ApiClient["default"].convertToType(data['video'], 'String');
         }
+
+        if (data.hasOwnProperty('profilePicture')) {
+          obj['profilePicture'] = _ApiClient["default"].convertToType(data['profilePicture'], 'String');
+        }
       }
 
       return obj;
@@ -188,6 +192,11 @@ CoachProfile.prototype['faq'] = undefined;
  */
 
 CoachProfile.prototype['video'] = undefined;
+/**
+ * @member {String} profilePicture
+ */
+
+CoachProfile.prototype['profilePicture'] = undefined;
 /**
  * Allowed values for the <code>sport</code> property.
  * @enum {String}

@@ -17,7 +17,7 @@ import CoachNotificationAdditionalInfoLessonInfo from './CoachNotificationAdditi
 /**
  * The CoachNotificationAdditionalInfo model module.
  * @module model/CoachNotificationAdditionalInfo
- * @version 1.0.7
+ * @version 1.0.12
  */
 class CoachNotificationAdditionalInfo {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse20014 model module.
  * @module model/InlineResponse20014
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20014 {
     /**
@@ -47,20 +47,20 @@ class InlineResponse20014 {
         if (data) {
             obj = obj || new InlineResponse20014();
 
-            if (data.hasOwnProperty('featureName')) {
-                obj['featureName'] = ApiClient.convertToType(data['featureName'], 'String');
+            if (data.hasOwnProperty('certificateName')) {
+                obj['certificateName'] = ApiClient.convertToType(data['certificateName'], 'String');
             }
-            if (data.hasOwnProperty('featureId')) {
-                obj['featureId'] = ApiClient.convertToType(data['featureId'], 'String');
+            if (data.hasOwnProperty('expirationDate')) {
+                obj['expirationDate'] = ApiClient.convertToType(data['expirationDate'], 'String');
             }
-            if (data.hasOwnProperty('dateImplemented')) {
-                obj['dateImplemented'] = ApiClient.convertToType(data['dateImplemented'], 'String');
+            if (data.hasOwnProperty('certificatePhoto')) {
+                obj['certificatePhoto'] = ApiClient.convertToType(data['certificatePhoto'], 'String');
             }
-            if (data.hasOwnProperty('numberOfFeedback')) {
-                obj['numberOfFeedback'] = ApiClient.convertToType(data['numberOfFeedback'], 'Number');
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
-            if (data.hasOwnProperty('averageRating')) {
-                obj['averageRating'] = ApiClient.convertToType(data['averageRating'], 'Number');
+            if (data.hasOwnProperty('certificateId')) {
+                obj['certificateId'] = ApiClient.convertToType(data['certificateId'], 'String');
             }
         }
         return obj;
@@ -70,29 +70,29 @@ class InlineResponse20014 {
 }
 
 /**
- * @member {String} featureName
+ * @member {String} certificateName
  */
-InlineResponse20014.prototype['featureName'] = undefined;
+InlineResponse20014.prototype['certificateName'] = undefined;
 
 /**
- * @member {String} featureId
+ * @member {String} expirationDate
  */
-InlineResponse20014.prototype['featureId'] = undefined;
+InlineResponse20014.prototype['expirationDate'] = undefined;
 
 /**
- * @member {String} dateImplemented
+ * @member {String} certificatePhoto
  */
-InlineResponse20014.prototype['dateImplemented'] = undefined;
+InlineResponse20014.prototype['certificatePhoto'] = undefined;
 
 /**
- * @member {Number} numberOfFeedback
+ * @member {String} status
  */
-InlineResponse20014.prototype['numberOfFeedback'] = undefined;
+InlineResponse20014.prototype['status'] = undefined;
 
 /**
- * @member {Number} averageRating
+ * @member {String} certificateId
  */
-InlineResponse20014.prototype['averageRating'] = undefined;
+InlineResponse20014.prototype['certificateId'] = undefined;
 
 
 

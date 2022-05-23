@@ -4,22 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**fullName** | **String** |  | [optional] 
-**phoneNumber** | **String** |  | [optional] 
-**gender** | **String** |  | [optional] 
-**emailAddress** | **String** |  | [optional] 
-
-
-
-## Enum: GenderEnum
-
-
-* `male` (value: `"male"`)
-
-* `female` (value: `"female"`)
-
-* `other` (value: `"other"`)
-
-
+**featureName** | **String** |  | [optional] 
+**featureId** | **String** |  | [optional] 
+**dateImplemented** | **String** |  | [optional] 
+**numberOfFeedback** | **Number** |  | [optional] 
+**averageRating** | **Number** |  | [optional] 
 
 

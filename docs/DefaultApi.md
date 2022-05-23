@@ -6,10 +6,11 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteLocationLocationId**](DefaultApi.md#deleteLocationLocationId) | **DELETE** /location/{locationId} | Delete location information by locationId
 [**deleteUserCoachAvailabilityAvailabilityId**](DefaultApi.md#deleteUserCoachAvailabilityAvailabilityId) | **DELETE** /coach/availability/{availabilityId} | 
-[**deleteUserCoachProfileSettingsPayoutPaymentMethodId**](DefaultApi.md#deleteUserCoachProfileSettingsPayoutPaymentMethodId) | **DELETE** /coach/profile-settings/payout/{paymentMethodId} | Coach delete payment method Id
+[**deleteUserCoachProfileSettingsPayoutPaymentMethodId**](DefaultApi.md#deleteUserCoachProfileSettingsPayoutPaymentMethodId) | **DELETE** /coach/profile/settings/payout/{paymentMethodId} | Coach delete payment method Id
 [**deleteUserFilterFilterName**](DefaultApi.md#deleteUserFilterFilterName) | **DELETE** /student/filter/{filterId} | Delete user filter by ID
-[**deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId**](DefaultApi.md#deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId) | **DELETE** /student/profile-settings/payment-methods/{studentId}/{paymentMethodId} | Delete payment method by payment ID
+[**deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId**](DefaultApi.md#deleteUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId) | **DELETE** /student/profile/payment-methods/{studentId}/{paymentMethodId} | Delete payment method by payment ID
 [**getCoach**](DefaultApi.md#getCoach) | **GET** /coach/profile | Get coach&#39;s own profile
+[**getCoachSignup**](DefaultApi.md#getCoachSignup) | **POST** /coach/signup | Signup student with basic information
 [**getLocation**](DefaultApi.md#getLocation) | **GET** /location | Get all saved locations by coach
 [**getLocationLocationId**](DefaultApi.md#getLocationLocationId) | **GET** /location/{locationId} | Get location information by locationId
 [**getUserAdmin**](DefaultApi.md#getUserAdmin) | **GET** /admin/bookings | Get Bookings
@@ -29,19 +30,19 @@ Method | HTTP request | Description
 [**getUserCoachAvailabilityInfo**](DefaultApi.md#getUserCoachAvailabilityInfo) | **GET** /coach/availability-options | Get Availability Info
 [**getUserCoachInsights**](DefaultApi.md#getUserCoachInsights) | **GET** /coach/insights/analytics | Get coach analytics insight
 [**getUserCoachNotifications**](DefaultApi.md#getUserCoachNotifications) | **GET** /coach/notifications | Get Coach Notifications
-[**getUserCoachProfileCoachId**](DefaultApi.md#getUserCoachProfileCoachId) | **GET** /coach/profile/{coachId} | Your GET endpoint
-[**getUserCoachProfileSettingsNotifications**](DefaultApi.md#getUserCoachProfileSettingsNotifications) | **GET** /coach/profile-settings/notifications | Get coach notifications settings
-[**getUserCoachProfileSettingsPayout**](DefaultApi.md#getUserCoachProfileSettingsPayout) | **GET** /coach/profile-settings/payout | Get Coach Payout Methods
+[**getUserCoachProfileCoachId**](DefaultApi.md#getUserCoachProfileCoachId) | **GET** /coach/profile/{coachId} | Get coach profile by Id
+[**getUserCoachProfileSettingsNotifications**](DefaultApi.md#getUserCoachProfileSettingsNotifications) | **GET** /coach/profile/settings/notifications | Get coach notifications settings
+[**getUserCoachProfileSettingsPayout**](DefaultApi.md#getUserCoachProfileSettingsPayout) | **GET** /coach/profile/settings/payout | Get Coach Payout Methods
 [**getUserCoachReview**](DefaultApi.md#getUserCoachReview) | **GET** /coach/review | Coach Get Reviews
 [**getUserCoachSession**](DefaultApi.md#getUserCoachSession) | **GET** /coach/session-plans | Get coach session info
 [**getUserFilter**](DefaultApi.md#getUserFilter) | **GET** /student/filter | Get user saved filters
 [**getUserFilterFilterName**](DefaultApi.md#getUserFilterFilterName) | **GET** /student/filter/{filterId} | Get user filter by ID
 [**getUserLessonsLessonId**](DefaultApi.md#getUserLessonsLessonId) | **GET** /lessons/{lessonId} | Get a lesson
-[**getUserStudentNotificationFilter**](DefaultApi.md#getUserStudentNotificationFilter) | **GET** /student/notification-filter/{studentId} | Get student notification filter by studentId
-[**getUserStudentProfileSettingsBasicInfoStudentId**](DefaultApi.md#getUserStudentProfileSettingsBasicInfoStudentId) | **GET** /student/profile-settings/basic-info/{studentId} | Get student basic information
-[**getUserStudentProfileSettingsNotificationSettingsStudentId**](DefaultApi.md#getUserStudentProfileSettingsNotificationSettingsStudentId) | **GET** /student/profile-settings/notification-settings/{studentId} | get student profile notification settings by ID
-[**getUserStudentProfileSettingsPaymentMethodsStudentId**](DefaultApi.md#getUserStudentProfileSettingsPaymentMethodsStudentId) | **GET** /student/profile-settings/payment-methods/{studentId} | Get student payment methods
-[**getUserStudentProfileSettingsStudentId**](DefaultApi.md#getUserStudentProfileSettingsStudentId) | **GET** /student/profile-settings/{studentId} | Get student profile by student ID
+[**getUserStudentNotificationFilter**](DefaultApi.md#getUserStudentNotificationFilter) | **GET** /student/settings/notification-filter/{studentId} | Get student notification filter by studentId
+[**getUserStudentProfileSettingsBasicInfoStudentId**](DefaultApi.md#getUserStudentProfileSettingsBasicInfoStudentId) | **GET** /student/profile/basic-info/{studentId} | Get student basic information
+[**getUserStudentProfileSettingsNotificationSettingsStudentId**](DefaultApi.md#getUserStudentProfileSettingsNotificationSettingsStudentId) | **GET** /student/profile/notification-settings/{studentId} | get student profile notification settings by ID
+[**getUserStudentProfileSettingsPaymentMethodsStudentId**](DefaultApi.md#getUserStudentProfileSettingsPaymentMethodsStudentId) | **GET** /student/profile/payment-methods/{studentId} | Get student payment methods
+[**getUserStudentProfileSettingsStudentId**](DefaultApi.md#getUserStudentProfileSettingsStudentId) | **GET** /student/profile/{studentId} | Get student profile by student ID
 [**getUsersLessons**](DefaultApi.md#getUsersLessons) | **GET** /lessons | Get user lessons
 [**patchLocationLocationId**](DefaultApi.md#patchLocationLocationId) | **PATCH** /location/{locationId} | Edit location information by locationId
 [**patchUserAdminCertificateCoachId**](DefaultApi.md#patchUserAdminCertificateCoachId) | **PATCH** /admin/certificate/{coachId} | Admin update certificate status
@@ -49,40 +50,43 @@ Method | HTTP request | Description
 [**patchUserAdminProfileCheckCoachId**](DefaultApi.md#patchUserAdminProfileCheckCoachId) | **PATCH** /admin/profile-onboarding/{coachId} | 
 [**patchUserCoachAvailability**](DefaultApi.md#patchUserCoachAvailability) | **PATCH** /coach/availability/{availabilityId} | 
 [**patchUserCoachNotificationsRead**](DefaultApi.md#patchUserCoachNotificationsRead) | **PATCH** /coach/notifications/read | Set list of notifications as read
-[**patchUserCoachProfileSettings**](DefaultApi.md#patchUserCoachProfileSettings) | **PATCH** /coach/profile-settings/privacy | Update coach privacy settings
-[**patchUserCoachProfileSettingsNotifications**](DefaultApi.md#patchUserCoachProfileSettingsNotifications) | **PATCH** /coach/profile-settings/notifications | Update coach profile notification settings
+[**patchUserCoachProfileSettings**](DefaultApi.md#patchUserCoachProfileSettings) | **PATCH** /coach/profile/settings/privacy | Update coach privacy settings
+[**patchUserCoachProfileSettingsNotifications**](DefaultApi.md#patchUserCoachProfileSettingsNotifications) | **PATCH** /coach/profile/settings/notifications | Update coach profile notification settings
+[**postAuthEmailVerification**](DefaultApi.md#postAuthEmailVerification) | **POST** /auth/emailVerification | Send email verification email to user
+[**postAuthPasswordReset**](DefaultApi.md#postAuthPasswordReset) | **POST** /auth/passwordReset | Send password reset email to user
 [**postCoachProfile**](DefaultApi.md#postCoachProfile) | **POST** /coach/profile | 
 [**postLocation**](DefaultApi.md#postLocation) | **POST** /location | Add a location
+[**postStudentSignup**](DefaultApi.md#postStudentSignup) | **POST** /student/signup | Signup student with basic information
 [**postUserAdminCertificateCoachId**](DefaultApi.md#postUserAdminCertificateCoachId) | **POST** /admin/certificate/{coachId} | Admin set certificate status
 [**postUserAdminDashboardFilter**](DefaultApi.md#postUserAdminDashboardFilter) | **POST** /admin/dashboard-filter | Save admin dashboard filter
 [**postUserAdminProfileCheckCoachId**](DefaultApi.md#postUserAdminProfileCheckCoachId) | **POST** /admin/profile-onboarding/{coachId} | Admin set coach status
 [**postUserAdminSendWarningEmail**](DefaultApi.md#postUserAdminSendWarningEmail) | **POST** /admin/send-warning-email | Admin send warning email
 [**postUserCoachAvailability**](DefaultApi.md#postUserCoachAvailability) | **POST** /coach/availability/list | 
 [**postUserCoachAvailabilityInfo**](DefaultApi.md#postUserCoachAvailabilityInfo) | **POST** /coach/availability-options | Set Coach Availability Options
-[**postUserCoachProfileSettingsPayout**](DefaultApi.md#postUserCoachProfileSettingsPayout) | **POST** /coach/profile-settings/payout | Add Payment Method
+[**postUserCoachProfileSettingsPayout**](DefaultApi.md#postUserCoachProfileSettingsPayout) | **POST** /coach/profile/settings/payout | Add Payment Method
 [**postUserCoachSession**](DefaultApi.md#postUserCoachSession) | **POST** /coach/session-plans | 
 [**postUserFilter**](DefaultApi.md#postUserFilter) | **POST** /student/filter | Save a user filter
 [**postUserLessonLessonIdCancelRequest**](DefaultApi.md#postUserLessonLessonIdCancelRequest) | **POST** /lesson/{lessonId}/cancel-request | Submit a lesson cancel request
 [**postUserLessons**](DefaultApi.md#postUserLessons) | **POST** /lessons | Book a new lesson
 [**postUserLessonsLessonIdProblemReport**](DefaultApi.md#postUserLessonsLessonIdProblemReport) | **POST** /lessons/{lessonId}/problem-report | Report a problem with a lesson
-[**postUserStudentNotificationFilter**](DefaultApi.md#postUserStudentNotificationFilter) | **POST** /student/notification-filter | create student notification filter with studentId
-[**postUserStudentProfileSettingsProfileCreate**](DefaultApi.md#postUserStudentProfileSettingsProfileCreate) | **POST** /student/profile-settings | create student profile
+[**postUserStudentNotificationFilter**](DefaultApi.md#postUserStudentNotificationFilter) | **POST** /student/settings/notification-filter | create student notification filter with studentId
+[**postUserStudentProfileSettingsProfileCreate**](DefaultApi.md#postUserStudentProfileSettingsProfileCreate) | **POST** /student/profile | create student profile
 [**putUserAdminBanUser**](DefaultApi.md#putUserAdminBanUser) | **PUT** /admin/ban-user | Admin ban user
 [**putUserAdminUnbanUser**](DefaultApi.md#putUserAdminUnbanUser) | **PUT** /admin/unban-user | Unban user
 [**putUserCoachAvailabilityOptions**](DefaultApi.md#putUserCoachAvailabilityOptions) | **PUT** /coach/availability-options | Update Availability Options
 [**putUserCoachProfile**](DefaultApi.md#putUserCoachProfile) | **PUT** /coach/profile | Update coach profile attributes
-[**putUserCoachProfileSettingsDisable**](DefaultApi.md#putUserCoachProfileSettingsDisable) | **PUT** /coach/profile-settings/disable | Disable Coach Account
-[**putUserCoachProfileSettingsEnable**](DefaultApi.md#putUserCoachProfileSettingsEnable) | **PUT** /coach/profile-settings/enable | Enable Coach Account
-[**putUserCoachProfileSettingsNotifications**](DefaultApi.md#putUserCoachProfileSettingsNotifications) | **PUT** /coach/profile-settings/notifications | Overwrite coach notification settings
-[**putUserCoachProfileSettingsPayoutPaymentMethodId**](DefaultApi.md#putUserCoachProfileSettingsPayoutPaymentMethodId) | **PUT** /coach/profile-settings/payout/{paymentMethodId} | Coach set default payment method
+[**putUserCoachProfileSettingsDisable**](DefaultApi.md#putUserCoachProfileSettingsDisable) | **PUT** /coach/profile/settings/disable | Disable Coach Account
+[**putUserCoachProfileSettingsEnable**](DefaultApi.md#putUserCoachProfileSettingsEnable) | **PUT** /coach/profile/settings/enable | Enable Coach Account
+[**putUserCoachProfileSettingsNotifications**](DefaultApi.md#putUserCoachProfileSettingsNotifications) | **PUT** /coach/profile/settings/notifications | Overwrite coach notification settings
+[**putUserCoachProfileSettingsPayoutPaymentMethodId**](DefaultApi.md#putUserCoachProfileSettingsPayoutPaymentMethodId) | **PUT** /coach/profile/settings/payout/{paymentMethodId} | Coach set default payment method
 [**putUserCoachSession**](DefaultApi.md#putUserCoachSession) | **PUT** /coach/session-plans | 
-[**putUserStudentNotificationFilterStudentId**](DefaultApi.md#putUserStudentNotificationFilterStudentId) | **PUT** /student/notification-filter/{studentId} | update student notification filter by studentId
-[**putUserStudentProfileSettingsBasicInfo**](DefaultApi.md#putUserStudentProfileSettingsBasicInfo) | **PUT** /student/profile-settings/basic-info/{studentId} | Edit student basic information
-[**putUserStudentProfileSettingsDisable**](DefaultApi.md#putUserStudentProfileSettingsDisable) | **PUT** /student/profile-settings/disable | 
-[**putUserStudentProfileSettingsEnable**](DefaultApi.md#putUserStudentProfileSettingsEnable) | **PUT** /student/profile-settings/enable | 
-[**putUserStudentProfileSettingsNotificationSettings**](DefaultApi.md#putUserStudentProfileSettingsNotificationSettings) | **PUT** /student/profile-settings/notification-settings/{studentId} | 
-[**putUserStudentProfileSettingsPayment**](DefaultApi.md#putUserStudentProfileSettingsPayment) | **PUT** /student/profile-settings/payment-methods/{studentId} | Create new payment method
-[**putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId**](DefaultApi.md#putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId) | **PUT** /student/profile-settings/payment-methods/{studentId}/{paymentMethodId} | Set student payment method to default by payment ID
+[**putUserStudentNotificationFilterStudentId**](DefaultApi.md#putUserStudentNotificationFilterStudentId) | **PUT** /student/settings/notification-filter/{studentId} | update student notification filter by studentId
+[**putUserStudentProfileSettingsBasicInfo**](DefaultApi.md#putUserStudentProfileSettingsBasicInfo) | **PUT** /student/profile/basic-info/{studentId} | Edit student basic information
+[**putUserStudentProfileSettingsDisable**](DefaultApi.md#putUserStudentProfileSettingsDisable) | **PUT** /student/profile/settings/disable | 
+[**putUserStudentProfileSettingsEnable**](DefaultApi.md#putUserStudentProfileSettingsEnable) | **PUT** /student/profile/settings/enable | 
+[**putUserStudentProfileSettingsNotificationSettings**](DefaultApi.md#putUserStudentProfileSettingsNotificationSettings) | **PUT** /student/profile/notification-settings/{studentId} | 
+[**putUserStudentProfileSettingsPayment**](DefaultApi.md#putUserStudentProfileSettingsPayment) | **PUT** /student/profile/payment-methods/{studentId} | Create new payment method
+[**putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId**](DefaultApi.md#putUserStudentProfileSettingsPaymentMethodsStudentIdPaymentMethodId) | **PUT** /student/profile/payment-methods/{studentId}/{paymentMethodId} | Set student payment method to default by payment ID
 
 
 
@@ -318,7 +322,7 @@ No authorization required
 
 ## getCoach
 
-> CoachProfile getCoach()
+> InlineResponse200 getCoach()
 
 Get coach&#39;s own profile
 
@@ -348,7 +352,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**CoachProfile**](CoachProfile.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -360,9 +364,59 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
+## getCoachSignup
+
+> getCoachSignup(opts)
+
+Signup student with basic information
+
+Create basic coach profile and set coach firebase custom claims - {\&quot;role\&quot;:\&quot;coach-pending\&quot;}
+
+### Example
+
+```javascript
+import LytesnapBackendApi from 'lytesnap_backend_api';
+let defaultClient = LytesnapBackendApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new LytesnapBackendApi.DefaultApi();
+let opts = {
+  'inlineObject14': new LytesnapBackendApi.InlineObject14() // InlineObject14 | 
+};
+apiInstance.getCoachSignup(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject14** | [**InlineObject14**](InlineObject14.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## getLocation
 
-> InlineResponse20017 getLocation()
+> InlineResponse20019 getLocation()
 
 Get all saved locations by coach
 
@@ -392,7 +446,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -406,7 +460,7 @@ This endpoint does not need any parameter.
 
 ## getLocationLocationId
 
-> InlineResponse20019 getLocationLocationId(locationId)
+> InlineResponse20020 getLocationLocationId(locationId)
 
 Get location information by locationId
 
@@ -440,7 +494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -512,7 +566,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminBookingLocationPercentage
 
-> InlineResponse2006 getUserAdminBookingLocationPercentage(reachedType, opts)
+> InlineResponse2008 getUserAdminBookingLocationPercentage(reachedType, opts)
 
 Your GET endpoint
 
@@ -554,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -568,7 +622,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminCertificate
 
-> [InlineResponse20011] getUserAdminCertificate(opts)
+> [InlineResponse20013] getUserAdminCertificate(opts)
 
 Admin get certificates
 
@@ -606,7 +660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse20011]**](InlineResponse20011.md)
+[**[InlineResponse20013]**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -620,7 +674,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminCertificateCoachId
 
-> [InlineResponse20012] getUserAdminCertificateCoachId(coachId)
+> [InlineResponse20014] getUserAdminCertificateCoachId(coachId)
 
 Admin get certificate from coachId
 
@@ -654,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse20012]**](InlineResponse20012.md)
+[**[InlineResponse20014]**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -668,7 +722,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminComplaintUserId
 
-> InlineResponse20010 getUserAdminComplaintUserId(userId)
+> InlineResponse20012 getUserAdminComplaintUserId(userId)
 
 Get complaint from user
 
@@ -702,7 +756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -716,7 +770,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminDashboardFilter
 
-> [InlineResponse2007] getUserAdminDashboardFilter()
+> [InlineResponse2009] getUserAdminDashboardFilter()
 
 This get the dashboard filter names
 
@@ -746,7 +800,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[InlineResponse2007]**](InlineResponse2007.md)
+[**[InlineResponse2009]**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -760,7 +814,7 @@ This endpoint does not need any parameter.
 
 ## getUserAdminDashboardLocationState
 
-> InlineResponse2005 getUserAdminDashboardLocationState(state, reachedType, opts)
+> InlineResponse2007 getUserAdminDashboardLocationState(state, reachedType, opts)
 
 Your GET endpoint
 
@@ -806,7 +860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -820,7 +874,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminProfile
 
-> InlineResponse20016 getUserAdminProfile()
+> InlineResponse20018 getUserAdminProfile()
 
 Admin get profile
 
@@ -850,7 +904,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -864,7 +918,7 @@ This endpoint does not need any parameter.
 
 ## getUserAdminProfileCheck
 
-> [InlineResponse20013] getUserAdminProfileCheck(opts)
+> [InlineResponse20015] getUserAdminProfileCheck(opts)
 
 Admin get Profile-Check
 
@@ -902,7 +956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse20013]**](InlineResponse20013.md)
+[**[InlineResponse20015]**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -916,7 +970,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminUserComplaints
 
-> [InlineResponse2009] getUserAdminUserComplaints(opts)
+> [InlineResponse20011] getUserAdminUserComplaints(opts)
 
 Admin gets user complaints
 
@@ -952,7 +1006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse2009]**](InlineResponse2009.md)
+[**[InlineResponse20011]**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -966,7 +1020,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminUserFeedback
 
-> [InlineResponse20014] getUserAdminUserFeedback(opts)
+> [InlineResponse20016] getUserAdminUserFeedback(opts)
 
 Admin get user feedback
 
@@ -1006,7 +1060,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse20014]**](InlineResponse20014.md)
+[**[InlineResponse20016]**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -1020,7 +1074,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminUserFeedbackFeedbackId
 
-> [InlineResponse20015] getUserAdminUserFeedbackFeedbackId(featureId)
+> [InlineResponse20017] getUserAdminUserFeedbackFeedbackId(featureId)
 
 Admin get feedback for specific feature
 
@@ -1054,7 +1108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse20015]**](InlineResponse20015.md)
+[**[InlineResponse20017]**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -1068,7 +1122,7 @@ Name | Type | Description  | Notes
 
 ## getUserAdminUsersManagement
 
-> InlineResponse2008 getUserAdminUsersManagement(opts)
+> InlineResponse20010 getUserAdminUsersManagement(opts)
 
 Your GET endpoint
 
@@ -1108,7 +1162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -1174,7 +1228,7 @@ Name | Type | Description  | Notes
 
 ## getUserCoachAvailabilityInfo
 
-> InlineResponse200 getUserCoachAvailabilityInfo()
+> InlineResponse2002 getUserCoachAvailabilityInfo()
 
 Get Availability Info
 
@@ -1204,7 +1258,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -1218,7 +1272,7 @@ This endpoint does not need any parameter.
 
 ## getUserCoachInsights
 
-> InlineResponse2002 getUserCoachInsights(locationID, startTime, endTime)
+> InlineResponse2004 getUserCoachInsights(locationID, startTime, endTime)
 
 Get coach analytics insight
 
@@ -1256,7 +1310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -1270,7 +1324,7 @@ Name | Type | Description  | Notes
 
 ## getUserCoachNotifications
 
-> [InlineResponse2003] getUserCoachNotifications(opts)
+> [InlineResponse2005] getUserCoachNotifications(opts)
 
 Get Coach Notifications
 
@@ -1306,7 +1360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse2003]**](InlineResponse2003.md)
+[**[InlineResponse2005]**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -1320,9 +1374,9 @@ Name | Type | Description  | Notes
 
 ## getUserCoachProfileCoachId
 
-> CoachProfile getUserCoachProfileCoachId(coachId)
+> InlineResponse2001 getUserCoachProfileCoachId(coachId)
 
-Your GET endpoint
+Get coach profile by Id
 
 Get coach profile data
 
@@ -1350,7 +1404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CoachProfile**](CoachProfile.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -1364,7 +1418,7 @@ No authorization required
 
 ## getUserCoachProfileSettingsNotifications
 
-> InlineResponse2001 getUserCoachProfileSettingsNotifications()
+> InlineResponse2003 getUserCoachProfileSettingsNotifications()
 
 Get coach notifications settings
 
@@ -1390,7 +1444,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -1830,7 +1884,7 @@ Name | Type | Description  | Notes
 
 ## getUserStudentProfileSettingsPaymentMethodsStudentId
 
-> [InlineResponse2004] getUserStudentProfileSettingsPaymentMethodsStudentId(studentId)
+> [InlineResponse2006] getUserStudentProfileSettingsPaymentMethodsStudentId(studentId)
 
 Get student payment methods
 
@@ -1864,7 +1918,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[InlineResponse2004]**](InlineResponse2004.md)
+[**[InlineResponse2006]**](InlineResponse2006.md)
 
 ### Authorization
 
@@ -2360,6 +2414,98 @@ No authorization required
 - **Accept**: application/json
 
 
+## postAuthEmailVerification
+
+> InlineResponse20021 postAuthEmailVerification(opts)
+
+Send email verification email to user
+
+Provided user email, send a email verification link to user email.
+
+### Example
+
+```javascript
+import LytesnapBackendApi from 'lytesnap_backend_api';
+
+let apiInstance = new LytesnapBackendApi.DefaultApi();
+let opts = {
+  'inlineObject16': new LytesnapBackendApi.InlineObject16() // InlineObject16 | 
+};
+apiInstance.postAuthEmailVerification(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject16** | [**InlineObject16**](InlineObject16.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20021**](InlineResponse20021.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## postAuthPasswordReset
+
+> InlineResponse20021 postAuthPasswordReset(opts)
+
+Send password reset email to user
+
+Provided user email, send a password reset link to user email.
+
+### Example
+
+```javascript
+import LytesnapBackendApi from 'lytesnap_backend_api';
+
+let apiInstance = new LytesnapBackendApi.DefaultApi();
+let opts = {
+  'inlineObject15': new LytesnapBackendApi.InlineObject15() // InlineObject15 | 
+};
+apiInstance.postAuthPasswordReset(opts).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject15** | [**InlineObject15**](InlineObject15.md)|  | [optional] 
+
+### Return type
+
+[**InlineResponse20021**](InlineResponse20021.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
 ## postCoachProfile
 
 > InlineResponse201 postCoachProfile(opts)
@@ -2412,7 +2558,7 @@ Name | Type | Description  | Notes
 
 ## postLocation
 
-> InlineResponse20018 postLocation(opts)
+> InlineResponse2014 postLocation(opts)
 
 Add a location
 
@@ -2448,7 +2594,57 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse2014**](InlineResponse2014.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## postStudentSignup
+
+> postStudentSignup(opts)
+
+Signup student with basic information
+
+Create basic student profile and set student firebase custom claims - {\&quot;role\&quot;: \&quot;student\&quot;}
+
+### Example
+
+```javascript
+import LytesnapBackendApi from 'lytesnap_backend_api';
+let defaultClient = LytesnapBackendApi.ApiClient.instance;
+// Configure Bearer (JWT) access token for authorization: bearerAuth
+let bearerAuth = defaultClient.authentications['bearerAuth'];
+bearerAuth.accessToken = "YOUR ACCESS TOKEN"
+
+let apiInstance = new LytesnapBackendApi.DefaultApi();
+let opts = {
+  'inlineObject13': new LytesnapBackendApi.InlineObject13() // InlineObject13 | 
+};
+apiInstance.postStudentSignup(opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inlineObject13** | [**InlineObject13**](InlineObject13.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
 
 ### Authorization
 

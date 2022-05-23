@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse20015 model module.
  * @module model/InlineResponse20015
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20015 {
     /**
@@ -47,26 +47,23 @@ class InlineResponse20015 {
         if (data) {
             obj = obj || new InlineResponse20015();
 
-            if (data.hasOwnProperty('featureName')) {
-                obj['featureName'] = ApiClient.convertToType(data['featureName'], 'String');
+            if (data.hasOwnProperty('userName')) {
+                obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
             }
-            if (data.hasOwnProperty('feedback')) {
-                obj['feedback'] = ApiClient.convertToType(data['feedback'], 'String');
+            if (data.hasOwnProperty('userId')) {
+                obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('coachPhoto')) {
+                obj['coachPhoto'] = ApiClient.convertToType(data['coachPhoto'], 'String');
             }
-            if (data.hasOwnProperty('userID')) {
-                obj['userID'] = ApiClient.convertToType(data['userID'], 'String');
+            if (data.hasOwnProperty('profileOnBoardingAccepted')) {
+                obj['profileOnBoardingAccepted'] = ApiClient.convertToType(data['profileOnBoardingAccepted'], 'Boolean');
             }
-            if (data.hasOwnProperty('type')) {
-                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            if (data.hasOwnProperty('backgroundCheckAccepted')) {
+                obj['backgroundCheckAccepted'] = ApiClient.convertToType(data['backgroundCheckAccepted'], 'Boolean');
             }
-            if (data.hasOwnProperty('rating')) {
-                obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'String');
+            if (data.hasOwnProperty('profileStatus')) {
+                obj['profileStatus'] = ApiClient.convertToType(data['profileStatus'], 'String');
             }
         }
         return obj;
@@ -76,62 +73,63 @@ class InlineResponse20015 {
 }
 
 /**
- * @member {String} featureName
+ * @member {String} userName
  */
-InlineResponse20015.prototype['featureName'] = undefined;
+InlineResponse20015.prototype['userName'] = undefined;
 
 /**
- * @member {String} feedback
+ * @member {String} userId
  */
-InlineResponse20015.prototype['feedback'] = undefined;
+InlineResponse20015.prototype['userId'] = undefined;
 
 /**
- * @member {String} name
+ * @member {String} coachPhoto
  */
-InlineResponse20015.prototype['name'] = undefined;
+InlineResponse20015.prototype['coachPhoto'] = undefined;
 
 /**
- * @member {String} userID
+ * @member {Boolean} profileOnBoardingAccepted
  */
-InlineResponse20015.prototype['userID'] = undefined;
+InlineResponse20015.prototype['profileOnBoardingAccepted'] = undefined;
 
 /**
- * @member {module:model/InlineResponse20015.TypeEnum} type
+ * @member {Boolean} backgroundCheckAccepted
  */
-InlineResponse20015.prototype['type'] = undefined;
+InlineResponse20015.prototype['backgroundCheckAccepted'] = undefined;
 
 /**
- * @member {Number} rating
+ * @member {module:model/InlineResponse20015.ProfileStatusEnum} profileStatus
  */
-InlineResponse20015.prototype['rating'] = undefined;
-
-/**
- * @member {String} date
- */
-InlineResponse20015.prototype['date'] = undefined;
+InlineResponse20015.prototype['profileStatus'] = undefined;
 
 
 
 
 
 /**
- * Allowed values for the <code>type</code> property.
+ * Allowed values for the <code>profileStatus</code> property.
  * @enum {String}
  * @readonly
  */
-InlineResponse20015['TypeEnum'] = {
+InlineResponse20015['ProfileStatusEnum'] = {
 
     /**
-     * value: "coach"
+     * value: "Pending"
      * @const
      */
-    "coach": "coach",
+    "Pending": "Pending",
 
     /**
-     * value: "student"
+     * value: "Declined"
      * @const
      */
-    "student": "student"
+    "Declined": "Declined",
+
+    /**
+     * value: "Approved"
+     * @const
+     */
+    "Approved": "Approved"
 };
 
 

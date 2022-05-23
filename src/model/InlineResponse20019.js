@@ -17,14 +17,14 @@ import LocationResponse from './LocationResponse';
 /**
  * The InlineResponse20019 model module.
  * @module model/InlineResponse20019
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20019 {
     /**
      * Constructs a new <code>InlineResponse20019</code>.
      * @alias module:model/InlineResponse20019
      * @param message {String} 
-     * @param data {module:model/LocationResponse} 
+     * @param data {Array.<module:model/LocationResponse>} 
      */
     constructor(message, data) { 
         
@@ -56,7 +56,7 @@ class InlineResponse20019 {
                 obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
             if (data.hasOwnProperty('data')) {
-                obj['data'] = LocationResponse.constructFromObject(data['data']);
+                obj['data'] = ApiClient.convertToType(data['data'], [LocationResponse]);
             }
         }
         return obj;
@@ -71,7 +71,7 @@ class InlineResponse20019 {
 InlineResponse20019.prototype['message'] = undefined;
 
 /**
- * @member {module:model/LocationResponse} data
+ * @member {Array.<module:model/LocationResponse>} data
  */
 InlineResponse20019.prototype['data'] = undefined;
 

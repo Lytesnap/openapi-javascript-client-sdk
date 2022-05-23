@@ -44,6 +44,10 @@ import InlineObject1 from './model/InlineObject1';
 import InlineObject10 from './model/InlineObject10';
 import InlineObject11 from './model/InlineObject11';
 import InlineObject12 from './model/InlineObject12';
+import InlineObject13 from './model/InlineObject13';
+import InlineObject14 from './model/InlineObject14';
+import InlineObject15 from './model/InlineObject15';
+import InlineObject16 from './model/InlineObject16';
 import InlineObject2 from './model/InlineObject2';
 import InlineObject3 from './model/InlineObject3';
 import InlineObject4 from './model/InlineObject4';
@@ -55,6 +59,7 @@ import InlineObject9 from './model/InlineObject9';
 import InlineResponse200 from './model/InlineResponse200';
 import InlineResponse2001 from './model/InlineResponse2001';
 import InlineResponse20010 from './model/InlineResponse20010';
+import InlineResponse20010CancellationReason from './model/InlineResponse20010CancellationReason';
 import InlineResponse20011 from './model/InlineResponse20011';
 import InlineResponse20012 from './model/InlineResponse20012';
 import InlineResponse20013 from './model/InlineResponse20013';
@@ -63,28 +68,29 @@ import InlineResponse20015 from './model/InlineResponse20015';
 import InlineResponse20016 from './model/InlineResponse20016';
 import InlineResponse20017 from './model/InlineResponse20017';
 import InlineResponse20018 from './model/InlineResponse20018';
-import InlineResponse20018Data from './model/InlineResponse20018Data';
 import InlineResponse20019 from './model/InlineResponse20019';
-import InlineResponse2001SomeoneMessagedMe from './model/InlineResponse2001SomeoneMessagedMe';
 import InlineResponse2002 from './model/InlineResponse2002';
+import InlineResponse20020 from './model/InlineResponse20020';
+import InlineResponse20021 from './model/InlineResponse20021';
 import InlineResponse2003 from './model/InlineResponse2003';
+import InlineResponse2003SomeoneMessagedMe from './model/InlineResponse2003SomeoneMessagedMe';
 import InlineResponse2004 from './model/InlineResponse2004';
 import InlineResponse2005 from './model/InlineResponse2005';
 import InlineResponse2006 from './model/InlineResponse2006';
-import InlineResponse2006TopCities from './model/InlineResponse2006TopCities';
-import InlineResponse2006TopStates from './model/InlineResponse2006TopStates';
 import InlineResponse2007 from './model/InlineResponse2007';
 import InlineResponse2008 from './model/InlineResponse2008';
-import InlineResponse2008CancellationReason from './model/InlineResponse2008CancellationReason';
+import InlineResponse2008TopCities from './model/InlineResponse2008TopCities';
+import InlineResponse2008TopStates from './model/InlineResponse2008TopStates';
 import InlineResponse2009 from './model/InlineResponse2009';
 import InlineResponse201 from './model/InlineResponse201';
 import InlineResponse2011 from './model/InlineResponse2011';
 import InlineResponse2012 from './model/InlineResponse2012';
 import InlineResponse2013 from './model/InlineResponse2013';
+import InlineResponse2014 from './model/InlineResponse2014';
+import InlineResponse2014Data from './model/InlineResponse2014Data';
 import InlineResponse400 from './model/InlineResponse400';
 import InlineResponse4001 from './model/InlineResponse4001';
 import InlineResponse400Errors from './model/InlineResponse400Errors';
-import InlineResponse403 from './model/InlineResponse403';
 import InlineResponse500 from './model/InlineResponse500';
 import InlineResponse500Errors from './model/InlineResponse500Errors';
 import Lesson from './model/Lesson';
@@ -141,7 +147,7 @@ import DefaultApi from './api/DefaultApi';
 * </pre>
 * </p>
 * @module index
-* @version 1.0.7
+* @version 1.0.12
 */
 export {
     /**
@@ -337,6 +343,30 @@ export {
     InlineObject12,
 
     /**
+     * The InlineObject13 model constructor.
+     * @property {module:model/InlineObject13}
+     */
+    InlineObject13,
+
+    /**
+     * The InlineObject14 model constructor.
+     * @property {module:model/InlineObject14}
+     */
+    InlineObject14,
+
+    /**
+     * The InlineObject15 model constructor.
+     * @property {module:model/InlineObject15}
+     */
+    InlineObject15,
+
+    /**
+     * The InlineObject16 model constructor.
+     * @property {module:model/InlineObject16}
+     */
+    InlineObject16,
+
+    /**
      * The InlineObject2 model constructor.
      * @property {module:model/InlineObject2}
      */
@@ -403,6 +433,12 @@ export {
     InlineResponse20010,
 
     /**
+     * The InlineResponse20010CancellationReason model constructor.
+     * @property {module:model/InlineResponse20010CancellationReason}
+     */
+    InlineResponse20010CancellationReason,
+
+    /**
      * The InlineResponse20011 model constructor.
      * @property {module:model/InlineResponse20011}
      */
@@ -451,22 +487,10 @@ export {
     InlineResponse20018,
 
     /**
-     * The InlineResponse20018Data model constructor.
-     * @property {module:model/InlineResponse20018Data}
-     */
-    InlineResponse20018Data,
-
-    /**
      * The InlineResponse20019 model constructor.
      * @property {module:model/InlineResponse20019}
      */
     InlineResponse20019,
-
-    /**
-     * The InlineResponse2001SomeoneMessagedMe model constructor.
-     * @property {module:model/InlineResponse2001SomeoneMessagedMe}
-     */
-    InlineResponse2001SomeoneMessagedMe,
 
     /**
      * The InlineResponse2002 model constructor.
@@ -475,10 +499,28 @@ export {
     InlineResponse2002,
 
     /**
+     * The InlineResponse20020 model constructor.
+     * @property {module:model/InlineResponse20020}
+     */
+    InlineResponse20020,
+
+    /**
+     * The InlineResponse20021 model constructor.
+     * @property {module:model/InlineResponse20021}
+     */
+    InlineResponse20021,
+
+    /**
      * The InlineResponse2003 model constructor.
      * @property {module:model/InlineResponse2003}
      */
     InlineResponse2003,
+
+    /**
+     * The InlineResponse2003SomeoneMessagedMe model constructor.
+     * @property {module:model/InlineResponse2003SomeoneMessagedMe}
+     */
+    InlineResponse2003SomeoneMessagedMe,
 
     /**
      * The InlineResponse2004 model constructor.
@@ -499,18 +541,6 @@ export {
     InlineResponse2006,
 
     /**
-     * The InlineResponse2006TopCities model constructor.
-     * @property {module:model/InlineResponse2006TopCities}
-     */
-    InlineResponse2006TopCities,
-
-    /**
-     * The InlineResponse2006TopStates model constructor.
-     * @property {module:model/InlineResponse2006TopStates}
-     */
-    InlineResponse2006TopStates,
-
-    /**
      * The InlineResponse2007 model constructor.
      * @property {module:model/InlineResponse2007}
      */
@@ -523,10 +553,16 @@ export {
     InlineResponse2008,
 
     /**
-     * The InlineResponse2008CancellationReason model constructor.
-     * @property {module:model/InlineResponse2008CancellationReason}
+     * The InlineResponse2008TopCities model constructor.
+     * @property {module:model/InlineResponse2008TopCities}
      */
-    InlineResponse2008CancellationReason,
+    InlineResponse2008TopCities,
+
+    /**
+     * The InlineResponse2008TopStates model constructor.
+     * @property {module:model/InlineResponse2008TopStates}
+     */
+    InlineResponse2008TopStates,
 
     /**
      * The InlineResponse2009 model constructor.
@@ -559,6 +595,18 @@ export {
     InlineResponse2013,
 
     /**
+     * The InlineResponse2014 model constructor.
+     * @property {module:model/InlineResponse2014}
+     */
+    InlineResponse2014,
+
+    /**
+     * The InlineResponse2014Data model constructor.
+     * @property {module:model/InlineResponse2014Data}
+     */
+    InlineResponse2014Data,
+
+    /**
      * The InlineResponse400 model constructor.
      * @property {module:model/InlineResponse400}
      */
@@ -575,12 +623,6 @@ export {
      * @property {module:model/InlineResponse400Errors}
      */
     InlineResponse400Errors,
-
-    /**
-     * The InlineResponse403 model constructor.
-     * @property {module:model/InlineResponse403}
-     */
-    InlineResponse403,
 
     /**
      * The InlineResponse500 model constructor.

@@ -7,7 +7,7 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse2001SomeoneMessagedMe = _interopRequireDefault(require("./InlineResponse2001SomeoneMessagedMe"));
+var _CoachProfile = _interopRequireDefault(require("./CoachProfile"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,22 +20,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2001 model module.
  * @module model/InlineResponse2001
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2001 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>InlineResponse2001</code>.
    * @alias module:model/InlineResponse2001
-   * @param someoneMessagedMe {module:model/InlineResponse2001SomeoneMessagedMe} 
-   * @param anyoneLeftMeAReview {module:model/InlineResponse2001SomeoneMessagedMe} 
-   * @param anyoneCancelledLesson {module:model/InlineResponse2001SomeoneMessagedMe} 
-   * @param anyoneAcceptOrDeclineLesson {module:model/InlineResponse2001SomeoneMessagedMe} 
-   * @param getNewsAnnouncementAndProductUpdates {module:model/InlineResponse2001SomeoneMessagedMe} 
    */
-  function InlineResponse2001(someoneMessagedMe, anyoneLeftMeAReview, anyoneCancelledLesson, anyoneAcceptOrDeclineLesson, getNewsAnnouncementAndProductUpdates) {
+  function InlineResponse2001() {
     _classCallCheck(this, InlineResponse2001);
 
-    InlineResponse2001.initialize(this, someoneMessagedMe, anyoneLeftMeAReview, anyoneCancelledLesson, anyoneAcceptOrDeclineLesson, getNewsAnnouncementAndProductUpdates);
+    InlineResponse2001.initialize(this);
   }
   /**
    * Initializes the fields of this object.
@@ -46,13 +41,7 @@ var InlineResponse2001 = /*#__PURE__*/function () {
 
   _createClass(InlineResponse2001, null, [{
     key: "initialize",
-    value: function initialize(obj, someoneMessagedMe, anyoneLeftMeAReview, anyoneCancelledLesson, anyoneAcceptOrDeclineLesson, getNewsAnnouncementAndProductUpdates) {
-      obj['someoneMessagedMe'] = someoneMessagedMe;
-      obj['anyoneLeftMeAReview'] = anyoneLeftMeAReview;
-      obj['anyoneCancelledLesson'] = anyoneCancelledLesson;
-      obj['anyoneAcceptOrDeclineLesson'] = anyoneAcceptOrDeclineLesson;
-      obj['getNewsAnnouncementAndProductUpdates'] = getNewsAnnouncementAndProductUpdates;
-    }
+    value: function initialize(obj) {}
     /**
      * Constructs a <code>InlineResponse2001</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -67,24 +56,12 @@ var InlineResponse2001 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2001();
 
-        if (data.hasOwnProperty('someoneMessagedMe')) {
-          obj['someoneMessagedMe'] = _InlineResponse2001SomeoneMessagedMe["default"].constructFromObject(data['someoneMessagedMe']);
+        if (data.hasOwnProperty('message')) {
+          obj['message'] = _ApiClient["default"].convertToType(data['message'], 'String');
         }
 
-        if (data.hasOwnProperty('anyoneLeftMeAReview')) {
-          obj['anyoneLeftMeAReview'] = _InlineResponse2001SomeoneMessagedMe["default"].constructFromObject(data['anyoneLeftMeAReview']);
-        }
-
-        if (data.hasOwnProperty('anyoneCancelledLesson')) {
-          obj['anyoneCancelledLesson'] = _InlineResponse2001SomeoneMessagedMe["default"].constructFromObject(data['anyoneCancelledLesson']);
-        }
-
-        if (data.hasOwnProperty('anyoneAcceptOrDeclineLesson')) {
-          obj['anyoneAcceptOrDeclineLesson'] = _InlineResponse2001SomeoneMessagedMe["default"].constructFromObject(data['anyoneAcceptOrDeclineLesson']);
-        }
-
-        if (data.hasOwnProperty('getNewsAnnouncementAndProductUpdates')) {
-          obj['getNewsAnnouncementAndProductUpdates'] = _InlineResponse2001SomeoneMessagedMe["default"].constructFromObject(data['getNewsAnnouncementAndProductUpdates']);
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _CoachProfile["default"].constructFromObject(data['data']);
         }
       }
 
@@ -95,30 +72,15 @@ var InlineResponse2001 = /*#__PURE__*/function () {
   return InlineResponse2001;
 }();
 /**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} someoneMessagedMe
+ * @member {String} message
  */
 
 
-InlineResponse2001.prototype['someoneMessagedMe'] = undefined;
+InlineResponse2001.prototype['message'] = undefined;
 /**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} anyoneLeftMeAReview
+ * @member {module:model/CoachProfile} data
  */
 
-InlineResponse2001.prototype['anyoneLeftMeAReview'] = undefined;
-/**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} anyoneCancelledLesson
- */
-
-InlineResponse2001.prototype['anyoneCancelledLesson'] = undefined;
-/**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} anyoneAcceptOrDeclineLesson
- */
-
-InlineResponse2001.prototype['anyoneAcceptOrDeclineLesson'] = undefined;
-/**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} getNewsAnnouncementAndProductUpdates
- */
-
-InlineResponse2001.prototype['getNewsAnnouncementAndProductUpdates'] = undefined;
+InlineResponse2001.prototype['data'] = undefined;
 var _default = InlineResponse2001;
 exports["default"] = _default;

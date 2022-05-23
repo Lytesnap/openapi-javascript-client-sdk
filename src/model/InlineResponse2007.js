@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2007 model module.
  * @module model/InlineResponse2007
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2007 {
     /**
@@ -47,11 +47,11 @@ class InlineResponse2007 {
         if (data) {
             obj = obj || new InlineResponse2007();
 
-            if (data.hasOwnProperty('filterName')) {
-                obj['filterName'] = ApiClient.convertToType(data['filterName'], 'String');
+            if (data.hasOwnProperty('students')) {
+                obj['students'] = ApiClient.convertToType(data['students'], 'Number');
             }
-            if (data.hasOwnProperty('filterID')) {
-                obj['filterID'] = ApiClient.convertToType(data['filterID'], 'String');
+            if (data.hasOwnProperty('coaches')) {
+                obj['coaches'] = ApiClient.convertToType(data['coaches'], 'Number');
             }
         }
         return obj;
@@ -61,14 +61,14 @@ class InlineResponse2007 {
 }
 
 /**
- * @member {String} filterName
+ * @member {Number} students
  */
-InlineResponse2007.prototype['filterName'] = undefined;
+InlineResponse2007.prototype['students'] = undefined;
 
 /**
- * @member {String} filterID
+ * @member {Number} coaches
  */
-InlineResponse2007.prototype['filterID'] = undefined;
+InlineResponse2007.prototype['coaches'] = undefined;
 
 
 

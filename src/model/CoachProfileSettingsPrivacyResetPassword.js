@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachProfileSettingsPrivacyResetPassword model module.
  * @module model/CoachProfileSettingsPrivacyResetPassword
- * @version 1.0.7
+ * @version 1.0.12
  */
 class CoachProfileSettingsPrivacyResetPassword {
     /**

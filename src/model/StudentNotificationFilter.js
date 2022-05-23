@@ -17,7 +17,7 @@ import StudentNotificationFilterFilter from './StudentNotificationFilterFilter';
 /**
  * The StudentNotificationFilter model module.
  * @module model/StudentNotificationFilter
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentNotificationFilter {
     /**

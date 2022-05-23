@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _CoachProfile = _interopRequireDefault(require("./CoachProfile"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,17 +20,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse200 model module.
  * @module model/InlineResponse200
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse200 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>InlineResponse200</code>.
    * @alias module:model/InlineResponse200
+   * @param message {String} 
+   * @param data {module:model/CoachProfile} 
    */
-  function InlineResponse200() {
+  function InlineResponse200(message, data) {
     _classCallCheck(this, InlineResponse200);
 
-    InlineResponse200.initialize(this);
+    InlineResponse200.initialize(this, message, data);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +43,10 @@ var InlineResponse200 = /*#__PURE__*/function () {
 
   _createClass(InlineResponse200, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, message, data) {
+      obj['message'] = message || 'Get Coach Own Profile Success';
+      obj['data'] = data;
+    }
     /**
      * Constructs a <code>InlineResponse200</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -54,12 +61,12 @@ var InlineResponse200 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse200();
 
-        if (data.hasOwnProperty('timeIntervalBetweenLocations')) {
-          obj['timeIntervalBetweenLocations'] = _ApiClient["default"].convertToType(data['timeIntervalBetweenLocations'], 'Number');
+        if (data.hasOwnProperty('message')) {
+          obj['message'] = _ApiClient["default"].convertToType(data['message'], 'String');
         }
 
-        if (data.hasOwnProperty('breaksBetweenLessons')) {
-          obj['breaksBetweenLessons'] = _ApiClient["default"].convertToType(data['breaksBetweenLessons'], 'Number');
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _CoachProfile["default"].constructFromObject(data['data']);
         }
       }
 
@@ -70,15 +77,16 @@ var InlineResponse200 = /*#__PURE__*/function () {
   return InlineResponse200;
 }();
 /**
- * @member {Number} timeIntervalBetweenLocations
+ * @member {String} message
+ * @default 'Get Coach Own Profile Success'
  */
 
 
-InlineResponse200.prototype['timeIntervalBetweenLocations'] = undefined;
+InlineResponse200.prototype['message'] = 'Get Coach Own Profile Success';
 /**
- * @member {Number} breaksBetweenLessons
+ * @member {module:model/CoachProfile} data
  */
 
-InlineResponse200.prototype['breaksBetweenLessons'] = undefined;
+InlineResponse200.prototype['data'] = undefined;
 var _default = InlineResponse200;
 exports["default"] = _default;

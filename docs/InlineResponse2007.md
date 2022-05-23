@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**filterName** | **String** |  | [optional] 
-**filterID** | **String** |  | [optional] 
+**students** | **Number** |  | [optional] 
+**coaches** | **Number** |  | [optional] 
 
 

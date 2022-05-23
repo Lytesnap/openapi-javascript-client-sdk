@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StudentPaymentMethodCard model module.
  * @module model/StudentPaymentMethodCard
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentPaymentMethodCard {
     /**

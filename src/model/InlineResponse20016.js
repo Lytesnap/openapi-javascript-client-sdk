@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse20016 model module.
  * @module model/InlineResponse20016
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20016 {
     /**
@@ -47,17 +47,20 @@ class InlineResponse20016 {
         if (data) {
             obj = obj || new InlineResponse20016();
 
-            if (data.hasOwnProperty('fullName')) {
-                obj['fullName'] = ApiClient.convertToType(data['fullName'], 'String');
+            if (data.hasOwnProperty('featureName')) {
+                obj['featureName'] = ApiClient.convertToType(data['featureName'], 'String');
             }
-            if (data.hasOwnProperty('phoneNumber')) {
-                obj['phoneNumber'] = ApiClient.convertToType(data['phoneNumber'], 'String');
+            if (data.hasOwnProperty('featureId')) {
+                obj['featureId'] = ApiClient.convertToType(data['featureId'], 'String');
             }
-            if (data.hasOwnProperty('gender')) {
-                obj['gender'] = ApiClient.convertToType(data['gender'], 'String');
+            if (data.hasOwnProperty('dateImplemented')) {
+                obj['dateImplemented'] = ApiClient.convertToType(data['dateImplemented'], 'String');
             }
-            if (data.hasOwnProperty('emailAddress')) {
-                obj['emailAddress'] = ApiClient.convertToType(data['emailAddress'], 'String');
+            if (data.hasOwnProperty('numberOfFeedback')) {
+                obj['numberOfFeedback'] = ApiClient.convertToType(data['numberOfFeedback'], 'Number');
+            }
+            if (data.hasOwnProperty('averageRating')) {
+                obj['averageRating'] = ApiClient.convertToType(data['averageRating'], 'Number');
             }
         }
         return obj;
@@ -67,54 +70,32 @@ class InlineResponse20016 {
 }
 
 /**
- * @member {String} fullName
+ * @member {String} featureName
  */
-InlineResponse20016.prototype['fullName'] = undefined;
+InlineResponse20016.prototype['featureName'] = undefined;
 
 /**
- * @member {String} phoneNumber
+ * @member {String} featureId
  */
-InlineResponse20016.prototype['phoneNumber'] = undefined;
+InlineResponse20016.prototype['featureId'] = undefined;
 
 /**
- * @member {module:model/InlineResponse20016.GenderEnum} gender
+ * @member {String} dateImplemented
  */
-InlineResponse20016.prototype['gender'] = undefined;
+InlineResponse20016.prototype['dateImplemented'] = undefined;
 
 /**
- * @member {String} emailAddress
+ * @member {Number} numberOfFeedback
  */
-InlineResponse20016.prototype['emailAddress'] = undefined;
-
-
-
-
+InlineResponse20016.prototype['numberOfFeedback'] = undefined;
 
 /**
- * Allowed values for the <code>gender</code> property.
- * @enum {String}
- * @readonly
+ * @member {Number} averageRating
  */
-InlineResponse20016['GenderEnum'] = {
+InlineResponse20016.prototype['averageRating'] = undefined;
 
-    /**
-     * value: "male"
-     * @const
-     */
-    "male": "male",
 
-    /**
-     * value: "female"
-     * @const
-     */
-    "female": "female",
 
-    /**
-     * value: "other"
-     * @const
-     */
-    "other": "other"
-};
 
 
 

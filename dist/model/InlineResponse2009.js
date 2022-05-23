@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2009 model module.
  * @module model/InlineResponse2009
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2009 = /*#__PURE__*/function () {
   /**
@@ -54,36 +54,12 @@ var InlineResponse2009 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2009();
 
-        if (data.hasOwnProperty('userId')) {
-          obj['userId'] = _ApiClient["default"].convertToType(data['userId'], 'String');
+        if (data.hasOwnProperty('filterName')) {
+          obj['filterName'] = _ApiClient["default"].convertToType(data['filterName'], 'String');
         }
 
-        if (data.hasOwnProperty('userType')) {
-          obj['userType'] = _ApiClient["default"].convertToType(data['userType'], 'String');
-        }
-
-        if (data.hasOwnProperty('userName')) {
-          obj['userName'] = _ApiClient["default"].convertToType(data['userName'], 'String');
-        }
-
-        if (data.hasOwnProperty('userPhoto')) {
-          obj['userPhoto'] = _ApiClient["default"].convertToType(data['userPhoto'], 'String');
-        }
-
-        if (data.hasOwnProperty('date')) {
-          obj['date'] = _ApiClient["default"].convertToType(data['date'], 'String');
-        }
-
-        if (data.hasOwnProperty('reason')) {
-          obj['reason'] = _ApiClient["default"].convertToType(data['reason'], 'String');
-        }
-
-        if (data.hasOwnProperty('rating')) {
-          obj['rating'] = _ApiClient["default"].convertToType(data['rating'], 'Number');
-        }
-
-        if (data.hasOwnProperty('status')) {
-          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
+        if (data.hasOwnProperty('filterID')) {
+          obj['filterID'] = _ApiClient["default"].convertToType(data['filterID'], 'String');
         }
       }
 
@@ -94,114 +70,15 @@ var InlineResponse2009 = /*#__PURE__*/function () {
   return InlineResponse2009;
 }();
 /**
- * @member {String} userId
+ * @member {String} filterName
  */
 
 
-InlineResponse2009.prototype['userId'] = undefined;
+InlineResponse2009.prototype['filterName'] = undefined;
 /**
- * @member {module:model/InlineResponse2009.UserTypeEnum} userType
+ * @member {String} filterID
  */
 
-InlineResponse2009.prototype['userType'] = undefined;
-/**
- * @member {String} userName
- */
-
-InlineResponse2009.prototype['userName'] = undefined;
-/**
- * @member {String} userPhoto
- */
-
-InlineResponse2009.prototype['userPhoto'] = undefined;
-/**
- * @member {String} date
- */
-
-InlineResponse2009.prototype['date'] = undefined;
-/**
- * @member {module:model/InlineResponse2009.ReasonEnum} reason
- */
-
-InlineResponse2009.prototype['reason'] = undefined;
-/**
- * @member {Number} rating
- */
-
-InlineResponse2009.prototype['rating'] = undefined;
-/**
- * @member {module:model/InlineResponse2009.StatusEnum} status
- */
-
-InlineResponse2009.prototype['status'] = undefined;
-/**
- * Allowed values for the <code>userType</code> property.
- * @enum {String}
- * @readonly
- */
-
-InlineResponse2009['UserTypeEnum'] = {
-  /**
-   * value: "Student"
-   * @const
-   */
-  "Student": "Student",
-
-  /**
-   * value: "Coach"
-   * @const
-   */
-  "Coach": "Coach"
-};
-/**
- * Allowed values for the <code>reason</code> property.
- * @enum {String}
- * @readonly
- */
-
-InlineResponse2009['ReasonEnum'] = {
-  /**
-   * value: "Medical emergency"
-   * @const
-   */
-  "Medical emergency": "Medical emergency",
-
-  /**
-   * value: "Weather"
-   * @const
-   */
-  "Weather": "Weather",
-
-  /**
-   * value: "Unspecified"
-   * @const
-   */
-  "Unspecified": "Unspecified",
-
-  /**
-   * value: "Other"
-   * @const
-   */
-  "Other": "Other"
-};
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-
-InlineResponse2009['StatusEnum'] = {
-  /**
-   * value: "pending"
-   * @const
-   */
-  "pending": "pending",
-
-  /**
-   * value: "solved"
-   * @const
-   */
-  "solved": "solved"
-};
+InlineResponse2009.prototype['filterID'] = undefined;
 var _default = InlineResponse2009;
 exports["default"] = _default;

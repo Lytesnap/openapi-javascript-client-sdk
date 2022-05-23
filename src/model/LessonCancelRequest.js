@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LessonCancelRequest model module.
  * @module model/LessonCancelRequest
- * @version 1.0.7
+ * @version 1.0.12
  */
 class LessonCancelRequest {
     /**

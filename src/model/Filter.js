@@ -20,7 +20,7 @@ import FilterSpecialties from './FilterSpecialties';
 /**
  * The Filter model module.
  * @module model/Filter
- * @version 1.0.7
+ * @version 1.0.12
  */
 class Filter {
     /**

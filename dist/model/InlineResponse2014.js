@@ -1,0 +1,91 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = void 0;
+
+var _ApiClient = _interopRequireDefault(require("../ApiClient"));
+
+var _InlineResponse2014Data = _interopRequireDefault(require("./InlineResponse2014Data"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+/**
+ * The InlineResponse2014 model module.
+ * @module model/InlineResponse2014
+ * @version 1.0.12
+ */
+var InlineResponse2014 = /*#__PURE__*/function () {
+  /**
+   * Constructs a new <code>InlineResponse2014</code>.
+   * @alias module:model/InlineResponse2014
+   * @param message {String} 
+   * @param data {module:model/InlineResponse2014Data} 
+   */
+  function InlineResponse2014(message, data) {
+    _classCallCheck(this, InlineResponse2014);
+
+    InlineResponse2014.initialize(this, message, data);
+  }
+  /**
+   * Initializes the fields of this object.
+   * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
+   * Only for internal use.
+   */
+
+
+  _createClass(InlineResponse2014, null, [{
+    key: "initialize",
+    value: function initialize(obj, message, data) {
+      obj['message'] = message;
+      obj['data'] = data;
+    }
+    /**
+     * Constructs a <code>InlineResponse2014</code> from a plain JavaScript object, optionally creating a new instance.
+     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
+     * @param {Object} data The plain JavaScript object bearing properties of interest.
+     * @param {module:model/InlineResponse2014} obj Optional instance to populate.
+     * @return {module:model/InlineResponse2014} The populated <code>InlineResponse2014</code> instance.
+     */
+
+  }, {
+    key: "constructFromObject",
+    value: function constructFromObject(data, obj) {
+      if (data) {
+        obj = obj || new InlineResponse2014();
+
+        if (data.hasOwnProperty('message')) {
+          obj['message'] = _ApiClient["default"].convertToType(data['message'], 'String');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _InlineResponse2014Data["default"].constructFromObject(data['data']);
+        }
+      }
+
+      return obj;
+    }
+  }]);
+
+  return InlineResponse2014;
+}();
+/**
+ * @member {String} message
+ */
+
+
+InlineResponse2014.prototype['message'] = undefined;
+/**
+ * @member {module:model/InlineResponse2014Data} data
+ */
+
+InlineResponse2014.prototype['data'] = undefined;
+var _default = InlineResponse2014;
+exports["default"] = _default;

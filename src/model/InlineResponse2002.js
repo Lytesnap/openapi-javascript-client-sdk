@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2002 model module.
  * @module model/InlineResponse2002
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2002 {
     /**
@@ -47,20 +47,11 @@ class InlineResponse2002 {
         if (data) {
             obj = obj || new InlineResponse2002();
 
-            if (data.hasOwnProperty('incomeThisWeek')) {
-                obj['incomeThisWeek'] = ApiClient.convertToType(data['incomeThisWeek'], 'Number');
+            if (data.hasOwnProperty('timeIntervalBetweenLocations')) {
+                obj['timeIntervalBetweenLocations'] = ApiClient.convertToType(data['timeIntervalBetweenLocations'], 'Number');
             }
-            if (data.hasOwnProperty('hoursWorked')) {
-                obj['hoursWorked'] = ApiClient.convertToType(data['hoursWorked'], 'Number');
-            }
-            if (data.hasOwnProperty('numSessions')) {
-                obj['numSessions'] = ApiClient.convertToType(data['numSessions'], 'Number');
-            }
-            if (data.hasOwnProperty('numStudents')) {
-                obj['numStudents'] = ApiClient.convertToType(data['numStudents'], 'Number');
-            }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [Object]);
+            if (data.hasOwnProperty('breaksBetweenLessons')) {
+                obj['breaksBetweenLessons'] = ApiClient.convertToType(data['breaksBetweenLessons'], 'Number');
             }
         }
         return obj;
@@ -70,29 +61,14 @@ class InlineResponse2002 {
 }
 
 /**
- * @member {Number} incomeThisWeek
+ * @member {Number} timeIntervalBetweenLocations
  */
-InlineResponse2002.prototype['incomeThisWeek'] = undefined;
+InlineResponse2002.prototype['timeIntervalBetweenLocations'] = undefined;
 
 /**
- * @member {Number} hoursWorked
+ * @member {Number} breaksBetweenLessons
  */
-InlineResponse2002.prototype['hoursWorked'] = undefined;
-
-/**
- * @member {Number} numSessions
- */
-InlineResponse2002.prototype['numSessions'] = undefined;
-
-/**
- * @member {Number} numStudents
- */
-InlineResponse2002.prototype['numStudents'] = undefined;
-
-/**
- * @member {Array.<Object>} data
- */
-InlineResponse2002.prototype['data'] = undefined;
+InlineResponse2002.prototype['breaksBetweenLessons'] = undefined;
 
 
 

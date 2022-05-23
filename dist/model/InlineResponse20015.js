@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse20015 model module.
  * @module model/InlineResponse20015
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse20015 = /*#__PURE__*/function () {
   /**
@@ -54,32 +54,28 @@ var InlineResponse20015 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse20015();
 
-        if (data.hasOwnProperty('featureName')) {
-          obj['featureName'] = _ApiClient["default"].convertToType(data['featureName'], 'String');
+        if (data.hasOwnProperty('userName')) {
+          obj['userName'] = _ApiClient["default"].convertToType(data['userName'], 'String');
         }
 
-        if (data.hasOwnProperty('feedback')) {
-          obj['feedback'] = _ApiClient["default"].convertToType(data['feedback'], 'String');
+        if (data.hasOwnProperty('userId')) {
+          obj['userId'] = _ApiClient["default"].convertToType(data['userId'], 'String');
         }
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('coachPhoto')) {
+          obj['coachPhoto'] = _ApiClient["default"].convertToType(data['coachPhoto'], 'String');
         }
 
-        if (data.hasOwnProperty('userID')) {
-          obj['userID'] = _ApiClient["default"].convertToType(data['userID'], 'String');
+        if (data.hasOwnProperty('profileOnBoardingAccepted')) {
+          obj['profileOnBoardingAccepted'] = _ApiClient["default"].convertToType(data['profileOnBoardingAccepted'], 'Boolean');
         }
 
-        if (data.hasOwnProperty('type')) {
-          obj['type'] = _ApiClient["default"].convertToType(data['type'], 'String');
+        if (data.hasOwnProperty('backgroundCheckAccepted')) {
+          obj['backgroundCheckAccepted'] = _ApiClient["default"].convertToType(data['backgroundCheckAccepted'], 'Boolean');
         }
 
-        if (data.hasOwnProperty('rating')) {
-          obj['rating'] = _ApiClient["default"].convertToType(data['rating'], 'Number');
-        }
-
-        if (data.hasOwnProperty('date')) {
-          obj['date'] = _ApiClient["default"].convertToType(data['date'], 'String');
+        if (data.hasOwnProperty('profileStatus')) {
+          obj['profileStatus'] = _ApiClient["default"].convertToType(data['profileStatus'], 'String');
         }
       }
 
@@ -90,59 +86,60 @@ var InlineResponse20015 = /*#__PURE__*/function () {
   return InlineResponse20015;
 }();
 /**
- * @member {String} featureName
+ * @member {String} userName
  */
 
 
-InlineResponse20015.prototype['featureName'] = undefined;
+InlineResponse20015.prototype['userName'] = undefined;
 /**
- * @member {String} feedback
+ * @member {String} userId
  */
 
-InlineResponse20015.prototype['feedback'] = undefined;
+InlineResponse20015.prototype['userId'] = undefined;
 /**
- * @member {String} name
+ * @member {String} coachPhoto
  */
 
-InlineResponse20015.prototype['name'] = undefined;
+InlineResponse20015.prototype['coachPhoto'] = undefined;
 /**
- * @member {String} userID
+ * @member {Boolean} profileOnBoardingAccepted
  */
 
-InlineResponse20015.prototype['userID'] = undefined;
+InlineResponse20015.prototype['profileOnBoardingAccepted'] = undefined;
 /**
- * @member {module:model/InlineResponse20015.TypeEnum} type
+ * @member {Boolean} backgroundCheckAccepted
  */
 
-InlineResponse20015.prototype['type'] = undefined;
+InlineResponse20015.prototype['backgroundCheckAccepted'] = undefined;
 /**
- * @member {Number} rating
+ * @member {module:model/InlineResponse20015.ProfileStatusEnum} profileStatus
  */
 
-InlineResponse20015.prototype['rating'] = undefined;
+InlineResponse20015.prototype['profileStatus'] = undefined;
 /**
- * @member {String} date
- */
-
-InlineResponse20015.prototype['date'] = undefined;
-/**
- * Allowed values for the <code>type</code> property.
+ * Allowed values for the <code>profileStatus</code> property.
  * @enum {String}
  * @readonly
  */
 
-InlineResponse20015['TypeEnum'] = {
+InlineResponse20015['ProfileStatusEnum'] = {
   /**
-   * value: "coach"
+   * value: "Pending"
    * @const
    */
-  "coach": "coach",
+  "Pending": "Pending",
 
   /**
-   * value: "student"
+   * value: "Declined"
    * @const
    */
-  "student": "student"
+  "Declined": "Declined",
+
+  /**
+   * value: "Approved"
+   * @const
+   */
+  "Approved": "Approved"
 };
 var _default = InlineResponse20015;
 exports["default"] = _default;

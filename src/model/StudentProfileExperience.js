@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StudentProfileExperience model module.
  * @module model/StudentProfileExperience
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentProfileExperience {
     /**

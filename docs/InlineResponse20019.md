@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** |  | 
-**data** | [**LocationResponse**](LocationResponse.md) |  | 
+**data** | [**[LocationResponse]**](LocationResponse.md) |  | 
 
 

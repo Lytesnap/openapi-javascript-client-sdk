@@ -18,7 +18,7 @@ import CoachSessionWhatToBring from './CoachSessionWhatToBring';
 /**
  * The CoachSession model module.
  * @module model/CoachSession
- * @version 1.0.7
+ * @version 1.0.12
  */
 class CoachSession {
     /**

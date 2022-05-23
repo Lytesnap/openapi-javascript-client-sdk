@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LessonProblemReport model module.
  * @module model/LessonProblemReport
- * @version 1.0.7
+ * @version 1.0.12
  */
 class LessonProblemReport {
     /**

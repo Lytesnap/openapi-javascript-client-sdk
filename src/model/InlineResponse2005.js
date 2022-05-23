@@ -12,20 +12,22 @@
  */
 
 import ApiClient from '../ApiClient';
+import CoachNotification from './CoachNotification';
 
 /**
  * The InlineResponse2005 model module.
  * @module model/InlineResponse2005
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2005 {
     /**
      * Constructs a new <code>InlineResponse2005</code>.
      * @alias module:model/InlineResponse2005
+     * @param id {String} 
      */
-    constructor() { 
+    constructor(id) { 
         
-        InlineResponse2005.initialize(this);
+        InlineResponse2005.initialize(this, id);
     }
 
     /**
@@ -33,7 +35,8 @@ class InlineResponse2005 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, id) { 
+        obj['id'] = id;
     }
 
     /**
@@ -47,11 +50,11 @@ class InlineResponse2005 {
         if (data) {
             obj = obj || new InlineResponse2005();
 
-            if (data.hasOwnProperty('students')) {
-                obj['students'] = ApiClient.convertToType(data['students'], 'Number');
+            if (data.hasOwnProperty('')) {
+                obj[''] = CoachNotification.constructFromObject(data['']);
             }
-            if (data.hasOwnProperty('coaches')) {
-                obj['coaches'] = ApiClient.convertToType(data['coaches'], 'Number');
+            if (data.hasOwnProperty('id')) {
+                obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
         }
         return obj;
@@ -61,14 +64,14 @@ class InlineResponse2005 {
 }
 
 /**
- * @member {Number} students
+ * @member {module:model/CoachNotification} 
  */
-InlineResponse2005.prototype['students'] = undefined;
+InlineResponse2005.prototype[''] = undefined;
 
 /**
- * @member {Number} coaches
+ * @member {String} id
  */
-InlineResponse2005.prototype['coaches'] = undefined;
+InlineResponse2005.prototype['id'] = undefined;
 
 
 

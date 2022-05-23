@@ -33,21 +33,29 @@ var _InlineObject4 = _interopRequireDefault(require("../model/InlineObject11"));
 
 var _InlineObject5 = _interopRequireDefault(require("../model/InlineObject12"));
 
-var _InlineObject6 = _interopRequireDefault(require("../model/InlineObject2"));
+var _InlineObject6 = _interopRequireDefault(require("../model/InlineObject13"));
 
-var _InlineObject7 = _interopRequireDefault(require("../model/InlineObject3"));
+var _InlineObject7 = _interopRequireDefault(require("../model/InlineObject14"));
 
-var _InlineObject8 = _interopRequireDefault(require("../model/InlineObject4"));
+var _InlineObject8 = _interopRequireDefault(require("../model/InlineObject15"));
 
-var _InlineObject9 = _interopRequireDefault(require("../model/InlineObject5"));
+var _InlineObject9 = _interopRequireDefault(require("../model/InlineObject16"));
 
-var _InlineObject10 = _interopRequireDefault(require("../model/InlineObject6"));
+var _InlineObject10 = _interopRequireDefault(require("../model/InlineObject2"));
 
-var _InlineObject11 = _interopRequireDefault(require("../model/InlineObject7"));
+var _InlineObject11 = _interopRequireDefault(require("../model/InlineObject3"));
 
-var _InlineObject12 = _interopRequireDefault(require("../model/InlineObject8"));
+var _InlineObject12 = _interopRequireDefault(require("../model/InlineObject4"));
 
-var _InlineObject13 = _interopRequireDefault(require("../model/InlineObject9"));
+var _InlineObject13 = _interopRequireDefault(require("../model/InlineObject5"));
+
+var _InlineObject14 = _interopRequireDefault(require("../model/InlineObject6"));
+
+var _InlineObject15 = _interopRequireDefault(require("../model/InlineObject7"));
+
+var _InlineObject16 = _interopRequireDefault(require("../model/InlineObject8"));
+
+var _InlineObject17 = _interopRequireDefault(require("../model/InlineObject9"));
 
 var _InlineResponse = _interopRequireDefault(require("../model/InlineResponse200"));
 
@@ -71,37 +79,43 @@ var _InlineResponse10 = _interopRequireDefault(require("../model/InlineResponse2
 
 var _InlineResponse11 = _interopRequireDefault(require("../model/InlineResponse20018"));
 
-var _InlineResponse12 = _interopRequireDefault(require("../model/InlineResponse2002"));
+var _InlineResponse12 = _interopRequireDefault(require("../model/InlineResponse20019"));
 
-var _InlineResponse13 = _interopRequireDefault(require("../model/InlineResponse2003"));
+var _InlineResponse13 = _interopRequireDefault(require("../model/InlineResponse2002"));
 
-var _InlineResponse14 = _interopRequireDefault(require("../model/InlineResponse2004"));
+var _InlineResponse14 = _interopRequireDefault(require("../model/InlineResponse20020"));
 
-var _InlineResponse15 = _interopRequireDefault(require("../model/InlineResponse2005"));
+var _InlineResponse15 = _interopRequireDefault(require("../model/InlineResponse20021"));
 
-var _InlineResponse16 = _interopRequireDefault(require("../model/InlineResponse2006"));
+var _InlineResponse16 = _interopRequireDefault(require("../model/InlineResponse2003"));
 
-var _InlineResponse17 = _interopRequireDefault(require("../model/InlineResponse2007"));
+var _InlineResponse17 = _interopRequireDefault(require("../model/InlineResponse2004"));
 
-var _InlineResponse18 = _interopRequireDefault(require("../model/InlineResponse2008"));
+var _InlineResponse18 = _interopRequireDefault(require("../model/InlineResponse2005"));
 
-var _InlineResponse19 = _interopRequireDefault(require("../model/InlineResponse2009"));
+var _InlineResponse19 = _interopRequireDefault(require("../model/InlineResponse2006"));
 
-var _InlineResponse20 = _interopRequireDefault(require("../model/InlineResponse201"));
+var _InlineResponse20 = _interopRequireDefault(require("../model/InlineResponse2007"));
 
-var _InlineResponse21 = _interopRequireDefault(require("../model/InlineResponse2011"));
+var _InlineResponse21 = _interopRequireDefault(require("../model/InlineResponse2008"));
 
-var _InlineResponse22 = _interopRequireDefault(require("../model/InlineResponse2012"));
+var _InlineResponse22 = _interopRequireDefault(require("../model/InlineResponse2009"));
 
-var _InlineResponse23 = _interopRequireDefault(require("../model/InlineResponse2013"));
+var _InlineResponse23 = _interopRequireDefault(require("../model/InlineResponse201"));
 
-var _InlineResponse24 = _interopRequireDefault(require("../model/InlineResponse400"));
+var _InlineResponse24 = _interopRequireDefault(require("../model/InlineResponse2011"));
 
-var _InlineResponse25 = _interopRequireDefault(require("../model/InlineResponse4001"));
+var _InlineResponse25 = _interopRequireDefault(require("../model/InlineResponse2012"));
 
-var _InlineResponse26 = _interopRequireDefault(require("../model/InlineResponse403"));
+var _InlineResponse26 = _interopRequireDefault(require("../model/InlineResponse2013"));
 
-var _InlineResponse27 = _interopRequireDefault(require("../model/InlineResponse500"));
+var _InlineResponse27 = _interopRequireDefault(require("../model/InlineResponse2014"));
+
+var _InlineResponse28 = _interopRequireDefault(require("../model/InlineResponse400"));
+
+var _InlineResponse29 = _interopRequireDefault(require("../model/InlineResponse4001"));
+
+var _InlineResponse30 = _interopRequireDefault(require("../model/InlineResponse500"));
 
 var _Lesson = _interopRequireDefault(require("../model/Lesson"));
 
@@ -112,8 +126,6 @@ var _LessonProblemReport = _interopRequireDefault(require("../model/LessonProble
 var _LocationRequest = _interopRequireDefault(require("../model/LocationRequest"));
 
 var _LocationRequestOptional = _interopRequireDefault(require("../model/LocationRequestOptional"));
-
-var _LocationResponse = _interopRequireDefault(require("../model/LocationResponse"));
 
 var _StudentNotificationFilter = _interopRequireDefault(require("../model/StudentNotificationFilter"));
 
@@ -138,7 +150,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
 * Default service.
 * @module api/DefaultApi
-* @version 1.0.4
+* @version 1.0.12
 */
 var DefaultApi = /*#__PURE__*/function () {
   /**
@@ -262,7 +274,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/payout/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/payout/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Coach delete payment method Id
@@ -353,7 +365,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/payment-methods/{studentId}/{paymentMethodId}', 'DELETE', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Delete payment method by payment ID
@@ -373,7 +385,7 @@ var DefaultApi = /*#__PURE__*/function () {
     /**
      * Get coach's own profile
      * This fetches the information of the coach profile
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CoachProfile} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
      */
 
   }, {
@@ -387,13 +399,13 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _CoachProfile["default"];
+      var returnType = _InlineResponse["default"];
       return this.apiClient.callApi('/coach/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get coach's own profile
      * This fetches the information of the coach profile
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CoachProfile}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
      */
 
   }, {
@@ -404,9 +416,47 @@ var DefaultApi = /*#__PURE__*/function () {
       });
     }
     /**
+     * Signup student with basic information
+     * Create basic coach profile and set coach firebase custom claims - {\"role\":\"coach-pending\"}
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject14} opts.inlineObject14 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "getCoachSignupWithHttpInfo",
+    value: function getCoachSignupWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = opts['inlineObject14'];
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/coach/signup', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Signup student with basic information
+     * Create basic coach profile and set coach firebase custom claims - {\"role\":\"coach-pending\"}
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject14} opts.inlineObject14 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: "getCoachSignup",
+    value: function getCoachSignup(opts) {
+      return this.getCoachSignupWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
      * Get all saved locations by coach
      * Coach can invoke this endpoint to get all the training locations he/she saved in the pass
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20017} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20019} and HTTP response
      */
 
   }, {
@@ -420,13 +470,13 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse10["default"];
+      var returnType = _InlineResponse12["default"];
       return this.apiClient.callApi('/location', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get all saved locations by coach
      * Coach can invoke this endpoint to get all the training locations he/she saved in the pass
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20017}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20019}
      */
 
   }, {
@@ -440,7 +490,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Get location information by locationId
      * Both student and coach can use this endpoint to fetch location information.
      * @param {String} locationId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/LocationResponse} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20020} and HTTP response
      */
 
   }, {
@@ -461,14 +511,14 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _LocationResponse["default"];
+      var returnType = _InlineResponse14["default"];
       return this.apiClient.callApi('/location/{locationId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get location information by locationId
      * Both student and coach can use this endpoint to fetch location information.
      * @param {String} locationId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/LocationResponse}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20020}
      */
 
   }, {
@@ -538,7 +588,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.startTime This is the start range of the period
      * @param {String} opts.endTime This is the end range of the period
      * @param {Number} opts.numItems This determines how many results you want to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2006} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
      */
 
   }, {
@@ -563,7 +613,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse16["default"];
+      var returnType = _InlineResponse21["default"];
       return this.apiClient.callApi('/admin/dashboard-location-percentage', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -574,7 +624,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.startTime This is the start range of the period
      * @param {String} opts.endTime This is the end range of the period
      * @param {Number} opts.numItems This determines how many results you want to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2006}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
      */
 
   }, {
@@ -590,7 +640,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status This is the filter for requests
      * @param {String} opts.numItems This is the number of items to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20011>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20013>} and HTTP response
      */
 
   }, {
@@ -608,7 +658,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse4["default"]];
+      var returnType = [_InlineResponse6["default"]];
       return this.apiClient.callApi('/admin/certificate', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -617,7 +667,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status This is the filter for requests
      * @param {String} opts.numItems This is the number of items to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20011>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20013>}
      */
 
   }, {
@@ -631,7 +681,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Admin get certificate from coachId
      * Retrieve coach certificate
      * @param {String} coachId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20012>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20014>} and HTTP response
      */
 
   }, {
@@ -652,14 +702,14 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse5["default"]];
+      var returnType = [_InlineResponse7["default"]];
       return this.apiClient.callApi('/admin/certificate/{coachId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Admin get certificate from coachId
      * Retrieve coach certificate
      * @param {String} coachId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20012>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20014>}
      */
 
   }, {
@@ -673,7 +723,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Get complaint from user
      * Get user complains
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20010} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20012} and HTTP response
      */
 
   }, {
@@ -694,14 +744,14 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse3["default"];
+      var returnType = _InlineResponse5["default"];
       return this.apiClient.callApi('/admin/complaint/{userId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get complaint from user
      * Get user complains
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20010}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20012}
      */
 
   }, {
@@ -714,7 +764,7 @@ var DefaultApi = /*#__PURE__*/function () {
     /**
      * This get the dashboard filter names
      * Get admin dashbord filter names
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2007>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2009>} and HTTP response
      */
 
   }, {
@@ -728,13 +778,13 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse17["default"]];
+      var returnType = [_InlineResponse22["default"]];
       return this.apiClient.callApi('/admin/dashboard-filter', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * This get the dashboard filter names
      * Get admin dashbord filter names
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2007>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2009>}
      */
 
   }, {
@@ -754,7 +804,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.startTime This is the start range of the period
      * @param {String} opts.endTime This is the end range of the period
      * @param {String} opts.filterID This is the filter id that represents the saved filter
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2005} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2007} and HTTP response
      */
 
   }, {
@@ -786,7 +836,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse15["default"];
+      var returnType = _InlineResponse20["default"];
       return this.apiClient.callApi('/admin/dashboard-location', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -799,7 +849,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} opts.startTime This is the start range of the period
      * @param {String} opts.endTime This is the end range of the period
      * @param {String} opts.filterID This is the filter id that represents the saved filter
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2005}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2007}
      */
 
   }, {
@@ -812,7 +862,7 @@ var DefaultApi = /*#__PURE__*/function () {
     /**
      * Admin get profile
      * Get profile of admin
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20016} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
      */
 
   }, {
@@ -826,13 +876,13 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse9["default"];
+      var returnType = _InlineResponse11["default"];
       return this.apiClient.callApi('/admin/profile', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Admin get profile
      * Get profile of admin
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20016}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
      */
 
   }, {
@@ -848,7 +898,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status This is the profiles to filter on 
      * @param {String} opts.numItems This is the number of items that you want to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20013>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20015>} and HTTP response
      */
 
   }, {
@@ -866,7 +916,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse6["default"]];
+      var returnType = [_InlineResponse8["default"]];
       return this.apiClient.callApi('/admin/profile-check', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -875,7 +925,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Object} opts Optional parameters
      * @param {module:model/String} opts.status This is the profiles to filter on 
      * @param {String} opts.numItems This is the number of items that you want to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20013>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20015>}
      */
 
   }, {
@@ -890,7 +940,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Get users complaints
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of items that you want to fetch
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2009>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20011>} and HTTP response
      */
 
   }, {
@@ -907,7 +957,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse19["default"]];
+      var returnType = [_InlineResponse4["default"]];
       return this.apiClient.callApi('/admin/complaint', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -915,7 +965,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Get users complaints
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of items that you want to fetch
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2009>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20011>}
      */
 
   }, {
@@ -932,7 +982,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Number} opts.rating This is used to filter feature by rating
      * @param {String} opts.startTime This is the start time of the range
      * @param {String} opts.endTime This is the end time of the range
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20014>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20016>} and HTTP response
      */
 
   }, {
@@ -951,7 +1001,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse7["default"]];
+      var returnType = [_InlineResponse9["default"]];
       return this.apiClient.callApi('/admin/user-feedback', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -961,7 +1011,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Number} opts.rating This is used to filter feature by rating
      * @param {String} opts.startTime This is the start time of the range
      * @param {String} opts.endTime This is the end time of the range
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20014>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20016>}
      */
 
   }, {
@@ -975,7 +1025,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Admin get feedback for specific feature
      * Get feedback for a specific feature
      * @param {String} featureId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20015>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse20017>} and HTTP response
      */
 
   }, {
@@ -996,14 +1046,14 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse8["default"]];
+      var returnType = [_InlineResponse10["default"]];
       return this.apiClient.callApi('/admin/user-feedback/{featureId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Admin get feedback for specific feature
      * Get feedback for a specific feature
      * @param {String} featureId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20015>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse20017>}
      */
 
   }, {
@@ -1022,7 +1072,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Number} opts.rating This is the rating to filter
      * @param {module:model/String} opts.userType This is the user type to filter
      * @param {Number} opts.numItems This is the number of items to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2008} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20010} and HTTP response
      */
 
   }, {
@@ -1043,7 +1093,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse18["default"];
+      var returnType = _InlineResponse3["default"];
       return this.apiClient.callApi('/admin/users-management', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1055,7 +1105,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {Number} opts.rating This is the rating to filter
      * @param {module:model/String} opts.userType This is the user type to filter
      * @param {Number} opts.numItems This is the number of items to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2008}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20010}
      */
 
   }, {
@@ -1111,7 +1161,7 @@ var DefaultApi = /*#__PURE__*/function () {
     /**
      * Get Availability Info
      * This gets the coach's availability options
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse200} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
      */
 
   }, {
@@ -1125,13 +1175,13 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse["default"];
+      var returnType = _InlineResponse13["default"];
       return this.apiClient.callApi('/coach/availability-options', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get Availability Info
      * This gets the coach's availability options
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse200}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
      */
 
   }, {
@@ -1147,7 +1197,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} locationID This is the location from where you are going to retrieve analytics.  It can be all if you want to retrieve all notifications
      * @param {String} startTime This  is the start range of data to perform analytics
      * @param {String} endTime This is the end range of data to perform analytics
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2002} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2004} and HTTP response
      */
 
   }, {
@@ -1180,7 +1230,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse12["default"];
+      var returnType = _InlineResponse17["default"];
       return this.apiClient.callApi('/coach/insights/analytics', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1189,7 +1239,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * @param {String} locationID This is the location from where you are going to retrieve analytics.  It can be all if you want to retrieve all notifications
      * @param {String} startTime This  is the start range of data to perform analytics
      * @param {String} endTime This is the end range of data to perform analytics
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2002}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2004}
      */
 
   }, {
@@ -1204,7 +1254,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Retrieve coach notification
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of notifications that you want to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2003>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2005>} and HTTP response
      */
 
   }, {
@@ -1221,7 +1271,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse13["default"]];
+      var returnType = [_InlineResponse18["default"]];
       return this.apiClient.callApi('/coach/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -1229,7 +1279,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Retrieve coach notification
      * @param {Object} opts Optional parameters
      * @param {Number} opts.numItems This is the number of notifications that you want to return
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2003>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2005>}
      */
 
   }, {
@@ -1240,10 +1290,10 @@ var DefaultApi = /*#__PURE__*/function () {
       });
     }
     /**
-     * Your GET endpoint
+     * Get coach profile by Id
      * Get coach profile data
      * @param {String} coachId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CoachProfile} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
      */
 
   }, {
@@ -1264,14 +1314,14 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _CoachProfile["default"];
+      var returnType = _InlineResponse2["default"];
       return this.apiClient.callApi('/coach/profile/{coachId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
-     * Your GET endpoint
+     * Get coach profile by Id
      * Get coach profile data
      * @param {String} coachId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CoachProfile}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
      */
 
   }, {
@@ -1284,7 +1334,7 @@ var DefaultApi = /*#__PURE__*/function () {
     /**
      * Get coach notifications settings
      * Retrieve coach notification settings
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2001} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2003} and HTTP response
      */
 
   }, {
@@ -1298,13 +1348,13 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse2["default"];
-      return this.apiClient.callApi('/coach/profile-settings/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = _InlineResponse16["default"];
+      return this.apiClient.callApi('/coach/profile/settings/notifications', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get coach notifications settings
      * Retrieve coach notification settings
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2001}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2003}
      */
 
   }, {
@@ -1332,7 +1382,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = [_CoachPaymentMethod["default"]];
-      return this.apiClient.callApi('/coach/profile-settings/payout', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/payout', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get Coach Payout Methods
@@ -1570,7 +1620,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentNotificationFilter["default"];
-      return this.apiClient.callApi('/student/notification-filter/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/settings/notification-filter/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get student notification filter by studentId
@@ -1612,7 +1662,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentProfileBasicInfo["default"];
-      return this.apiClient.callApi('/student/profile-settings/basic-info/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/basic-info/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get student basic information
@@ -1654,7 +1704,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentProfileNotifications["default"];
-      return this.apiClient.callApi('/student/profile-settings/notification-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/notification-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * get student profile notification settings by ID
@@ -1674,7 +1724,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * Get student payment methods
      * Get the registered payment methods
      * @param {String} studentId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2004>} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Array.<module:model/InlineResponse2006>} and HTTP response
      */
 
   }, {
@@ -1695,14 +1745,14 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = [];
       var accepts = ['application/json'];
-      var returnType = [_InlineResponse14["default"]];
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = [_InlineResponse19["default"]];
+      return this.apiClient.callApi('/student/profile/payment-methods/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get student payment methods
      * Get the registered payment methods
      * @param {String} studentId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2004>}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Array.<module:model/InlineResponse2006>}
      */
 
   }, {
@@ -1738,7 +1788,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = _StudentProfile["default"];
-      return this.apiClient.callApi('/student/profile-settings/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/{studentId}', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Get student profile by student ID
@@ -2068,7 +2118,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/privacy', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/privacy', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Update coach privacy settings
@@ -2106,7 +2156,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/coach/profile-settings/notifications', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/notifications', 'PATCH', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Update coach profile notification settings
@@ -2120,6 +2170,82 @@ var DefaultApi = /*#__PURE__*/function () {
     key: "patchUserCoachProfileSettingsNotifications",
     value: function patchUserCoachProfileSettingsNotifications(opts) {
       return this.patchUserCoachProfileSettingsNotificationsWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Send email verification email to user
+     * Provided user email, send a email verification link to user email.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject16} opts.inlineObject16 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20021} and HTTP response
+     */
+
+  }, {
+    key: "postAuthEmailVerificationWithHttpInfo",
+    value: function postAuthEmailVerificationWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = opts['inlineObject16'];
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _InlineResponse15["default"];
+      return this.apiClient.callApi('/auth/emailVerification', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Send email verification email to user
+     * Provided user email, send a email verification link to user email.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject16} opts.inlineObject16 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20021}
+     */
+
+  }, {
+    key: "postAuthEmailVerification",
+    value: function postAuthEmailVerification(opts) {
+      return this.postAuthEmailVerificationWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Send password reset email to user
+     * Provided user email, send a password reset link to user email.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject15} opts.inlineObject15 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20021} and HTTP response
+     */
+
+  }, {
+    key: "postAuthPasswordResetWithHttpInfo",
+    value: function postAuthPasswordResetWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = opts['inlineObject15'];
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = [];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = _InlineResponse15["default"];
+      return this.apiClient.callApi('/auth/passwordReset', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Send password reset email to user
+     * Provided user email, send a password reset link to user email.
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject15} opts.inlineObject15 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20021}
+     */
+
+  }, {
+    key: "postAuthPasswordReset",
+    value: function postAuthPasswordReset(opts) {
+      return this.postAuthPasswordResetWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -2142,7 +2268,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/coach/profile', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2164,7 +2290,7 @@ var DefaultApi = /*#__PURE__*/function () {
      * This endpoint allow coach to add/saved a training location
      * @param {Object} opts Optional parameters
      * @param {module:model/LocationRequest} opts.locationRequest location request object
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse20018} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/InlineResponse2014} and HTTP response
      */
 
   }, {
@@ -2179,7 +2305,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse11["default"];
+      var returnType = _InlineResponse27["default"];
       return this.apiClient.callApi('/location', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2187,13 +2313,51 @@ var DefaultApi = /*#__PURE__*/function () {
      * This endpoint allow coach to add/saved a training location
      * @param {Object} opts Optional parameters
      * @param {module:model/LocationRequest} opts.locationRequest location request object
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse20018}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/InlineResponse2014}
      */
 
   }, {
     key: "postLocation",
     value: function postLocation(opts) {
       return this.postLocationWithHttpInfo(opts).then(function (response_and_data) {
+        return response_and_data.data;
+      });
+    }
+    /**
+     * Signup student with basic information
+     * Create basic student profile and set student firebase custom claims - {\"role\": \"student\"}
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject13} opts.inlineObject13 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+
+  }, {
+    key: "postStudentSignupWithHttpInfo",
+    value: function postStudentSignupWithHttpInfo(opts) {
+      opts = opts || {};
+      var postBody = opts['inlineObject13'];
+      var pathParams = {};
+      var queryParams = {};
+      var headerParams = {};
+      var formParams = {};
+      var authNames = ['bearerAuth'];
+      var contentTypes = ['application/json'];
+      var accepts = ['application/json'];
+      var returnType = null;
+      return this.apiClient.callApi('/student/signup', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+    }
+    /**
+     * Signup student with basic information
+     * Create basic student profile and set student firebase custom claims - {\"role\": \"student\"}
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject13} opts.inlineObject13 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+
+  }, {
+    key: "postStudentSignup",
+    value: function postStudentSignup(opts) {
+      return this.postStudentSignupWithHttpInfo(opts).then(function (response_and_data) {
         return response_and_data.data;
       });
     }
@@ -2225,7 +2389,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/admin/certificate/{coachId}', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2396,7 +2560,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/coach/availability/list', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2433,7 +2597,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json', 'application/xml'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/coach/availability-options', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2472,7 +2636,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/payout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/payout', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Add Payment Method
@@ -2508,7 +2672,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/coach/session-plans', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2545,7 +2709,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/student/filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2591,7 +2755,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse22["default"];
+      var returnType = _InlineResponse25["default"];
       return this.apiClient.callApi('/lesson/{lessonId}/cancel-request', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2630,7 +2794,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = [];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse21["default"];
+      var returnType = _InlineResponse24["default"];
       return this.apiClient.callApi('/lessons', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2676,7 +2840,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse23["default"];
+      var returnType = _InlineResponse26["default"];
       return this.apiClient.callApi('/lessons/{lessonId}/problem-report', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -2716,7 +2880,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/student/notification-filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/settings/notification-filter', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * create student notification filter with studentId
@@ -2753,8 +2917,8 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
-      return this.apiClient.callApi('/student/profile-settings', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      var returnType = _InlineResponse23["default"];
+      return this.apiClient.callApi('/student/profile', 'POST', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * create student profile
@@ -2953,7 +3117,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Disable Coach Account
@@ -2988,7 +3152,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Enable Coach Account
@@ -3024,7 +3188,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/coach/profile-settings/notifications', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/notifications', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Overwrite coach notification settings
@@ -3067,7 +3231,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/coach/profile-settings/payout/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/coach/profile/settings/payout/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Coach set default payment method
@@ -3102,7 +3266,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var authNames = ['bearerAuth'];
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
-      var returnType = _InlineResponse20["default"];
+      var returnType = _InlineResponse23["default"];
       return this.apiClient.callApi('/coach/session-plans', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
@@ -3148,7 +3312,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = null;
-      return this.apiClient.callApi('/student/notification-filter/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/settings/notification-filter/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * update student notification filter by studentId
@@ -3195,7 +3359,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/basic-info/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/basic-info/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Edit student basic information
@@ -3230,7 +3394,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/student/profile-settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/settings/disable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Disable student profile settings
@@ -3261,7 +3425,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = [];
       var returnType = null;
-      return this.apiClient.callApi('/student/profile-settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/settings/enable', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Enable student profile settings
@@ -3303,7 +3467,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/notification-settings/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/notification-settings/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Update the user notification settings
@@ -3349,7 +3513,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = ['application/json'];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/payment-methods/{studentId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Create new payment method
@@ -3400,7 +3564,7 @@ var DefaultApi = /*#__PURE__*/function () {
       var contentTypes = [];
       var accepts = ['application/json'];
       var returnType = Object;
-      return this.apiClient.callApi('/student/profile-settings/payment-methods/{studentId}/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
+      return this.apiClient.callApi('/student/profile/payment-methods/{studentId}/{paymentMethodId}', 'PUT', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, null);
     }
     /**
      * Set student payment method to default by payment ID

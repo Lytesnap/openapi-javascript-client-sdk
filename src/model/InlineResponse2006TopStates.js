@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2006TopStates model module.
  * @module model/InlineResponse2006TopStates
- * @version 1.0.7
+ * @version 1.0.4
  */
 class InlineResponse2006TopStates {
     /**

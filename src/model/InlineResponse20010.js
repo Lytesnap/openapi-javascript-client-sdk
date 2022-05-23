@@ -12,11 +12,12 @@
  */
 
 import ApiClient from '../ApiClient';
+import InlineResponse20010CancellationReason from './InlineResponse20010CancellationReason';
 
 /**
  * The InlineResponse20010 model module.
  * @module model/InlineResponse20010
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20010 {
     /**
@@ -50,11 +51,26 @@ class InlineResponse20010 {
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
+            if (data.hasOwnProperty('photo')) {
+                obj['photo'] = ApiClient.convertToType(data['photo'], 'String');
+            }
             if (data.hasOwnProperty('userType')) {
                 obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
             }
+            if (data.hasOwnProperty('numCancellations')) {
+                obj['numCancellations'] = ApiClient.convertToType(data['numCancellations'], 'Number');
+            }
+            if (data.hasOwnProperty('cancellationReason')) {
+                obj['cancellationReason'] = ApiClient.convertToType(data['cancellationReason'], [InlineResponse20010CancellationReason]);
+            }
             if (data.hasOwnProperty('rating')) {
                 obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
+            }
+            if (data.hasOwnProperty('status')) {
+                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            }
+            if (data.hasOwnProperty('userId')) {
+                obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
             }
         }
         return obj;
@@ -69,14 +85,39 @@ class InlineResponse20010 {
 InlineResponse20010.prototype['name'] = undefined;
 
 /**
+ * @member {String} photo
+ */
+InlineResponse20010.prototype['photo'] = undefined;
+
+/**
  * @member {module:model/InlineResponse20010.UserTypeEnum} userType
  */
 InlineResponse20010.prototype['userType'] = undefined;
 
 /**
+ * @member {Number} numCancellations
+ */
+InlineResponse20010.prototype['numCancellations'] = undefined;
+
+/**
+ * @member {Array.<module:model/InlineResponse20010CancellationReason>} cancellationReason
+ */
+InlineResponse20010.prototype['cancellationReason'] = undefined;
+
+/**
  * @member {Number} rating
  */
 InlineResponse20010.prototype['rating'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20010.StatusEnum} status
+ */
+InlineResponse20010.prototype['status'] = undefined;
+
+/**
+ * @member {String} userId
+ */
+InlineResponse20010.prototype['userId'] = undefined;
 
 
 
@@ -90,16 +131,37 @@ InlineResponse20010.prototype['rating'] = undefined;
 InlineResponse20010['UserTypeEnum'] = {
 
     /**
-     * value: "coach"
-     * @const
-     */
-    "coach": "coach",
-
-    /**
      * value: "student"
      * @const
      */
-    "student": "student"
+    "student": "student",
+
+    /**
+     * value: "coach"
+     * @const
+     */
+    "coach": "coach"
+};
+
+
+/**
+ * Allowed values for the <code>status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineResponse20010['StatusEnum'] = {
+
+    /**
+     * value: "banned"
+     * @const
+     */
+    "banned": "banned",
+
+    /**
+     * value: "active"
+     * @const
+     */
+    "active": "active"
 };
 
 

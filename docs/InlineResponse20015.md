@@ -4,22 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**featureName** | **String** |  | [optional] 
-**feedback** | **String** |  | [optional] 
-**name** | **String** |  | [optional] 
-**userID** | **String** |  | [optional] 
-**type** | **String** |  | [optional] 
-**rating** | **Number** |  | [optional] 
-**date** | **String** |  | [optional] 
+**userName** | **String** |  | [optional] 
+**userId** | **String** |  | [optional] 
+**coachPhoto** | **String** |  | [optional] 
+**profileOnBoardingAccepted** | **Boolean** |  | [optional] 
+**backgroundCheckAccepted** | **Boolean** |  | [optional] 
+**profileStatus** | **String** |  | [optional] 
 
 
 
-## Enum: TypeEnum
+## Enum: ProfileStatusEnum
 
 
-* `coach` (value: `"coach"`)
+* `Pending` (value: `"Pending"`)
 
-* `student` (value: `"student"`)
+* `Declined` (value: `"Declined"`)
+
+* `Approved` (value: `"Approved"`)
 
 
 

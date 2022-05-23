@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2007 model module.
  * @module model/InlineResponse2007
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2007 = /*#__PURE__*/function () {
   /**
@@ -54,12 +54,12 @@ var InlineResponse2007 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2007();
 
-        if (data.hasOwnProperty('filterName')) {
-          obj['filterName'] = _ApiClient["default"].convertToType(data['filterName'], 'String');
+        if (data.hasOwnProperty('students')) {
+          obj['students'] = _ApiClient["default"].convertToType(data['students'], 'Number');
         }
 
-        if (data.hasOwnProperty('filterID')) {
-          obj['filterID'] = _ApiClient["default"].convertToType(data['filterID'], 'String');
+        if (data.hasOwnProperty('coaches')) {
+          obj['coaches'] = _ApiClient["default"].convertToType(data['coaches'], 'Number');
         }
       }
 
@@ -70,15 +70,15 @@ var InlineResponse2007 = /*#__PURE__*/function () {
   return InlineResponse2007;
 }();
 /**
- * @member {String} filterName
+ * @member {Number} students
  */
 
 
-InlineResponse2007.prototype['filterName'] = undefined;
+InlineResponse2007.prototype['students'] = undefined;
 /**
- * @member {String} filterID
+ * @member {Number} coaches
  */
 
-InlineResponse2007.prototype['filterID'] = undefined;
+InlineResponse2007.prototype['coaches'] = undefined;
 var _default = InlineResponse2007;
 exports["default"] = _default;

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachReview model module.
  * @module model/CoachReview
- * @version 1.0.4
+ * @version 1.0.12
  */
 var CoachReview = /*#__PURE__*/function () {
   /**

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LessonCancelRequest model module.
  * @module model/LessonCancelRequest
- * @version 1.0.4
+ * @version 1.0.12
  */
 var LessonCancelRequest = /*#__PURE__*/function () {
   /**

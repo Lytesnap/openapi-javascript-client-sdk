@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _InlineResponse20010CancellationReason = _interopRequireDefault(require("./InlineResponse20010CancellationReason"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse20010 model module.
  * @module model/InlineResponse20010
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse20010 = /*#__PURE__*/function () {
   /**
@@ -58,12 +60,32 @@ var InlineResponse20010 = /*#__PURE__*/function () {
           obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
         }
 
+        if (data.hasOwnProperty('photo')) {
+          obj['photo'] = _ApiClient["default"].convertToType(data['photo'], 'String');
+        }
+
         if (data.hasOwnProperty('userType')) {
           obj['userType'] = _ApiClient["default"].convertToType(data['userType'], 'String');
         }
 
+        if (data.hasOwnProperty('numCancellations')) {
+          obj['numCancellations'] = _ApiClient["default"].convertToType(data['numCancellations'], 'Number');
+        }
+
+        if (data.hasOwnProperty('cancellationReason')) {
+          obj['cancellationReason'] = _ApiClient["default"].convertToType(data['cancellationReason'], [_InlineResponse20010CancellationReason["default"]]);
+        }
+
         if (data.hasOwnProperty('rating')) {
           obj['rating'] = _ApiClient["default"].convertToType(data['rating'], 'Number');
+        }
+
+        if (data.hasOwnProperty('status')) {
+          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
+        }
+
+        if (data.hasOwnProperty('userId')) {
+          obj['userId'] = _ApiClient["default"].convertToType(data['userId'], 'String');
         }
       }
 
@@ -80,15 +102,40 @@ var InlineResponse20010 = /*#__PURE__*/function () {
 
 InlineResponse20010.prototype['name'] = undefined;
 /**
+ * @member {String} photo
+ */
+
+InlineResponse20010.prototype['photo'] = undefined;
+/**
  * @member {module:model/InlineResponse20010.UserTypeEnum} userType
  */
 
 InlineResponse20010.prototype['userType'] = undefined;
 /**
+ * @member {Number} numCancellations
+ */
+
+InlineResponse20010.prototype['numCancellations'] = undefined;
+/**
+ * @member {Array.<module:model/InlineResponse20010CancellationReason>} cancellationReason
+ */
+
+InlineResponse20010.prototype['cancellationReason'] = undefined;
+/**
  * @member {Number} rating
  */
 
 InlineResponse20010.prototype['rating'] = undefined;
+/**
+ * @member {module:model/InlineResponse20010.StatusEnum} status
+ */
+
+InlineResponse20010.prototype['status'] = undefined;
+/**
+ * @member {String} userId
+ */
+
+InlineResponse20010.prototype['userId'] = undefined;
 /**
  * Allowed values for the <code>userType</code> property.
  * @enum {String}
@@ -97,16 +144,35 @@ InlineResponse20010.prototype['rating'] = undefined;
 
 InlineResponse20010['UserTypeEnum'] = {
   /**
-   * value: "coach"
-   * @const
-   */
-  "coach": "coach",
-
-  /**
    * value: "student"
    * @const
    */
-  "student": "student"
+  "student": "student",
+
+  /**
+   * value: "coach"
+   * @const
+   */
+  "coach": "coach"
+};
+/**
+ * Allowed values for the <code>status</code> property.
+ * @enum {String}
+ * @readonly
+ */
+
+InlineResponse20010['StatusEnum'] = {
+  /**
+   * value: "banned"
+   * @const
+   */
+  "banned": "banned",
+
+  /**
+   * value: "active"
+   * @const
+   */
+  "active": "active"
 };
 var _default = InlineResponse20010;
 exports["default"] = _default;

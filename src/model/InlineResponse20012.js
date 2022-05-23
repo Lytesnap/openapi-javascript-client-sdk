@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse20012 model module.
  * @module model/InlineResponse20012
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20012 {
     /**
@@ -47,20 +47,14 @@ class InlineResponse20012 {
         if (data) {
             obj = obj || new InlineResponse20012();
 
-            if (data.hasOwnProperty('certificateName')) {
-                obj['certificateName'] = ApiClient.convertToType(data['certificateName'], 'String');
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
-            if (data.hasOwnProperty('expirationDate')) {
-                obj['expirationDate'] = ApiClient.convertToType(data['expirationDate'], 'String');
+            if (data.hasOwnProperty('userType')) {
+                obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
             }
-            if (data.hasOwnProperty('certificatePhoto')) {
-                obj['certificatePhoto'] = ApiClient.convertToType(data['certificatePhoto'], 'String');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('certificateId')) {
-                obj['certificateId'] = ApiClient.convertToType(data['certificateId'], 'String');
+            if (data.hasOwnProperty('rating')) {
+                obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
             }
         }
         return obj;
@@ -70,32 +64,43 @@ class InlineResponse20012 {
 }
 
 /**
- * @member {String} certificateName
+ * @member {String} name
  */
-InlineResponse20012.prototype['certificateName'] = undefined;
+InlineResponse20012.prototype['name'] = undefined;
 
 /**
- * @member {String} expirationDate
+ * @member {module:model/InlineResponse20012.UserTypeEnum} userType
  */
-InlineResponse20012.prototype['expirationDate'] = undefined;
+InlineResponse20012.prototype['userType'] = undefined;
 
 /**
- * @member {String} certificatePhoto
+ * @member {Number} rating
  */
-InlineResponse20012.prototype['certificatePhoto'] = undefined;
+InlineResponse20012.prototype['rating'] = undefined;
+
+
+
+
 
 /**
- * @member {String} status
+ * Allowed values for the <code>userType</code> property.
+ * @enum {String}
+ * @readonly
  */
-InlineResponse20012.prototype['status'] = undefined;
+InlineResponse20012['UserTypeEnum'] = {
 
-/**
- * @member {String} certificateId
- */
-InlineResponse20012.prototype['certificateId'] = undefined;
+    /**
+     * value: "coach"
+     * @const
+     */
+    "coach": "coach",
 
-
-
+    /**
+     * value: "student"
+     * @const
+     */
+    "student": "student"
+};
 
 
 

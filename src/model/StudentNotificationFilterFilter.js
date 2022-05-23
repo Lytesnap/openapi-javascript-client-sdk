@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StudentNotificationFilterFilter model module.
  * @module model/StudentNotificationFilterFilter
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentNotificationFilterFilter {
     /**

@@ -17,7 +17,7 @@ import StudentPaymentMethodCard from './StudentPaymentMethodCard';
 /**
  * The StudentPaymentMethod model module.
  * @module model/StudentPaymentMethod
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentPaymentMethod {
     /**

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**featureName** | **String** |  | [optional] 
-**featureId** | **String** |  | [optional] 
-**dateImplemented** | **String** |  | [optional] 
-**numberOfFeedback** | **Number** |  | [optional] 
-**averageRating** | **Number** |  | [optional] 
+**certificateName** | **String** |  | [optional] 
+**expirationDate** | **String** |  | [optional] 
+**certificatePhoto** | **String** |  | [optional] 
+**status** | **String** |  | [optional] 
+**certificateId** | **String** |  | [optional] 
 
 

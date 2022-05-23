@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
+var _CoachNotification = _interopRequireDefault(require("./CoachNotification"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,17 +20,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2005 model module.
  * @module model/InlineResponse2005
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2005 = /*#__PURE__*/function () {
   /**
    * Constructs a new <code>InlineResponse2005</code>.
    * @alias module:model/InlineResponse2005
+   * @param id {String} 
    */
-  function InlineResponse2005() {
+  function InlineResponse2005(id) {
     _classCallCheck(this, InlineResponse2005);
 
-    InlineResponse2005.initialize(this);
+    InlineResponse2005.initialize(this, id);
   }
   /**
    * Initializes the fields of this object.
@@ -39,7 +42,9 @@ var InlineResponse2005 = /*#__PURE__*/function () {
 
   _createClass(InlineResponse2005, null, [{
     key: "initialize",
-    value: function initialize(obj) {}
+    value: function initialize(obj, id) {
+      obj['id'] = id;
+    }
     /**
      * Constructs a <code>InlineResponse2005</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
@@ -54,12 +59,12 @@ var InlineResponse2005 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2005();
 
-        if (data.hasOwnProperty('students')) {
-          obj['students'] = _ApiClient["default"].convertToType(data['students'], 'Number');
+        if (data.hasOwnProperty('')) {
+          obj[''] = _CoachNotification["default"].constructFromObject(data['']);
         }
 
-        if (data.hasOwnProperty('coaches')) {
-          obj['coaches'] = _ApiClient["default"].convertToType(data['coaches'], 'Number');
+        if (data.hasOwnProperty('id')) {
+          obj['id'] = _ApiClient["default"].convertToType(data['id'], 'String');
         }
       }
 
@@ -70,15 +75,15 @@ var InlineResponse2005 = /*#__PURE__*/function () {
   return InlineResponse2005;
 }();
 /**
- * @member {Number} students
+ * @member {module:model/CoachNotification} 
  */
 
 
-InlineResponse2005.prototype['students'] = undefined;
+InlineResponse2005.prototype[''] = undefined;
 /**
- * @member {Number} coaches
+ * @member {String} id
  */
 
-InlineResponse2005.prototype['coaches'] = undefined;
+InlineResponse2005.prototype['id'] = undefined;
 var _default = InlineResponse2005;
 exports["default"] = _default;

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LocationRequest model module.
  * @module model/LocationRequest
- * @version 1.0.4
+ * @version 1.0.12
  */
 var LocationRequest = /*#__PURE__*/function () {
   /**

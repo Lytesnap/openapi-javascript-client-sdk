@@ -691,7 +691,6 @@ export class DefaultApi {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            console.log(body)
                             body = ObjectSerializer.deserialize(body, "LocationResponse");
                             resolve({ response: response, body: body });
                         } else {

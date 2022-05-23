@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CoachNotificationAdditionalInfoLessonInfo model module.
  * @module model/CoachNotificationAdditionalInfoLessonInfo
- * @version 1.0.7
+ * @version 1.0.12
  */
 class CoachNotificationAdditionalInfoLessonInfo {
     /**

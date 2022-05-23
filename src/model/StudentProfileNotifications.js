@@ -17,7 +17,7 @@ import StudentProfilePostNotificationSettings from './StudentProfilePostNotifica
 /**
  * The StudentProfileNotifications model module.
  * @module model/StudentProfileNotifications
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentProfileNotifications {
     /**

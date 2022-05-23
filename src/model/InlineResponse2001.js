@@ -12,26 +12,21 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2001SomeoneMessagedMe from './InlineResponse2001SomeoneMessagedMe';
+import CoachProfile from './CoachProfile';
 
 /**
  * The InlineResponse2001 model module.
  * @module model/InlineResponse2001
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2001 {
     /**
      * Constructs a new <code>InlineResponse2001</code>.
      * @alias module:model/InlineResponse2001
-     * @param someoneMessagedMe {module:model/InlineResponse2001SomeoneMessagedMe} 
-     * @param anyoneLeftMeAReview {module:model/InlineResponse2001SomeoneMessagedMe} 
-     * @param anyoneCancelledLesson {module:model/InlineResponse2001SomeoneMessagedMe} 
-     * @param anyoneAcceptOrDeclineLesson {module:model/InlineResponse2001SomeoneMessagedMe} 
-     * @param getNewsAnnouncementAndProductUpdates {module:model/InlineResponse2001SomeoneMessagedMe} 
      */
-    constructor(someoneMessagedMe, anyoneLeftMeAReview, anyoneCancelledLesson, anyoneAcceptOrDeclineLesson, getNewsAnnouncementAndProductUpdates) { 
+    constructor() { 
         
-        InlineResponse2001.initialize(this, someoneMessagedMe, anyoneLeftMeAReview, anyoneCancelledLesson, anyoneAcceptOrDeclineLesson, getNewsAnnouncementAndProductUpdates);
+        InlineResponse2001.initialize(this);
     }
 
     /**
@@ -39,12 +34,7 @@ class InlineResponse2001 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, someoneMessagedMe, anyoneLeftMeAReview, anyoneCancelledLesson, anyoneAcceptOrDeclineLesson, getNewsAnnouncementAndProductUpdates) { 
-        obj['someoneMessagedMe'] = someoneMessagedMe;
-        obj['anyoneLeftMeAReview'] = anyoneLeftMeAReview;
-        obj['anyoneCancelledLesson'] = anyoneCancelledLesson;
-        obj['anyoneAcceptOrDeclineLesson'] = anyoneAcceptOrDeclineLesson;
-        obj['getNewsAnnouncementAndProductUpdates'] = getNewsAnnouncementAndProductUpdates;
+    static initialize(obj) { 
     }
 
     /**
@@ -58,20 +48,11 @@ class InlineResponse2001 {
         if (data) {
             obj = obj || new InlineResponse2001();
 
-            if (data.hasOwnProperty('someoneMessagedMe')) {
-                obj['someoneMessagedMe'] = InlineResponse2001SomeoneMessagedMe.constructFromObject(data['someoneMessagedMe']);
+            if (data.hasOwnProperty('message')) {
+                obj['message'] = ApiClient.convertToType(data['message'], 'String');
             }
-            if (data.hasOwnProperty('anyoneLeftMeAReview')) {
-                obj['anyoneLeftMeAReview'] = InlineResponse2001SomeoneMessagedMe.constructFromObject(data['anyoneLeftMeAReview']);
-            }
-            if (data.hasOwnProperty('anyoneCancelledLesson')) {
-                obj['anyoneCancelledLesson'] = InlineResponse2001SomeoneMessagedMe.constructFromObject(data['anyoneCancelledLesson']);
-            }
-            if (data.hasOwnProperty('anyoneAcceptOrDeclineLesson')) {
-                obj['anyoneAcceptOrDeclineLesson'] = InlineResponse2001SomeoneMessagedMe.constructFromObject(data['anyoneAcceptOrDeclineLesson']);
-            }
-            if (data.hasOwnProperty('getNewsAnnouncementAndProductUpdates')) {
-                obj['getNewsAnnouncementAndProductUpdates'] = InlineResponse2001SomeoneMessagedMe.constructFromObject(data['getNewsAnnouncementAndProductUpdates']);
+            if (data.hasOwnProperty('data')) {
+                obj['data'] = CoachProfile.constructFromObject(data['data']);
             }
         }
         return obj;
@@ -81,29 +62,14 @@ class InlineResponse2001 {
 }
 
 /**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} someoneMessagedMe
+ * @member {String} message
  */
-InlineResponse2001.prototype['someoneMessagedMe'] = undefined;
+InlineResponse2001.prototype['message'] = undefined;
 
 /**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} anyoneLeftMeAReview
+ * @member {module:model/CoachProfile} data
  */
-InlineResponse2001.prototype['anyoneLeftMeAReview'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} anyoneCancelledLesson
- */
-InlineResponse2001.prototype['anyoneCancelledLesson'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} anyoneAcceptOrDeclineLesson
- */
-InlineResponse2001.prototype['anyoneAcceptOrDeclineLesson'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2001SomeoneMessagedMe} getNewsAnnouncementAndProductUpdates
- */
-InlineResponse2001.prototype['getNewsAnnouncementAndProductUpdates'] = undefined;
+InlineResponse2001.prototype['data'] = undefined;
 
 
 

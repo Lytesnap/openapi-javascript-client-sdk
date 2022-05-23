@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2002 model module.
  * @module model/InlineResponse2002
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2002 = /*#__PURE__*/function () {
   /**
@@ -54,24 +54,12 @@ var InlineResponse2002 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2002();
 
-        if (data.hasOwnProperty('incomeThisWeek')) {
-          obj['incomeThisWeek'] = _ApiClient["default"].convertToType(data['incomeThisWeek'], 'Number');
+        if (data.hasOwnProperty('timeIntervalBetweenLocations')) {
+          obj['timeIntervalBetweenLocations'] = _ApiClient["default"].convertToType(data['timeIntervalBetweenLocations'], 'Number');
         }
 
-        if (data.hasOwnProperty('hoursWorked')) {
-          obj['hoursWorked'] = _ApiClient["default"].convertToType(data['hoursWorked'], 'Number');
-        }
-
-        if (data.hasOwnProperty('numSessions')) {
-          obj['numSessions'] = _ApiClient["default"].convertToType(data['numSessions'], 'Number');
-        }
-
-        if (data.hasOwnProperty('numStudents')) {
-          obj['numStudents'] = _ApiClient["default"].convertToType(data['numStudents'], 'Number');
-        }
-
-        if (data.hasOwnProperty('data')) {
-          obj['data'] = _ApiClient["default"].convertToType(data['data'], [Object]);
+        if (data.hasOwnProperty('breaksBetweenLessons')) {
+          obj['breaksBetweenLessons'] = _ApiClient["default"].convertToType(data['breaksBetweenLessons'], 'Number');
         }
       }
 
@@ -82,30 +70,15 @@ var InlineResponse2002 = /*#__PURE__*/function () {
   return InlineResponse2002;
 }();
 /**
- * @member {Number} incomeThisWeek
+ * @member {Number} timeIntervalBetweenLocations
  */
 
 
-InlineResponse2002.prototype['incomeThisWeek'] = undefined;
+InlineResponse2002.prototype['timeIntervalBetweenLocations'] = undefined;
 /**
- * @member {Number} hoursWorked
+ * @member {Number} breaksBetweenLessons
  */
 
-InlineResponse2002.prototype['hoursWorked'] = undefined;
-/**
- * @member {Number} numSessions
- */
-
-InlineResponse2002.prototype['numSessions'] = undefined;
-/**
- * @member {Number} numStudents
- */
-
-InlineResponse2002.prototype['numStudents'] = undefined;
-/**
- * @member {Array.<Object>} data
- */
-
-InlineResponse2002.prototype['data'] = undefined;
+InlineResponse2002.prototype['breaksBetweenLessons'] = undefined;
 var _default = InlineResponse2002;
 exports["default"] = _default;

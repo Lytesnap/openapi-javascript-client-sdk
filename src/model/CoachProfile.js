@@ -21,7 +21,7 @@ import CoachProfileTrainingLocations from './CoachProfileTrainingLocations';
 /**
  * The CoachProfile model module.
  * @module model/CoachProfile
- * @version 1.0.7
+ * @version 1.0.12
  */
 class CoachProfile {
     /**
@@ -101,6 +101,9 @@ class CoachProfile {
             if (data.hasOwnProperty('video')) {
                 obj['video'] = ApiClient.convertToType(data['video'], 'String');
             }
+            if (data.hasOwnProperty('profilePicture')) {
+                obj['profilePicture'] = ApiClient.convertToType(data['profilePicture'], 'String');
+            }
         }
         return obj;
     }
@@ -162,6 +165,11 @@ CoachProfile.prototype['faq'] = undefined;
  * @member {String} video
  */
 CoachProfile.prototype['video'] = undefined;
+
+/**
+ * @member {String} profilePicture
+ */
+CoachProfile.prototype['profilePicture'] = undefined;
 
 
 

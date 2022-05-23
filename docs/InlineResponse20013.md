@@ -4,23 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**userName** | **String** |  | [optional] 
 **userId** | **String** |  | [optional] 
-**coachPhoto** | **String** |  | [optional] 
-**profileOnBoardingAccepted** | **Boolean** |  | [optional] 
-**backgroundCheckAccepted** | **Boolean** |  | [optional] 
-**profileStatus** | **String** |  | [optional] 
+**userName** | **String** |  | [optional] 
+**numCertificates** | **Number** |  | [optional] 
+**status** | **String** |  | [optional] 
 
 
 
-## Enum: ProfileStatusEnum
+## Enum: StatusEnum
 
 
-* `Pending` (value: `"Pending"`)
+* `pending` (value: `"pending"`)
 
-* `Declined` (value: `"Declined"`)
+* `declined` (value: `"declined"`)
 
-* `Approved` (value: `"Approved"`)
+* `approved` (value: `"approved"`)
 
 
 

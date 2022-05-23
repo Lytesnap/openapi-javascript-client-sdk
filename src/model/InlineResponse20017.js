@@ -12,23 +12,20 @@
  */
 
 import ApiClient from '../ApiClient';
-import LocationResponse from './LocationResponse';
 
 /**
  * The InlineResponse20017 model module.
  * @module model/InlineResponse20017
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse20017 {
     /**
      * Constructs a new <code>InlineResponse20017</code>.
      * @alias module:model/InlineResponse20017
-     * @param message {String} 
-     * @param data {Array.<module:model/LocationResponse>} 
      */
-    constructor(message, data) { 
+    constructor() { 
         
-        InlineResponse20017.initialize(this, message, data);
+        InlineResponse20017.initialize(this);
     }
 
     /**
@@ -36,9 +33,7 @@ class InlineResponse20017 {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, message, data) { 
-        obj['message'] = message;
-        obj['data'] = data;
+    static initialize(obj) { 
     }
 
     /**
@@ -52,11 +47,26 @@ class InlineResponse20017 {
         if (data) {
             obj = obj || new InlineResponse20017();
 
-            if (data.hasOwnProperty('message')) {
-                obj['message'] = ApiClient.convertToType(data['message'], 'String');
+            if (data.hasOwnProperty('featureName')) {
+                obj['featureName'] = ApiClient.convertToType(data['featureName'], 'String');
             }
-            if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [LocationResponse]);
+            if (data.hasOwnProperty('feedback')) {
+                obj['feedback'] = ApiClient.convertToType(data['feedback'], 'String');
+            }
+            if (data.hasOwnProperty('name')) {
+                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            }
+            if (data.hasOwnProperty('userID')) {
+                obj['userID'] = ApiClient.convertToType(data['userID'], 'String');
+            }
+            if (data.hasOwnProperty('type')) {
+                obj['type'] = ApiClient.convertToType(data['type'], 'String');
+            }
+            if (data.hasOwnProperty('rating')) {
+                obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
+            }
+            if (data.hasOwnProperty('date')) {
+                obj['date'] = ApiClient.convertToType(data['date'], 'String');
             }
         }
         return obj;
@@ -66,17 +76,63 @@ class InlineResponse20017 {
 }
 
 /**
- * @member {String} message
+ * @member {String} featureName
  */
-InlineResponse20017.prototype['message'] = undefined;
+InlineResponse20017.prototype['featureName'] = undefined;
 
 /**
- * @member {Array.<module:model/LocationResponse>} data
+ * @member {String} feedback
  */
-InlineResponse20017.prototype['data'] = undefined;
+InlineResponse20017.prototype['feedback'] = undefined;
+
+/**
+ * @member {String} name
+ */
+InlineResponse20017.prototype['name'] = undefined;
+
+/**
+ * @member {String} userID
+ */
+InlineResponse20017.prototype['userID'] = undefined;
+
+/**
+ * @member {module:model/InlineResponse20017.TypeEnum} type
+ */
+InlineResponse20017.prototype['type'] = undefined;
+
+/**
+ * @member {Number} rating
+ */
+InlineResponse20017.prototype['rating'] = undefined;
+
+/**
+ * @member {String} date
+ */
+InlineResponse20017.prototype['date'] = undefined;
 
 
 
+
+
+/**
+ * Allowed values for the <code>type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+InlineResponse20017['TypeEnum'] = {
+
+    /**
+     * value: "coach"
+     * @const
+     */
+    "coach": "coach",
+
+    /**
+     * value: "student"
+     * @const
+     */
+    "student": "student"
+};
 
 
 

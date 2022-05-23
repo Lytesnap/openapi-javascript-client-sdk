@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The LessonStudentInfo model module.
  * @module model/LessonStudentInfo
- * @version 1.0.7
+ * @version 1.0.12
  */
 class LessonStudentInfo {
     /**

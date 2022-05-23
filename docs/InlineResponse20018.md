@@ -4,7 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**message** | **String** |  | 
-**data** | [**InlineResponse20018Data**](InlineResponse20018Data.md) |  | 
+**fullName** | **String** |  | [optional] 
+**phoneNumber** | **String** |  | [optional] 
+**gender** | **String** |  | [optional] 
+**emailAddress** | **String** |  | [optional] 
+
+
+
+## Enum: GenderEnum
+
+
+* `male` (value: `"male"`)
+
+* `female` (value: `"female"`)
+
+* `other` (value: `"other"`)
+
+
 
 

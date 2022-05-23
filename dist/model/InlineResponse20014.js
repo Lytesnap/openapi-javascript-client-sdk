@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse20014 model module.
  * @module model/InlineResponse20014
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse20014 = /*#__PURE__*/function () {
   /**
@@ -54,24 +54,24 @@ var InlineResponse20014 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse20014();
 
-        if (data.hasOwnProperty('featureName')) {
-          obj['featureName'] = _ApiClient["default"].convertToType(data['featureName'], 'String');
+        if (data.hasOwnProperty('certificateName')) {
+          obj['certificateName'] = _ApiClient["default"].convertToType(data['certificateName'], 'String');
         }
 
-        if (data.hasOwnProperty('featureId')) {
-          obj['featureId'] = _ApiClient["default"].convertToType(data['featureId'], 'String');
+        if (data.hasOwnProperty('expirationDate')) {
+          obj['expirationDate'] = _ApiClient["default"].convertToType(data['expirationDate'], 'String');
         }
 
-        if (data.hasOwnProperty('dateImplemented')) {
-          obj['dateImplemented'] = _ApiClient["default"].convertToType(data['dateImplemented'], 'String');
+        if (data.hasOwnProperty('certificatePhoto')) {
+          obj['certificatePhoto'] = _ApiClient["default"].convertToType(data['certificatePhoto'], 'String');
         }
 
-        if (data.hasOwnProperty('numberOfFeedback')) {
-          obj['numberOfFeedback'] = _ApiClient["default"].convertToType(data['numberOfFeedback'], 'Number');
+        if (data.hasOwnProperty('status')) {
+          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
 
-        if (data.hasOwnProperty('averageRating')) {
-          obj['averageRating'] = _ApiClient["default"].convertToType(data['averageRating'], 'Number');
+        if (data.hasOwnProperty('certificateId')) {
+          obj['certificateId'] = _ApiClient["default"].convertToType(data['certificateId'], 'String');
         }
       }
 
@@ -82,30 +82,30 @@ var InlineResponse20014 = /*#__PURE__*/function () {
   return InlineResponse20014;
 }();
 /**
- * @member {String} featureName
+ * @member {String} certificateName
  */
 
 
-InlineResponse20014.prototype['featureName'] = undefined;
+InlineResponse20014.prototype['certificateName'] = undefined;
 /**
- * @member {String} featureId
+ * @member {String} expirationDate
  */
 
-InlineResponse20014.prototype['featureId'] = undefined;
+InlineResponse20014.prototype['expirationDate'] = undefined;
 /**
- * @member {String} dateImplemented
+ * @member {String} certificatePhoto
  */
 
-InlineResponse20014.prototype['dateImplemented'] = undefined;
+InlineResponse20014.prototype['certificatePhoto'] = undefined;
 /**
- * @member {Number} numberOfFeedback
+ * @member {String} status
  */
 
-InlineResponse20014.prototype['numberOfFeedback'] = undefined;
+InlineResponse20014.prototype['status'] = undefined;
 /**
- * @member {Number} averageRating
+ * @member {String} certificateId
  */
 
-InlineResponse20014.prototype['averageRating'] = undefined;
+InlineResponse20014.prototype['certificateId'] = undefined;
 var _default = InlineResponse20014;
 exports["default"] = _default;

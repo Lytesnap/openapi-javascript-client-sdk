@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse20013 model module.
  * @module model/InlineResponse20013
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse20013 = /*#__PURE__*/function () {
   /**
@@ -54,28 +54,20 @@ var InlineResponse20013 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse20013();
 
-        if (data.hasOwnProperty('userName')) {
-          obj['userName'] = _ApiClient["default"].convertToType(data['userName'], 'String');
-        }
-
         if (data.hasOwnProperty('userId')) {
           obj['userId'] = _ApiClient["default"].convertToType(data['userId'], 'String');
         }
 
-        if (data.hasOwnProperty('coachPhoto')) {
-          obj['coachPhoto'] = _ApiClient["default"].convertToType(data['coachPhoto'], 'String');
+        if (data.hasOwnProperty('userName')) {
+          obj['userName'] = _ApiClient["default"].convertToType(data['userName'], 'String');
         }
 
-        if (data.hasOwnProperty('profileOnBoardingAccepted')) {
-          obj['profileOnBoardingAccepted'] = _ApiClient["default"].convertToType(data['profileOnBoardingAccepted'], 'Boolean');
+        if (data.hasOwnProperty('numCertificates')) {
+          obj['numCertificates'] = _ApiClient["default"].convertToType(data['numCertificates'], 'Number');
         }
 
-        if (data.hasOwnProperty('backgroundCheckAccepted')) {
-          obj['backgroundCheckAccepted'] = _ApiClient["default"].convertToType(data['backgroundCheckAccepted'], 'Boolean');
-        }
-
-        if (data.hasOwnProperty('profileStatus')) {
-          obj['profileStatus'] = _ApiClient["default"].convertToType(data['profileStatus'], 'String');
+        if (data.hasOwnProperty('status')) {
+          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
         }
       }
 
@@ -86,60 +78,50 @@ var InlineResponse20013 = /*#__PURE__*/function () {
   return InlineResponse20013;
 }();
 /**
- * @member {String} userName
- */
-
-
-InlineResponse20013.prototype['userName'] = undefined;
-/**
  * @member {String} userId
  */
 
+
 InlineResponse20013.prototype['userId'] = undefined;
 /**
- * @member {String} coachPhoto
+ * @member {String} userName
  */
 
-InlineResponse20013.prototype['coachPhoto'] = undefined;
+InlineResponse20013.prototype['userName'] = undefined;
 /**
- * @member {Boolean} profileOnBoardingAccepted
+ * @member {Number} numCertificates
  */
 
-InlineResponse20013.prototype['profileOnBoardingAccepted'] = undefined;
+InlineResponse20013.prototype['numCertificates'] = undefined;
 /**
- * @member {Boolean} backgroundCheckAccepted
+ * @member {module:model/InlineResponse20013.StatusEnum} status
  */
 
-InlineResponse20013.prototype['backgroundCheckAccepted'] = undefined;
+InlineResponse20013.prototype['status'] = undefined;
 /**
- * @member {module:model/InlineResponse20013.ProfileStatusEnum} profileStatus
- */
-
-InlineResponse20013.prototype['profileStatus'] = undefined;
-/**
- * Allowed values for the <code>profileStatus</code> property.
+ * Allowed values for the <code>status</code> property.
  * @enum {String}
  * @readonly
  */
 
-InlineResponse20013['ProfileStatusEnum'] = {
+InlineResponse20013['StatusEnum'] = {
   /**
-   * value: "Pending"
+   * value: "pending"
    * @const
    */
-  "Pending": "Pending",
+  "pending": "pending",
 
   /**
-   * value: "Declined"
+   * value: "declined"
    * @const
    */
-  "Declined": "Declined",
+  "declined": "declined",
 
   /**
-   * value: "Approved"
+   * value: "approved"
    * @const
    */
-  "Approved": "Approved"
+  "approved": "approved"
 };
 var _default = InlineResponse20013;
 exports["default"] = _default;

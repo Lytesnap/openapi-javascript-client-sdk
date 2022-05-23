@@ -4,10 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**certificateName** | **String** |  | [optional] 
-**expirationDate** | **String** |  | [optional] 
-**certificatePhoto** | **String** |  | [optional] 
-**status** | **String** |  | [optional] 
-**certificateId** | **String** |  | [optional] 
+**name** | **String** |  | [optional] 
+**userType** | **String** |  | [optional] 
+**rating** | **Number** |  | [optional] 
+
+
+
+## Enum: UserTypeEnum
+
+
+* `coach` (value: `"coach"`)
+
+* `student` (value: `"student"`)
+
+
 
 

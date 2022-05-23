@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachAvailabilityLocation model module.
  * @module model/CoachAvailabilityLocation
- * @version 1.0.4
+ * @version 1.0.12
  */
 var CoachAvailabilityLocation = /*#__PURE__*/function () {
   /**

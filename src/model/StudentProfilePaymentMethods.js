@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The StudentProfilePaymentMethods model module.
  * @module model/StudentProfilePaymentMethods
- * @version 1.0.7
+ * @version 1.0.12
  */
 class StudentProfilePaymentMethods {
     /**

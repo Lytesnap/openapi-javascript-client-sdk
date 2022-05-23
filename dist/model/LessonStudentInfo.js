@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The LessonStudentInfo model module.
  * @module model/LessonStudentInfo
- * @version 1.0.4
+ * @version 1.0.12
  */
 var LessonStudentInfo = /*#__PURE__*/function () {
   /**

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**timeIntervalBetweenLocations** | **Number** |  | [optional] 
-**breaksBetweenLessons** | **Number** |  | [optional] 
+**message** | **String** |  | [default to &#39;Get Coach Own Profile Success&#39;]
+**data** | [**CoachProfile**](CoachProfile.md) |  | 
 
 

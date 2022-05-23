@@ -7,10 +7,6 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse2006TopCities = _interopRequireDefault(require("./InlineResponse2006TopCities"));
-
-var _InlineResponse2006TopStates = _interopRequireDefault(require("./InlineResponse2006TopStates"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2006 model module.
  * @module model/InlineResponse2006
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2006 = /*#__PURE__*/function () {
   /**
@@ -58,12 +54,12 @@ var InlineResponse2006 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2006();
 
-        if (data.hasOwnProperty('topStates')) {
-          obj['topStates'] = _ApiClient["default"].convertToType(data['topStates'], [_InlineResponse2006TopStates["default"]]);
+        if (data.hasOwnProperty('default')) {
+          obj['default'] = _ApiClient["default"].convertToType(data['default'], 'Boolean');
         }
 
-        if (data.hasOwnProperty('topCities')) {
-          obj['topCities'] = _ApiClient["default"].convertToType(data['topCities'], [_InlineResponse2006TopCities["default"]]);
+        if (data.hasOwnProperty('paymentMethodId')) {
+          obj['paymentMethodId'] = _ApiClient["default"].convertToType(data['paymentMethodId'], 'String');
         }
       }
 
@@ -74,15 +70,15 @@ var InlineResponse2006 = /*#__PURE__*/function () {
   return InlineResponse2006;
 }();
 /**
- * @member {Array.<module:model/InlineResponse2006TopStates>} topStates
+ * @member {Boolean} default
  */
 
 
-InlineResponse2006.prototype['topStates'] = undefined;
+InlineResponse2006.prototype['default'] = undefined;
 /**
- * @member {Array.<module:model/InlineResponse2006TopCities>} topCities
+ * @member {String} paymentMethodId
  */
 
-InlineResponse2006.prototype['topCities'] = undefined;
+InlineResponse2006.prototype['paymentMethodId'] = undefined;
 var _default = InlineResponse2006;
 exports["default"] = _default;

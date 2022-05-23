@@ -20,7 +20,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The CoachAvailabilityPut model module.
  * @module model/CoachAvailabilityPut
- * @version 1.0.4
+ * @version 1.0.12
  */
 var CoachAvailabilityPut = /*#__PURE__*/function () {
   /**

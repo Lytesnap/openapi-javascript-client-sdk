@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**_default** | **Boolean** |  | [optional] 
-**paymentMethodId** | **String** |  | [optional] 
+**incomeThisWeek** | **Number** |  | [optional] 
+**hoursWorked** | **Number** |  | [optional] 
+**numSessions** | **Number** |  | [optional] 
+**numStudents** | **Number** |  | [optional] 
+**data** | **[Object]** |  | [optional] 
 
 

@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2004 model module.
  * @module model/InlineResponse2004
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2004 = /*#__PURE__*/function () {
   /**
@@ -54,12 +54,24 @@ var InlineResponse2004 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2004();
 
-        if (data.hasOwnProperty('default')) {
-          obj['default'] = _ApiClient["default"].convertToType(data['default'], 'Boolean');
+        if (data.hasOwnProperty('incomeThisWeek')) {
+          obj['incomeThisWeek'] = _ApiClient["default"].convertToType(data['incomeThisWeek'], 'Number');
         }
 
-        if (data.hasOwnProperty('paymentMethodId')) {
-          obj['paymentMethodId'] = _ApiClient["default"].convertToType(data['paymentMethodId'], 'String');
+        if (data.hasOwnProperty('hoursWorked')) {
+          obj['hoursWorked'] = _ApiClient["default"].convertToType(data['hoursWorked'], 'Number');
+        }
+
+        if (data.hasOwnProperty('numSessions')) {
+          obj['numSessions'] = _ApiClient["default"].convertToType(data['numSessions'], 'Number');
+        }
+
+        if (data.hasOwnProperty('numStudents')) {
+          obj['numStudents'] = _ApiClient["default"].convertToType(data['numStudents'], 'Number');
+        }
+
+        if (data.hasOwnProperty('data')) {
+          obj['data'] = _ApiClient["default"].convertToType(data['data'], [Object]);
         }
       }
 
@@ -70,15 +82,30 @@ var InlineResponse2004 = /*#__PURE__*/function () {
   return InlineResponse2004;
 }();
 /**
- * @member {Boolean} default
+ * @member {Number} incomeThisWeek
  */
 
 
-InlineResponse2004.prototype['default'] = undefined;
+InlineResponse2004.prototype['incomeThisWeek'] = undefined;
 /**
- * @member {String} paymentMethodId
+ * @member {Number} hoursWorked
  */
 
-InlineResponse2004.prototype['paymentMethodId'] = undefined;
+InlineResponse2004.prototype['hoursWorked'] = undefined;
+/**
+ * @member {Number} numSessions
+ */
+
+InlineResponse2004.prototype['numSessions'] = undefined;
+/**
+ * @member {Number} numStudents
+ */
+
+InlineResponse2004.prototype['numStudents'] = undefined;
+/**
+ * @member {Array.<Object>} data
+ */
+
+InlineResponse2004.prototype['data'] = undefined;
 var _default = InlineResponse2004;
 exports["default"] = _default;

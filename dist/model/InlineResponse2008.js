@@ -7,7 +7,9 @@ exports["default"] = void 0;
 
 var _ApiClient = _interopRequireDefault(require("../ApiClient"));
 
-var _InlineResponse2008CancellationReason = _interopRequireDefault(require("./InlineResponse2008CancellationReason"));
+var _InlineResponse2008TopCities = _interopRequireDefault(require("./InlineResponse2008TopCities"));
+
+var _InlineResponse2008TopStates = _interopRequireDefault(require("./InlineResponse2008TopStates"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -20,7 +22,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The InlineResponse2008 model module.
  * @module model/InlineResponse2008
- * @version 1.0.4
+ * @version 1.0.12
  */
 var InlineResponse2008 = /*#__PURE__*/function () {
   /**
@@ -56,36 +58,12 @@ var InlineResponse2008 = /*#__PURE__*/function () {
       if (data) {
         obj = obj || new InlineResponse2008();
 
-        if (data.hasOwnProperty('name')) {
-          obj['name'] = _ApiClient["default"].convertToType(data['name'], 'String');
+        if (data.hasOwnProperty('topStates')) {
+          obj['topStates'] = _ApiClient["default"].convertToType(data['topStates'], [_InlineResponse2008TopStates["default"]]);
         }
 
-        if (data.hasOwnProperty('photo')) {
-          obj['photo'] = _ApiClient["default"].convertToType(data['photo'], 'String');
-        }
-
-        if (data.hasOwnProperty('userType')) {
-          obj['userType'] = _ApiClient["default"].convertToType(data['userType'], 'String');
-        }
-
-        if (data.hasOwnProperty('numCancellations')) {
-          obj['numCancellations'] = _ApiClient["default"].convertToType(data['numCancellations'], 'Number');
-        }
-
-        if (data.hasOwnProperty('cancellationReason')) {
-          obj['cancellationReason'] = _ApiClient["default"].convertToType(data['cancellationReason'], [_InlineResponse2008CancellationReason["default"]]);
-        }
-
-        if (data.hasOwnProperty('rating')) {
-          obj['rating'] = _ApiClient["default"].convertToType(data['rating'], 'Number');
-        }
-
-        if (data.hasOwnProperty('status')) {
-          obj['status'] = _ApiClient["default"].convertToType(data['status'], 'String');
-        }
-
-        if (data.hasOwnProperty('userId')) {
-          obj['userId'] = _ApiClient["default"].convertToType(data['userId'], 'String');
+        if (data.hasOwnProperty('topCities')) {
+          obj['topCities'] = _ApiClient["default"].convertToType(data['topCities'], [_InlineResponse2008TopCities["default"]]);
         }
       }
 
@@ -96,83 +74,15 @@ var InlineResponse2008 = /*#__PURE__*/function () {
   return InlineResponse2008;
 }();
 /**
- * @member {String} name
+ * @member {Array.<module:model/InlineResponse2008TopStates>} topStates
  */
 
 
-InlineResponse2008.prototype['name'] = undefined;
+InlineResponse2008.prototype['topStates'] = undefined;
 /**
- * @member {String} photo
+ * @member {Array.<module:model/InlineResponse2008TopCities>} topCities
  */
 
-InlineResponse2008.prototype['photo'] = undefined;
-/**
- * @member {module:model/InlineResponse2008.UserTypeEnum} userType
- */
-
-InlineResponse2008.prototype['userType'] = undefined;
-/**
- * @member {Number} numCancellations
- */
-
-InlineResponse2008.prototype['numCancellations'] = undefined;
-/**
- * @member {Array.<module:model/InlineResponse2008CancellationReason>} cancellationReason
- */
-
-InlineResponse2008.prototype['cancellationReason'] = undefined;
-/**
- * @member {Number} rating
- */
-
-InlineResponse2008.prototype['rating'] = undefined;
-/**
- * @member {module:model/InlineResponse2008.StatusEnum} status
- */
-
-InlineResponse2008.prototype['status'] = undefined;
-/**
- * @member {String} userId
- */
-
-InlineResponse2008.prototype['userId'] = undefined;
-/**
- * Allowed values for the <code>userType</code> property.
- * @enum {String}
- * @readonly
- */
-
-InlineResponse2008['UserTypeEnum'] = {
-  /**
-   * value: "student"
-   * @const
-   */
-  "student": "student",
-
-  /**
-   * value: "coach"
-   * @const
-   */
-  "coach": "coach"
-};
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-
-InlineResponse2008['StatusEnum'] = {
-  /**
-   * value: "banned"
-   * @const
-   */
-  "banned": "banned",
-
-  /**
-   * value: "active"
-   * @const
-   */
-  "active": "active"
-};
+InlineResponse2008.prototype['topCities'] = undefined;
 var _default = InlineResponse2008;
 exports["default"] = _default;

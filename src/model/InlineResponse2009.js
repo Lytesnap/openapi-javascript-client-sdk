@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The InlineResponse2009 model module.
  * @module model/InlineResponse2009
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2009 {
     /**
@@ -47,29 +47,11 @@ class InlineResponse2009 {
         if (data) {
             obj = obj || new InlineResponse2009();
 
-            if (data.hasOwnProperty('userId')) {
-                obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
+            if (data.hasOwnProperty('filterName')) {
+                obj['filterName'] = ApiClient.convertToType(data['filterName'], 'String');
             }
-            if (data.hasOwnProperty('userType')) {
-                obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
-            }
-            if (data.hasOwnProperty('userName')) {
-                obj['userName'] = ApiClient.convertToType(data['userName'], 'String');
-            }
-            if (data.hasOwnProperty('userPhoto')) {
-                obj['userPhoto'] = ApiClient.convertToType(data['userPhoto'], 'String');
-            }
-            if (data.hasOwnProperty('date')) {
-                obj['date'] = ApiClient.convertToType(data['date'], 'String');
-            }
-            if (data.hasOwnProperty('reason')) {
-                obj['reason'] = ApiClient.convertToType(data['reason'], 'String');
-            }
-            if (data.hasOwnProperty('rating')) {
-                obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
+            if (data.hasOwnProperty('filterID')) {
+                obj['filterID'] = ApiClient.convertToType(data['filterID'], 'String');
             }
         }
         return obj;
@@ -79,122 +61,17 @@ class InlineResponse2009 {
 }
 
 /**
- * @member {String} userId
+ * @member {String} filterName
  */
-InlineResponse2009.prototype['userId'] = undefined;
+InlineResponse2009.prototype['filterName'] = undefined;
 
 /**
- * @member {module:model/InlineResponse2009.UserTypeEnum} userType
+ * @member {String} filterID
  */
-InlineResponse2009.prototype['userType'] = undefined;
-
-/**
- * @member {String} userName
- */
-InlineResponse2009.prototype['userName'] = undefined;
-
-/**
- * @member {String} userPhoto
- */
-InlineResponse2009.prototype['userPhoto'] = undefined;
-
-/**
- * @member {String} date
- */
-InlineResponse2009.prototype['date'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2009.ReasonEnum} reason
- */
-InlineResponse2009.prototype['reason'] = undefined;
-
-/**
- * @member {Number} rating
- */
-InlineResponse2009.prototype['rating'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2009.StatusEnum} status
- */
-InlineResponse2009.prototype['status'] = undefined;
+InlineResponse2009.prototype['filterID'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>userType</code> property.
- * @enum {String}
- * @readonly
- */
-InlineResponse2009['UserTypeEnum'] = {
-
-    /**
-     * value: "Student"
-     * @const
-     */
-    "Student": "Student",
-
-    /**
-     * value: "Coach"
-     * @const
-     */
-    "Coach": "Coach"
-};
-
-
-/**
- * Allowed values for the <code>reason</code> property.
- * @enum {String}
- * @readonly
- */
-InlineResponse2009['ReasonEnum'] = {
-
-    /**
-     * value: "Medical emergency"
-     * @const
-     */
-    "Medical emergency": "Medical emergency",
-
-    /**
-     * value: "Weather"
-     * @const
-     */
-    "Weather": "Weather",
-
-    /**
-     * value: "Unspecified"
-     * @const
-     */
-    "Unspecified": "Unspecified",
-
-    /**
-     * value: "Other"
-     * @const
-     */
-    "Other": "Other"
-};
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-InlineResponse2009['StatusEnum'] = {
-
-    /**
-     * value: "pending"
-     * @const
-     */
-    "pending": "pending",
-
-    /**
-     * value: "solved"
-     * @const
-     */
-    "solved": "solved"
-};
 
 
 

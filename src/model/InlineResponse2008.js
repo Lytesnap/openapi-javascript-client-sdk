@@ -12,12 +12,13 @@
  */
 
 import ApiClient from '../ApiClient';
-import InlineResponse2008CancellationReason from './InlineResponse2008CancellationReason';
+import InlineResponse2008TopCities from './InlineResponse2008TopCities';
+import InlineResponse2008TopStates from './InlineResponse2008TopStates';
 
 /**
  * The InlineResponse2008 model module.
  * @module model/InlineResponse2008
- * @version 1.0.7
+ * @version 1.0.12
  */
 class InlineResponse2008 {
     /**
@@ -48,29 +49,11 @@ class InlineResponse2008 {
         if (data) {
             obj = obj || new InlineResponse2008();
 
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
+            if (data.hasOwnProperty('topStates')) {
+                obj['topStates'] = ApiClient.convertToType(data['topStates'], [InlineResponse2008TopStates]);
             }
-            if (data.hasOwnProperty('photo')) {
-                obj['photo'] = ApiClient.convertToType(data['photo'], 'String');
-            }
-            if (data.hasOwnProperty('userType')) {
-                obj['userType'] = ApiClient.convertToType(data['userType'], 'String');
-            }
-            if (data.hasOwnProperty('numCancellations')) {
-                obj['numCancellations'] = ApiClient.convertToType(data['numCancellations'], 'Number');
-            }
-            if (data.hasOwnProperty('cancellationReason')) {
-                obj['cancellationReason'] = ApiClient.convertToType(data['cancellationReason'], [InlineResponse2008CancellationReason]);
-            }
-            if (data.hasOwnProperty('rating')) {
-                obj['rating'] = ApiClient.convertToType(data['rating'], 'Number');
-            }
-            if (data.hasOwnProperty('status')) {
-                obj['status'] = ApiClient.convertToType(data['status'], 'String');
-            }
-            if (data.hasOwnProperty('userId')) {
-                obj['userId'] = ApiClient.convertToType(data['userId'], 'String');
+            if (data.hasOwnProperty('topCities')) {
+                obj['topCities'] = ApiClient.convertToType(data['topCities'], [InlineResponse2008TopCities]);
             }
         }
         return obj;
@@ -80,89 +63,17 @@ class InlineResponse2008 {
 }
 
 /**
- * @member {String} name
+ * @member {Array.<module:model/InlineResponse2008TopStates>} topStates
  */
-InlineResponse2008.prototype['name'] = undefined;
+InlineResponse2008.prototype['topStates'] = undefined;
 
 /**
- * @member {String} photo
+ * @member {Array.<module:model/InlineResponse2008TopCities>} topCities
  */
-InlineResponse2008.prototype['photo'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2008.UserTypeEnum} userType
- */
-InlineResponse2008.prototype['userType'] = undefined;
-
-/**
- * @member {Number} numCancellations
- */
-InlineResponse2008.prototype['numCancellations'] = undefined;
-
-/**
- * @member {Array.<module:model/InlineResponse2008CancellationReason>} cancellationReason
- */
-InlineResponse2008.prototype['cancellationReason'] = undefined;
-
-/**
- * @member {Number} rating
- */
-InlineResponse2008.prototype['rating'] = undefined;
-
-/**
- * @member {module:model/InlineResponse2008.StatusEnum} status
- */
-InlineResponse2008.prototype['status'] = undefined;
-
-/**
- * @member {String} userId
- */
-InlineResponse2008.prototype['userId'] = undefined;
+InlineResponse2008.prototype['topCities'] = undefined;
 
 
 
-
-
-/**
- * Allowed values for the <code>userType</code> property.
- * @enum {String}
- * @readonly
- */
-InlineResponse2008['UserTypeEnum'] = {
-
-    /**
-     * value: "student"
-     * @const
-     */
-    "student": "student",
-
-    /**
-     * value: "coach"
-     * @const
-     */
-    "coach": "coach"
-};
-
-
-/**
- * Allowed values for the <code>status</code> property.
- * @enum {String}
- * @readonly
- */
-InlineResponse2008['StatusEnum'] = {
-
-    /**
-     * value: "banned"
-     * @const
-     */
-    "banned": "banned",
-
-    /**
-     * value: "active"
-     * @const
-     */
-    "active": "active"
-};
 
 
 

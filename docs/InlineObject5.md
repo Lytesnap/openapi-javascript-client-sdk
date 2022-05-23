@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**someoneMessagedMe** | [**InlineResponse2001SomeoneMessagedMe**](InlineResponse2001SomeoneMessagedMe.md) |  | [optional] 
-**anyoneLeftMeAReview** | [**InlineResponse2001SomeoneMessagedMe**](InlineResponse2001SomeoneMessagedMe.md) |  | [optional] 
-**anyoneCancelledLesson** | [**InlineResponse2001SomeoneMessagedMe**](InlineResponse2001SomeoneMessagedMe.md) |  | [optional] 
-**anyoneAcceptOrDeclineLesson** | [**InlineResponse2001SomeoneMessagedMe**](InlineResponse2001SomeoneMessagedMe.md) |  | [optional] 
-**getNewsAnnouncementAndProductUpdates** | [**InlineResponse2001SomeoneMessagedMe**](InlineResponse2001SomeoneMessagedMe.md) |  | [optional] 
+**someoneMessagedMe** | [**InlineResponse2003SomeoneMessagedMe**](InlineResponse2003SomeoneMessagedMe.md) |  | [optional] 
+**anyoneLeftMeAReview** | [**InlineResponse2003SomeoneMessagedMe**](InlineResponse2003SomeoneMessagedMe.md) |  | [optional] 
+**anyoneCancelledLesson** | [**InlineResponse2003SomeoneMessagedMe**](InlineResponse2003SomeoneMessagedMe.md) |  | [optional] 
+**anyoneAcceptOrDeclineLesson** | [**InlineResponse2003SomeoneMessagedMe**](InlineResponse2003SomeoneMessagedMe.md) |  | [optional] 
+**getNewsAnnouncementAndProductUpdates** | [**InlineResponse2003SomeoneMessagedMe**](InlineResponse2003SomeoneMessagedMe.md) |  | [optional] 
 
 

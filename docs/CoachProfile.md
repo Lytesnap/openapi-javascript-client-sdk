@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **trainingLocations** | [**[CoachProfileTrainingLocations]**](CoachProfileTrainingLocations.md) |  | 
 **faq** | [**[CoachProfileFaq]**](CoachProfileFaq.md) |  | [optional] 
 **video** | **String** |  | [optional] 
+**profilePicture** | **String** |  | [optional] 
 
 
 

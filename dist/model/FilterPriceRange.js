@@ -18,7 +18,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 /**
  * The FilterPriceRange model module.
  * @module model/FilterPriceRange
- * @version 1.0.4
+ * @version 1.0.12
  */
 var FilterPriceRange = /*#__PURE__*/function () {
   /**
